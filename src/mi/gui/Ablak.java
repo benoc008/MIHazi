@@ -90,3 +90,4 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     }
 }
 
+
