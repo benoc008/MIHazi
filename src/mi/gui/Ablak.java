@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+
 public class Ablak extends JFrame implements Runnable, ActionListener, KeyListener {
 
     private JTextArea chatAblak;
@@ -19,16 +20,17 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     private InputProcessor inputProcessor;
 
     public Ablak() {
-        inputProcessor = new InputProcessor();
+        inputProcessor = new InputProcessor(); //feldolgozza a bemenetet
 
-        setLayout(new BorderLayout());
+        setLayout(new BorderLayout());      // felosztja az ablakot felsö oldaso job ball középső sávra
 
         chatAblak = new JTextArea();
-        chatAblak.setEditable(false);
+        chatAblak.setEditable(false);       // ne legyen szerkeszthetö a középsö ablak
 
-        bemenetiMezo = new JTextField();
+        bemenetiMezo = new JTextField();    // szövegg ide
+        bemenetiMezo.addKeyListener(this);
         kuldesGomb = new JButton("Kuldes");
-        kuldesGomb.addActionListener(this);
+        kuldesGomb.addActionListener(this);     //eseméyn figyelő feldolgozza a beérkezö eseményeket
 
         bemenetiSor = new JPanel();
         bemenetiSor.setLayout(new BorderLayout());
@@ -48,7 +50,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
         // Display the window.
         //frame.pack();
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);    // x kor bezárja
     }
 
     public void run() {
@@ -75,7 +77,9 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_ENTER){
+        int key = e.getKeyCode();
+
+        if(key == KeyEvent.VK_ENTER){
             kuldes();
         }
     }
