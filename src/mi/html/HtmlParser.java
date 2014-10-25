@@ -23,6 +23,9 @@ public class HtmlParser {
 
     private void fajlokatOlvas(){
         File[] szotarFajl = szotarMappa.listFiles();
+        if(szotarFajl == null){
+            return;
+        }
         for (int i = 0; i < szotarFajl.length; i++){
             try(BufferedReader br = new BufferedReader(new FileReader(szotarFajl[i]))) {
                 String sor = br.readLine();
