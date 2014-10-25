@@ -10,7 +10,6 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-//tzdhtf fthf
         FileMuveletHelper.log = new File("log" + new Date().getTime() + ".txt");
         try {
             FileMuveletHelper.log.createNewFile();
