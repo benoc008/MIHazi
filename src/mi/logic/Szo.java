@@ -1,13 +1,11 @@
 package mi.logic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Szo {
     private String szo;
-    private String szofaj;
-
-    public Szo(String szo, String szofaj) {
-        this.szo = szo;
-        this.szofaj = szofaj;
-    }
+    private List<String> szofajok = new ArrayList<>();
 
     public String getSzo() {
         return szo;
@@ -17,11 +15,23 @@ public class Szo {
         this.szo = szo;
     }
 
-    public String getSzofaj() {
-        return szofaj;
+    public List<String> getSzofajok() {
+        return szofajok;
     }
 
-    public void setSzofaj(String szofaj) {
-        this.szofaj = szofaj;
+    public void addSzofaj(String szofaj) {
+        this.szofajok.add(szofaj);
+    }
+
+    @Override
+    public String toString(){
+        String ret = szo + ";";
+        for(int i = 0; i < szofajok.size(); i++){
+            ret += szofajok.get(i);
+            if(i < szofajok.size() - 1){
+                ret += ";";
+            }
+        }
+        return ret;
     }
 }

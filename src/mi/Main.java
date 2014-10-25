@@ -2,6 +2,7 @@ package mi;
 
 import mi.gui.Ablak;
 import mi.helperek.FileMuveletHelper;
+import mi.html.HtmlParser;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +17,9 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        HtmlParser parser = new HtmlParser();
+        parser.parse();
 
         Ablak ablak = new Ablak();
         Thread t = new Thread(ablak);
