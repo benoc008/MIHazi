@@ -1,5 +1,6 @@
 package mi.logic;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class KerdesValasz {
@@ -11,7 +12,7 @@ public class KerdesValasz {
         this.valaszok = valaszok;
     }
     public KerdesValasz(){
-
+        valaszok = new ArrayList<>();
     }
 
     public String getKerdes() {
@@ -30,7 +31,7 @@ public class KerdesValasz {
         this.valaszok = valaszok;
     }
 
-    public void setValasz(String valasz){
+    public void addValasz(String valasz){
         valaszok.add(valasz);
     }
 

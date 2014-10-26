@@ -8,15 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.File;
-import java.awt.Window;
-import java.io.*;
-import mi.logic.KerdesValasz;
-
-import javax.swing.SwingUtilities;
-import javax.swing.filechooser.*;
 
 public class ManualisOktatasAblak extends JFrame implements Runnable, ActionListener, KeyListener {
 
@@ -39,7 +33,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     List<KerdesValasz> kerdesekValaszok = new ArrayList<>();
 
-    public ManualisOktatasAblak(){
+    public ManualisOktatasAblak() {
         List<String> valaszok1 = new ArrayList<>();
         valaszok1.add("semmi");
         valaszok1.add("semmu kul");
@@ -85,7 +79,8 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         feltoltesNezet = new OktatasFeltoltesNezet(kerdesekValaszok);
         szerkesztesNezet = new OktatasSzerkesztesNezet(kerdesekValaszok);
 
-        add(feltoltesNezet, BorderLayout.CENTER);
+        //add(feltoltesNezet, BorderLayout.CENTER);
+        add(szerkesztesNezet, BorderLayout.CENTER);
     }
 
     @Override
@@ -108,13 +103,13 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
             add(feltoltesNezet, BorderLayout.CENTER);
         } else if (e.getSource() == szerkesztesNezetMenuPont) {
             add(szerkesztesNezet, BorderLayout.CENTER);
-        }else if (e.getSource()== mentesMenuPont){
+        } else if (e.getSource() == mentesMenuPont) {
             try {
                 mentesfileba();
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
-        }else if(e.getSource()==betoltesMenuPont){
+        } else if (e.getSource() == betoltesMenuPont) {
             try {
                 betoltesfilebol();
             } catch (IOException e1) {
@@ -138,60 +133,54 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     }
 
-    public  void mentesfileba()throws IOException{
-        file =new JFileChooser();
+    public void mentesfileba() throws IOException {
+        file = new JFileChooser();
         int returnVal = file.showDialog(ManualisOktatasAblak.this, "Mentés");
         //Process the results.
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file2 = file.getSelectedFile();
-            File file4= file.getCurrentDirectory();
-            File file3 = new File(file4.getCanonicalPath(),file2.getName());
+            File file4 = file.getCurrentDirectory();
+            File file3 = new File(file4.getCanonicalPath(), file2.getName());
             FileWriter fis = new FileWriter(file3);
             KerdesValasz kv = new KerdesValasz();
-            for(int i=0 ;i<kerdesekValaszok.size();i++) {
+            for (int i = 0; i < kerdesekValaszok.size(); i++) {
                 kv = kerdesekValaszok.get(i);
-                fis.write("K:" + " " + kv.getKerdes()+"\n");
-                for (int j=0;j<kerdesekValaszok.get(i).getValaszok().size();j++)
-                    fis.write(kv.getValaszKiir(j)+"\n");
+                fis.write("K:" + " " + kv.getKerdes() + "\n");
+                for (int j = 0; j < kerdesekValaszok.get(i).getValaszok().size(); j++)
+                    fis.write(kv.getValaszKiir(j) + "\n");
             }
             fis.close();
         } else {
         }
         ;
-     }
+    }
 
-    public void betoltesfilebol() throws  IOException{
+    public void betoltesfilebol() throws IOException {
+        kerdesekValaszok = new ArrayList<>();
         file = new JFileChooser();
         int returnVal = file.showDialog(ManualisOktatasAblak.this, "Betöltés");
         //Process the results.
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file2 = file.getSelectedFile();
             File file3 = file.getCurrentDirectory();
-            File file4=new File(file3.getCanonicalPath(),file2.getName());
+            File file4 = new File(file3.getCanonicalPath(), file2.getName());
             FileReader isr = new FileReader(file4);
             BufferedReader br = new BufferedReader(isr);
-            int i=0;
-            int j=1;
             try {
-                while (true) {
-                    String line = br.readLine();
+                String line = br.readLine();
+                while (line != null) {
                     KerdesValasz kv = new KerdesValasz();
-                    if(line.matches("K:.*")) {
-                        i=i+1;
-                        if(i==2){
-                            kerdesekValaszok.add(new KerdesValasz(kv.getKerdes(), kv.getValaszok()));
-                            i=1;
-                        }
+                    if (line.matches("K:.*")) {
                         kv.setKerdes(line.substring(3));
+                        line = br.readLine();
+                        while (line != null && line.matches("V:.*")){
+                            kv.addValasz(line.substring(3));
+                            line = br.readLine();
+                        }
                     }
-                    else if (line.matches("V:.*")) {
-                            kv.setValasz(line.substring(3));
-
-                    }
-
+                    kerdesekValaszok.add(kv);
                 }
-
-            } catch(IOException e) {
+            } catch (IOException e) {
                 System.out.println(e);
             }
             br.close();

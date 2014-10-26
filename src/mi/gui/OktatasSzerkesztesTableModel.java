@@ -2,12 +2,17 @@ package mi.gui;
 
 import mi.logic.KerdesValasz;
 
+import javax.swing.*;
 import javax.swing.event.TableModelListener;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OktatasSzerkesztesTableModel implements TableModel {
+public class OktatasSzerkesztesTableModel extends AbstractTableModel implements TableModel {
 
     private class Elem {
         String tipus;
@@ -21,7 +26,7 @@ public class OktatasSzerkesztesTableModel implements TableModel {
 
     private List<KerdesValasz> lista;
     private List<Elem> sorok;
-    String[] oszlopNevek = {"Típius", "Sor", "Törlés"};
+    String[] oszlopNevek = {"Típius", "Sor", "Törlés", "Hozzáadás"};
 
     public OktatasSzerkesztesTableModel(List<KerdesValasz> lista) {
         this.lista = lista;
@@ -56,7 +61,7 @@ public class OktatasSzerkesztesTableModel implements TableModel {
             case 1:
                 return String.class;
             case 2:
-                return String.class;
+                return JButton.class;
             default:
                 return String.class;
         }
@@ -71,13 +76,42 @@ public class OktatasSzerkesztesTableModel implements TableModel {
     }
 
     @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        if (columnIndex == 0) {
-            return sorok.get(rowIndex).tipus;
-        } else if (columnIndex == 1) {
-            return sorok.get(rowIndex).sor;
+    public Object getValueAt(final int rowIndex, int columnIndex) {
+        switch (columnIndex){
+            case 0: return sorok.get(rowIndex).tipus;
+            case 1: return sorok.get(rowIndex).sor;
+            case 2:
+                    final JButton torlesGomb = new JButton(oszlopNevek[columnIndex]);
+                    torlesGomb.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent arg0) {
+                            int i = rowIndex;
+                            if(sorok.get(rowIndex).tipus.equals("Válasz")){
+                                sorok.remove(rowIndex);
+                            } else {
+                                while(sorok.get(rowIndex).tipus.equals("Válasz")){
+                                    sorok.remove(rowIndex);
+                                    i++;
+                                }
+                            }
+                            fireTableRowsDeleted(rowIndex, i);
+                        }
+                    });
+                    return torlesGomb;
+            case 3:
+                    if(sorok.get(rowIndex).tipus.equals("Válasz")) {
+                        JButton button = new JButton();
+                        return button;
+                    }
+                    final JButton hozzaadasGomb = new JButton(oszlopNevek[columnIndex]);
+                    hozzaadasGomb.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent arg0) {
+                            JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(hozzaadasGomb), "Button clicked for row " + rowIndex);
+                        }
+                    });
+                    return hozzaadasGomb;
+            default: return null;
         }
-        return "Torles";
+
     }
 
     @Override
