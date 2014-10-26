@@ -1,11 +1,15 @@
 package mi.gui;
 
+import mi.logic.KerdesValasz;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.io.File;
 import java.awt.Window;
 import java.io.*;
@@ -33,7 +37,10 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private OktatasFeltoltesNezet feltoltesNezet;
     private OktatasSzerkesztesNezet szerkesztesNezet;
 
+    List<KerdesValasz> kerdesekValaszok = new ArrayList<>();
+
     public ManualisOktatasAblak(){
+
         setLayout(new BorderLayout());
 
         //TODO file, sugo, akarmmi...
@@ -63,14 +70,12 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         nezetMenu.add(szerkesztesNezetMenuPont);
         menuBar.add(nezetMenu);
 
-
         add(menuBar, BorderLayout.PAGE_START);
 
-        feltoltesNezet = new OktatasFeltoltesNezet();
-        szerkesztesNezet = new OktatasSzerkesztesNezet();
+        feltoltesNezet = new OktatasFeltoltesNezet(kerdesekValaszok);
+        szerkesztesNezet = new OktatasSzerkesztesNezet(kerdesekValaszok);
 
         add(feltoltesNezet, BorderLayout.CENTER);
-
     }
 
     @Override

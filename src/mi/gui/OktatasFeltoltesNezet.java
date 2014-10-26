@@ -1,11 +1,14 @@
 package mi.gui;
 
+import mi.logic.KerdesValasz;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.List;
 
 public class OktatasFeltoltesNezet extends JPanel implements ActionListener, KeyListener{
 
@@ -15,7 +18,11 @@ public class OktatasFeltoltesNezet extends JPanel implements ActionListener, Key
     private JButton kuldesGomb;
     private JPanel bemenetiSor;
 
-    public OktatasFeltoltesNezet(){
+    private List<KerdesValasz> kerdesekValaszok;
+
+    public OktatasFeltoltesNezet(List<KerdesValasz> kerdesekValaszok){
+
+        this.kerdesekValaszok = kerdesekValaszok;
 
         setLayout(new BorderLayout());
 
