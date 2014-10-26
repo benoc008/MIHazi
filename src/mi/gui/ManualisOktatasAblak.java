@@ -6,6 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.awt.Window;
+import java.io.*;
+
+
+import javax.swing.SwingUtilities;
+import javax.swing.filechooser.*;
 
 public class ManualisOktatasAblak extends JFrame implements Runnable, ActionListener, KeyListener {
 
@@ -18,6 +25,9 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private JMenuItem betoltesMenuPont;
     private JMenuItem mentesMenuPont;
     private JMenuItem mentesMaskentMenuPont;
+
+
+    private JFileChooser file;
 
 
     private OktatasFeltoltesNezet feltoltesNezet;
@@ -53,12 +63,14 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         nezetMenu.add(szerkesztesNezetMenuPont);
         menuBar.add(nezetMenu);
 
+
         add(menuBar, BorderLayout.PAGE_START);
 
         feltoltesNezet = new OktatasFeltoltesNezet();
         szerkesztesNezet = new OktatasSzerkesztesNezet();
 
         add(feltoltesNezet, BorderLayout.CENTER);
+
     }
 
     @Override
@@ -81,6 +93,12 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
             add(feltoltesNezet, BorderLayout.CENTER);
         } else if (e.getSource() == szerkesztesNezetMenuPont) {
             add(szerkesztesNezet, BorderLayout.CENTER);
+        }else if (e.getSource()== mentesMenuPont){
+            try {
+                mentesfileba();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
     }
 
@@ -96,6 +114,27 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     @Override
     public void keyReleased(KeyEvent e) {
+
+    }
+
+    public  void mentesfileba()throws IOException{
+        file =new JFileChooser();
+
+        int returnVal = file.showDialog(ManualisOktatasAblak.this,
+                "Mentés");
+
+        //Process the results.
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file2 = file.getSelectedFile();
+            File file4= file.getCurrentDirectory();
+             File file3 = new File(file4.getCanonicalPath(),file2.getName());
+            FileOutputStream fis = new FileOutputStream(file3);
+            fis.close();
+
+        } else {
+
+        }
+        ;
 
     }
 }
