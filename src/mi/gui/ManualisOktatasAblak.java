@@ -174,12 +174,11 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
             try {
                 while (true) {
                     String line = br.readLine();
-                    String[] splits = line.split(" ");
                     KerdesValasz kv = new KerdesValasz();
-                    if(splits[0].equals("K:")) {kv.setKerdes(splits[1]);}
-                    else if (splits[0].equals("V:")) {
-                        while (splits[0].equals("V:"))
-                             kv.setValasz(splits[1]);
+                    if(line.matches("K:")) {kv.setKerdes(line.substring(3));}
+                    else if (line.matches("V:")) {
+                        //while (line.matches("V:"))
+                             kv.setValasz(line.substring(3));
                         kerdesekValaszok.add(new KerdesValasz(kv.getKerdes(), kv.getValaszok()));
                     }
                     else
@@ -189,9 +188,6 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
             } catch(IOException e) {
                 System.out.println(e);
             }
-
-
-
         }
     }
 }
