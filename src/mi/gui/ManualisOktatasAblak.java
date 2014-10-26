@@ -11,8 +11,14 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     private JMenuBar menuBar;
     private JMenu nezetMenu;
-    private JMenuItem feltoltesNezetMenuElem;
-    private JMenuItem szerkesztesNezetMenuElem;
+    private JMenuItem feltoltesNezetMenuPont;
+    private JMenuItem szerkesztesNezetMenuPont;
+
+    private JMenu fileMenu;
+    private JMenuItem betoltesMenuPont;
+    private JMenuItem mentesMenuPont;
+    private JMenuItem mentesMaskentMenuPont;
+
 
     private OktatasFeltoltesNezet feltoltesNezet;
     private OktatasSzerkesztesNezet szerkesztesNezet;
@@ -23,14 +29,29 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         //TODO file, sugo, akarmmi...
 
         menuBar = new JMenuBar();
+
+        fileMenu = new JMenu("Fájl");
+        fileMenu.setMnemonic(KeyEvent.VK_F);
+        betoltesMenuPont = new JMenuItem("Betöltés", KeyEvent.VK_O);
+        betoltesMenuPont.addActionListener(this);
+        fileMenu.add(betoltesMenuPont);
+        mentesMenuPont = new JMenuItem("Mentés", KeyEvent.VK_S);
+        mentesMenuPont.addActionListener(this);
+        fileMenu.add(mentesMenuPont);
+        mentesMaskentMenuPont = new JMenuItem("Mentés másként", KeyEvent.VK_A);
+        mentesMaskentMenuPont.addActionListener(this);
+        fileMenu.add(mentesMaskentMenuPont);
+        menuBar.add(fileMenu);
+
         nezetMenu = new JMenu("Nézet");
         nezetMenu.setMnemonic(KeyEvent.VK_N);
-        feltoltesNezetMenuElem = new JMenuItem("Feltöltés nézet", KeyEvent.VK_F);
-        feltoltesNezetMenuElem.addActionListener(this);
-        nezetMenu.add(feltoltesNezetMenuElem);
-        szerkesztesNezetMenuElem = new JMenuItem("Szerkesztés nézet", KeyEvent.VK_E);
-        szerkesztesNezetMenuElem.addActionListener(this);
-        nezetMenu.add(szerkesztesNezetMenuElem);
+        feltoltesNezetMenuPont = new JMenuItem("Feltöltés nézet", KeyEvent.VK_F);
+        feltoltesNezetMenuPont.addActionListener(this);
+        nezetMenu.add(feltoltesNezetMenuPont);
+        szerkesztesNezetMenuPont = new JMenuItem("Szerkesztés nézet", KeyEvent.VK_E);
+        szerkesztesNezetMenuPont.addActionListener(this);
+        nezetMenu.add(szerkesztesNezetMenuPont);
+        menuBar.add(nezetMenu);
 
         add(menuBar, BorderLayout.PAGE_START);
 
@@ -56,9 +77,9 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == feltoltesNezetMenuElem ) {
+        if (e.getSource() == feltoltesNezetMenuPont) {
             add(feltoltesNezet, BorderLayout.CENTER);
-        } else if (e.getSource() == szerkesztesNezetMenuElem) {
+        } else if (e.getSource() == szerkesztesNezetMenuPont) {
             add(szerkesztesNezet, BorderLayout.CENTER);
         }
     }
