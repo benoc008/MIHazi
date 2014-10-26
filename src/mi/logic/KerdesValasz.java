@@ -10,6 +10,9 @@ public class KerdesValasz {
         this.kerdes = kerdes;
         this.valaszok = valaszok;
     }
+    public KerdesValasz(){
+
+    }
 
     public String getKerdes() {
         return kerdes;
@@ -25,5 +28,15 @@ public class KerdesValasz {
 
     public void setValaszok(List<String> valaszok) {
         this.valaszok = valaszok;
+    }
+
+    public void setValasz(String valasz){
+        valaszok.add(valasz);
+    }
+
+    public String getValaszKiir(int i){
+        String vissza;
+        return vissza="V:"+" "+valaszok.get(i);
+
     }
 }
