@@ -6,6 +6,11 @@ public class KerdesValasz {
     public String kerdes;
     public List<String> valaszok;
 
+    public KerdesValasz(String kerdes, List<String> valaszok) {
+        this.kerdes = kerdes;
+        this.valaszok = valaszok;
+    }
+
     public String getKerdes() {
         return kerdes;
     }
