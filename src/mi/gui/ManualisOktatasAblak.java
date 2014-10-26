@@ -170,24 +170,31 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
             File file4=new File(file3.getCanonicalPath(),file2.getName());
             FileReader isr = new FileReader(file4);
             BufferedReader br = new BufferedReader(isr);
-
+            int i=0;
+            int j=1;
             try {
                 while (true) {
                     String line = br.readLine();
                     KerdesValasz kv = new KerdesValasz();
-                    if(line.matches("K:")) {kv.setKerdes(line.substring(3));}
-                    else if (line.matches("V:")) {
-                        //while (line.matches("V:"))
-                             kv.setValasz(line.substring(3));
-                        kerdesekValaszok.add(new KerdesValasz(kv.getKerdes(), kv.getValaszok()));
+                    if(line.matches("K:.*")) {
+                        i=i+1;
+                        if(i==2){
+                            kerdesekValaszok.add(new KerdesValasz(kv.getKerdes(), kv.getValaszok()));
+                            i=1;
+                        }
+                        kv.setKerdes(line.substring(3));
                     }
-                    else
-                        break;
+                    else if (line.matches("V:.*")) {
+                            kv.setValasz(line.substring(3));
+
                     }
-                br.close();
+
+                }
+
             } catch(IOException e) {
                 System.out.println(e);
             }
+            br.close();
         }
     }
 }
