@@ -18,8 +18,8 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        HtmlParser parser = new HtmlParser();
-        parser.parse();
+//        HtmlParser parser = new HtmlParser();
+//        parser.parse();
 
         Ablak ablak = new Ablak();
         Thread t = new Thread(ablak);

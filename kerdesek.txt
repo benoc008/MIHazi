@@ -5,6 +5,6 @@ V: lofasz habbal
 K: szoktal te szopni?
 V: igen
 K: Melyik a menobb?
-V: dsad
+V: te
 V: redvas szenya
 V: gennyes tus
