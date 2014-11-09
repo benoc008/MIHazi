@@ -1,11 +1,10 @@
 package mi.gui;
 
+import mi.logic.Sor;
 import mi.logic.KerdesValasz;
 
 import javax.swing.*;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,29 +13,11 @@ import java.util.List;
 
 public class OktatasSzerkesztesTableModel extends AbstractTableModel implements TableModel {
 
-    private class Elem {
-        String tipus;
-        String sor;
-
-        Elem(String tipus, String sor) {
-            this.tipus = tipus;
-            this.sor = sor;
-        }
-    }
-
-    private List<KerdesValasz> lista;
-    private List<Elem> sorok;
+    private List<Sor> sorok;
     String[] oszlopNevek = {"Típius", "Sor", "Törlés", "Hozzáadás"};
 
     public OktatasSzerkesztesTableModel(List<KerdesValasz> lista) {
-        this.lista = lista;
-        sorok = new ArrayList<>();
-        for (KerdesValasz kv : lista) {
-            sorok.add(new Elem("Kérdés", kv.getKerdes()));
-            for (String s : kv.getValaszok()) {
-                sorok.add(new Elem("Válasz", s));
-            }
-        }
+        setSorokFromKerdesValaszLista(lista);
     }
 
     @Override
@@ -88,12 +69,13 @@ public class OktatasSzerkesztesTableModel extends AbstractTableModel implements 
                             if(sorok.get(rowIndex).tipus.equals("Válasz")){
                                 sorok.remove(rowIndex);
                             } else {
-                                while(sorok.get(rowIndex).tipus.equals("Válasz")){
+                                sorok.remove(rowIndex);
+                                while(rowIndex < sorok.size() && sorok.get(rowIndex).tipus.equals("Válasz")){
                                     sorok.remove(rowIndex);
                                     i++;
                                 }
                             }
-                            fireTableRowsDeleted(rowIndex, i);
+                            fireTableDataChanged();
                         }
                     });
                     return torlesGomb;
@@ -105,7 +87,8 @@ public class OktatasSzerkesztesTableModel extends AbstractTableModel implements 
                     final JButton hozzaadasGomb = new JButton(oszlopNevek[columnIndex]);
                     hozzaadasGomb.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent arg0) {
-                            JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(hozzaadasGomb), "Button clicked for row " + rowIndex);
+                            sorok.add(rowIndex + 1, new Sor("Válasz", ""));
+                            fireTableDataChanged();
                         }
                     });
                     return hozzaadasGomb;
@@ -119,13 +102,22 @@ public class OktatasSzerkesztesTableModel extends AbstractTableModel implements 
         sorok.get(rowIndex).sor = (String) aValue;
     }
 
-    @Override
-    public void addTableModelListener(TableModelListener l) {
-
+    public void addSor(String tipus, String sor) {
+        sorok.add(new Sor(tipus, sor));
     }
 
-    @Override
-    public void removeTableModelListener(TableModelListener l) {
+    public List<KerdesValasz> getKerdesValaszok(){
+        return KerdesValasz.createListFromSorok(sorok);
+    }
 
+    public void setSorokFromKerdesValaszLista(List<KerdesValasz> lista) {
+        sorok = new ArrayList<>();
+        for (KerdesValasz kv : lista) {
+            sorok.add(new Sor("Kérdés", kv.getKerdes()));
+            for (String s : kv.getValaszok()) {
+                sorok.add(new Sor("Válasz", s));
+            }
+        }
+        fireTableDataChanged();
     }
 }

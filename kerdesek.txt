@@ -1,0 +1,9 @@
+K: mizu?
+V: semmi
+V: semmu kul
+V: lofasz habbal
+K: szoktal te szopni?
+V: igen
+K: Melyik a menobb?
+V: redvas szenya
+V: gennyes tus

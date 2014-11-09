@@ -14,6 +14,8 @@ import java.util.List;
 
 public class ManualisOktatasAblak extends JFrame implements Runnable, ActionListener, KeyListener {
 
+    private static String ALAP_FILE = "kerdesek.txt";
+
     private JMenuBar menuBar;
     private JMenu nezetMenu;
     private JMenuItem feltoltesNezetMenuPont;
@@ -24,9 +26,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private JMenuItem mentesMenuPont;
     private JMenuItem mentesMaskentMenuPont;
 
-
     private JFileChooser file;
-
 
     private OktatasFeltoltesNezet feltoltesNezet;
     private OktatasSzerkesztesNezet szerkesztesNezet;
@@ -34,17 +34,6 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     List<KerdesValasz> kerdesekValaszok = new ArrayList<>();
 
     public ManualisOktatasAblak() {
-        List<String> valaszok1 = new ArrayList<>();
-        valaszok1.add("semmi");
-        valaszok1.add("semmu kul");
-        valaszok1.add("lofasz habbal");
-        kerdesekValaszok.add(new KerdesValasz("mizu?", valaszok1));
-
-        List<String> valaszok2 = new ArrayList<>();
-        valaszok2.add("igen");
-        valaszok2.add("nem");
-        kerdesekValaszok.add(new KerdesValasz("szoktal te szopni?", valaszok2));
-
         setLayout(new BorderLayout());
 
         //TODO file, sugo, akarmmi...
@@ -79,6 +68,8 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         feltoltesNezet = new OktatasFeltoltesNezet(kerdesekValaszok);
         szerkesztesNezet = new OktatasSzerkesztesNezet(kerdesekValaszok);
 
+        kerdesekValaszokBetoltes(new File(ALAP_FILE));
+
         //add(feltoltesNezet, BorderLayout.CENTER);
         add(szerkesztesNezet, BorderLayout.CENTER);
     }
@@ -104,17 +95,9 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         } else if (e.getSource() == szerkesztesNezetMenuPont) {
             add(szerkesztesNezet, BorderLayout.CENTER);
         } else if (e.getSource() == mentesMenuPont) {
-            try {
-                mentesfileba();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
+            mentesFajlba();
         } else if (e.getSource() == betoltesMenuPont) {
-            try {
-                betoltesfilebol();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
+            betoltesFajlbol();
         }
     }
 
@@ -133,57 +116,55 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     }
 
-    public void mentesfileba() throws IOException {
+    public void mentesFajlba() {
+        kerdesekValaszok = szerkesztesNezet.getKerdesekValaszok();
+
         file = new JFileChooser();
         int returnVal = file.showDialog(ManualisOktatasAblak.this, "Mentés");
-        //Process the results.
+
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file2 = file.getSelectedFile();
-            File file4 = file.getCurrentDirectory();
-            File file3 = new File(file4.getCanonicalPath(), file2.getName());
-            FileWriter fis = new FileWriter(file3);
-            KerdesValasz kv = new KerdesValasz();
-            for (int i = 0; i < kerdesekValaszok.size(); i++) {
-                kv = kerdesekValaszok.get(i);
-                fis.write("K:" + " " + kv.getKerdes() + "\n");
-                for (int j = 0; j < kerdesekValaszok.get(i).getValaszok().size(); j++)
-                    fis.write(kv.getValaszKiir(j) + "\n");
+            try(FileWriter fis = new FileWriter(file.getSelectedFile())) {
+                for (KerdesValasz kv : kerdesekValaszok) {
+                    fis.write("K:" + " " + kv.getKerdes() + "\n");
+                    for (int j = 0; j < kv.getValaszok().size(); j++) {
+                        fis.write(kv.getValaszKiir(j) + "\n");
+                    }
+                }
+            } catch (IOException e){
+                JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
             }
-            fis.close();
-        } else {
         }
-        ;
     }
 
-    public void betoltesfilebol() throws IOException {
-        kerdesekValaszok = new ArrayList<>();
+    public void betoltesFajlbol() {
+
         file = new JFileChooser();
         int returnVal = file.showDialog(ManualisOktatasAblak.this, "Betöltés");
-        //Process the results.
+
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file2 = file.getSelectedFile();
-            File file3 = file.getCurrentDirectory();
-            File file4 = new File(file3.getCanonicalPath(), file2.getName());
-            FileReader isr = new FileReader(file4);
-            BufferedReader br = new BufferedReader(isr);
-            try {
-                String line = br.readLine();
-                while (line != null) {
-                    KerdesValasz kv = new KerdesValasz();
-                    if (line.matches("K:.*")) {
-                        kv.setKerdes(line.substring(3));
-                        line = br.readLine();
-                        while (line != null && line.matches("V:.*")){
-                            kv.addValasz(line.substring(3));
-                            line = br.readLine();
-                        }
-                    }
-                    kerdesekValaszok.add(kv);
-                }
-            } catch (IOException e) {
-                System.out.println(e);
-            }
-            br.close();
+            kerdesekValaszokBetoltes(file.getSelectedFile());
         }
+    }
+
+    private void kerdesekValaszokBetoltes(File file) {
+        kerdesekValaszok = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line = br.readLine();
+            while (line != null) {
+                KerdesValasz kv = new KerdesValasz();
+                if (line.matches("K:.*")) {
+                    kv.setKerdes(line.substring(3));
+                    line = br.readLine();
+                    while (line != null && line.matches("V:.*")){
+                        kv.addValasz(line.substring(3));
+                        line = br.readLine();
+                    }
+                }
+                kerdesekValaszok.add(kv);
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        szerkesztesNezet.tableModel.setSorokFromKerdesValaszLista(kerdesekValaszok);
     }
 }

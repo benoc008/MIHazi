@@ -36,8 +36,25 @@ public class KerdesValasz {
     }
 
     public String getValaszKiir(int i){
-        String vissza;
-        return vissza="V:"+" "+valaszok.get(i);
+        return "V:" + " " + valaszok.get(i);
 
+    }
+
+    public static List<KerdesValasz> createListFromSorok(List<Sor> sorok){
+        List<KerdesValasz> ret = new ArrayList<>();
+        int i = 0;
+        while(i < sorok.size()){
+            if(sorok.get(i).tipus.equals("Kérdés")){
+                String kerdes = sorok.get(i).sor;
+                List<String> valaszok = new ArrayList<>();
+                i++;
+                while(i < sorok.size() && sorok.get(i).tipus.equals("Válasz")){
+                    valaszok.add(sorok.get(i).sor);
+                    i++;
+                }
+                ret.add(new KerdesValasz(kerdes,valaszok));
+            }
+        }
+        return ret;
     }
 }
