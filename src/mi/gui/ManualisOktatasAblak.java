@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ManualisOktatasAblak extends JFrame implements Runnable, ActionListener, KeyListener {
 
-    private static String ALAP_FILE = "kerdesek.txt";
+    private  String ALAP_FILE = "kerdesek.txt";
 
     private JMenuBar menuBar;
     private JMenu nezetMenu;
@@ -99,6 +99,9 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         } else if (e.getSource() == betoltesMenuPont) {
             betoltesFajlbol();
         }
+        else if (e.getSource()==mentesMaskentMenuPont){
+            mentesMaskentFajlba();
+        }
     }
 
     @Override
@@ -116,23 +119,35 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     }
 
-    public void mentesFajlba() {
+    public void mentesMaskentFajlba() {
         kerdesekValaszok = szerkesztesNezet.getKerdesekValaszok();
 
         file = new JFileChooser();
         int returnVal = file.showDialog(ManualisOktatasAblak.this, "Mentés");
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            try(FileWriter fis = new FileWriter(file.getSelectedFile())) {
-                for (KerdesValasz kv : kerdesekValaszok) {
-                    fis.write("K:" + " " + kv.getKerdes() + "\n");
-                    for (int j = 0; j < kv.getValaszok().size(); j++) {
-                        fis.write(kv.getValaszKiir(j) + "\n");
-                    }
+            kerdesValaszokMentes(file.getSelectedFile());
+         }
+    }
+
+    public void mentesFajlba(){
+        kerdesekValaszok = szerkesztesNezet.getKerdesekValaszok();
+        File file=new File(ALAP_FILE);
+        kerdesValaszokMentes(file);
+    }
+
+    private void kerdesValaszokMentes(File file){
+        try(
+            FileWriter fis = new FileWriter(file)) {
+            ALAP_FILE=file.getCanonicalPath();
+            for (KerdesValasz kv : kerdesekValaszok) {
+                fis.write("K:" + " " + kv.getKerdes() + "\n");
+                for (int j = 0; j < kv.getValaszok().size(); j++) {
+                    fis.write(kv.getValaszKiir(j) + "\n");
                 }
-            } catch (IOException e){
-                JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
             }
+        } catch (IOException e){
+            JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
         }
     }
 
@@ -149,6 +164,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private void kerdesekValaszokBetoltes(File file) {
         kerdesekValaszok = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+            ALAP_FILE=file.getCanonicalPath();
             String line = br.readLine();
             while (line != null) {
                 KerdesValasz kv = new KerdesValasz();
