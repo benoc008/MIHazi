@@ -28,8 +28,8 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
     private InputProcessor inputProcessor;
 
-    public Ablak() {
-        inputProcessor = new InputProcessor(); //feldolgozza a bemenetet
+    public Ablak(InputProcessor inputProcessor) {
+        this.inputProcessor = inputProcessor; //feldolgozza a bemenetet
 
         setLayout(new BorderLayout());      // felosztja az ablakot felsö oldaso job ball középső sávra
 
@@ -75,7 +75,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
     private void createView() {
         // Create and set up the window.
-        JFrame frame = new Ablak();
+        JFrame frame = new Ablak(inputProcessor);
         frame.setSize(640, 480);
         frame.setTitle("ChatBot");
         // Display the window.
@@ -89,8 +89,9 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     }
 
     public void kuldes() {
-        inputProcessor.add(bemenetiMezo.getText() + "\n");
+        String valasz = inputProcessor.add(bemenetiMezo.getText() + "\n");
         chatAblak.append(bemenetiMezo.getText() + "\n");
+        chatAblak.append(valasz + "\n");
         bemenetiMezo.setText("");
     }
 
