@@ -1,27 +1,19 @@
-Használatimegjegyzés;
 dollár;főnév
-Továbbirészletezés;
 csillag;főnév
 kérdőjel;főnév
 aposztróf;főnév
-zárójel;;;;írásjel
-zárójel;;;;írásjel
-zárójel;;;;írásjel
 plusz;melléknév
 vessző;főnév
 kötőjel;főnév
 nulla;számnév
-Továbbirészletezés;
 kettő;számnév
 három;számnév
 négy;számnév
 öt;számnév
-Kifejezések;
 hét;számnév
 nyolc;számnév
 kilenc;számnév
 pontosvessző;főnév
-Kifejezés;
 kukac;főnév
 a;rövidítés
 aba;abaposztó;főnév
@@ -29,7 +21,6 @@ abajdóc;melléknév
 abajgat;ige
 abdalo;főnév
 Abaliget;tulajdonnév;földrajzinév
-aba;abaposztó;főnév
 abarognózis;főnév
 abasso;határozó
 Abasár;tulajdonnév;földrajzinév
@@ -203,11 +194,9 @@ abszencia;főnév
 abszentizmus;főnév
 abszentista;főnév
 ablegatusabsentium;főnév
-abszenciátkap;
 abszentál;ige
 abszentáljamagát;kifejezés
 abszint;főnév
-absitinjuriaverbo;
 absitomen;kifejezés
 absnicli;főnév
 Absolon;tulajdonnév
@@ -230,14 +219,12 @@ absztinencia;főnév
 absztinencia;főnév
 absztrakt;melléknév
 absztraktum;főnév
-abstractumproconcreto;
 abstrus;melléknév
 abszurd;melléknév
 abszurdum;főnév
 abszurd;melléknév
 abszcissza;főnév
 abszencia;főnév
-abszenciátkap;
 abszentista;főnév
 abszentizmus;főnév
 abszentál;ige
@@ -268,7 +255,6 @@ absztrakt;melléknév
 absztraktum;főnév
 abszurd;melléknév
 abszurdum;főnév
-abu;
 Abuja;tulajdonnév
 abúlia;főnév
 abundancia;főnév
@@ -276,35 +262,22 @@ abundancia;főnév
 abusive;határozó
 abúzus;főnév
 abususnontollitusum;kifejezés
-abususnontollitusum;
 abyssus;főnév
 abyssusabyssuminvocat;kifejezés
 abcúg;indulatszó
 abcúgol;ige
 ababsurdo;kifejezés
 abesseadposse;kifejezés
-abesseadposse;
 abhino;kifejezés
-abhocetabhac;
 abhocetabhac;kifejezés
-abhocetabhac;
-abhodierno;
-abigneignem;
 abimopectore;határozó
 abinitio;kifejezés
-abinstantia;
 abintestato;kifejezés
 abinvisis;határozó
 abirato;határozó
-abJoveprincipium;
-abovo;
 abovousqueadmala;szófaj
-abovousqueadmala;
 abseterno;főnév
 abuniversaliadparticulare;kifejezés
-abuniversaliadparticulare;
-abunodisceomnes;
-abunodisceomnes;
 Abád;tulajdonnév
 Abádszalók;tulajdonnév;földrajzinév
 abárol;abál;ige
@@ -344,7 +317,6 @@ akcidencia;főnév
 accidenciák;főnév
 akcidens;főnév
 akcidentális;melléknév
-akcidentaliter;
 akcidencia;főnév
 accidenciák;főnév
 acciditinpunctoquodnonsperaturinanno;kifejezés
@@ -363,7 +335,6 @@ akkomodáció;főnév
 akkomodál;ige
 akkomodáció;főnév
 accompagnement;főnév
-Kifejezés;
 akkordál;ige
 accoucheur;főnév
 Accra;tulajdonnév
@@ -399,7 +370,6 @@ achca;kifejezés
 acháj;főnév
 achát;agát;főnév
 Acicét;tulajdonnév
-Továbbirészletezés;
 aciditás;főnév
 acidum;főnév
 acidózis;főnév
@@ -428,7 +398,6 @@ Acsád;tulajdonnév;földrajzinév
 akt;főnév
 akta;főnév
 actaad;ige
-actaestfabula;
 ACTH;főnév
 akcia;főnév
 actinodermatitis;főnév
@@ -525,7 +494,6 @@ adatol;ige
 adatszerű;melléknév
 adatszolgáltatás;főnév
 adattár;főnév
-Adatvédelminyilatkozat;
 adde;ige
 adde;ige
 addenda;főnév
@@ -536,7 +504,6 @@ addigra;határozószó
 addikció;főnév
 addiktológus;főnév
 addiktív;melléknév
-addio;
 addíció;főnév
 addsza;főnév
 adducens;melléknév
@@ -725,7 +692,6 @@ advocatus;főnév
 advocatusdei;kifejezés
 advocatusdiaboli;kifejezés
 advokatúra;főnév
-adabsurdo;
 adabszurdum;kifejezés
 adabszurdum;kifejezés
 adaktatesz;kifejezés
@@ -737,14 +703,12 @@ adanimumvenni;kifejezés
 adaudiendumregis;kifejezés
 adaudiendumregis;kifejezés
 adaudiendumverbum;kifejezés
-adbeneplacitum;
 adCalendasGraecas;kifejezés
 adCalendasGraecas;kifejezés
 adcaptumvulgi;kifejezés
 addecretum;határozó
 addeliberandum;határozó
 addepositum;határozó
-addiemdictum;
 adduplicandum;kifejezés
 ádécouvert;kifejezés
 adexemplum;kifejezés
@@ -1187,7 +1151,6 @@ agydaganat;főnév
 agyhomok;főnév
 agymosás;főnév
 agyműködés;főnév
-Továbbirészletezés;
 agyonbonyolít;ige
 agyonbonyolított;melléknév
 agyondicsér;ige
@@ -1350,7 +1313,6 @@ akcia;főnév
 akcidencia;főnév
 akcidens;főnév
 akcidensszedő;főnév
-akcidentaliter;
 akcidentális;melléknév
 akció;főnév
 akcióképes;melléknév
@@ -1374,7 +1336,6 @@ akkompaníroz;ige
 akkompaníroz;ige
 akkor;névmás;határozószó
 akkora;névmás;melléknév
-Kifejezés;
 akkordál;ige
 akkori;névmás;melléknév
 akkoriban;névmás;határozószó
@@ -2462,7 +2423,6 @@ androphobia;főnév
 András;tulajdonnév
 Andrásfa;tulajdonnév;földrajzinév
 André;tulajdonnév
-Szóhasználatimegjegyzések;
 anekdota;főnév
 anekdotikus;melléknév
 anekdotázik;ige
@@ -2623,14 +2583,12 @@ annunciál;ige
 Annunciáta;tulajdonnév
 annuál;ige
 annyi;számnév;melléknév
-Szóhasználatimegjegyzés;
 annyiadik;névmás;sorszámnév
 annyian;névmás;határozószó
 annyiban;névmás;határozószó
 annyiból;névmás;határozószó
 annyiféle;névmás;melléknév
 annyira;névmás;határozószó
-Szóhasználatimegjegyzés;
 annyiszor;névmás;határozószó
 annyival;névmás;határozószó
 annyimint;kifejezés
@@ -3347,7 +3305,6 @@ arisztokrata;főnév
 arisztokratikus;melléknév
 arisztokratizmus;főnév
 arisztokrácia;főnév
-Arisztotelész;
 Arita;tulajdonnév
 aritmetika;számtan;főnév
 aritmetika;számtan;főnév
@@ -3603,7 +3560,6 @@ Asszunta;tulajdonnév
 asszéki;főnév
 asszír;főnév
 asszó;főnév
-Használatimegjegyzés;
 Asztaróth;tulajdonnév
 Astarte;tulajdonnév
 asteriscus;főnév
@@ -3705,7 +3661,6 @@ Aszófő;tulajdonnév;földrajzinév
 aszú;melléknév
 aszúbor;főnév
 aszürévonalak;főnév
-Használatimegjegyzés;
 at;írásjel
 Atala;tulajdonnév
 Atalanta;tulajdonnév
@@ -4030,7 +3985,6 @@ avantgárda;főnév
 avanti;határozó
 avantcorps;főnév
 avanzsál;avandzsíroz;ige
-Kifejezés;
 Avarka;tulajdonnév
 avas;melléknév
 avasodik;ige
@@ -4090,7 +4044,6 @@ axis;főnév
 axiális;melléknév
 axióma;főnév
 axonometria;főnév
-Továbbirészletezés;
 azalatt;névmás;határozószó
 azálea;főnév
 azaz;kötőszó
@@ -4098,12 +4051,10 @@ azazhogy;kötőszó
 azbeszt;főnév
 azelőtt;névmás;határozószó
 Azerbajdzsán;tulajdonnév
-Továbbirészletezés;
 azilum;főnév
 aziránt;névmás;határozószó
 aznap;határozószó
 aznapi;melléknév
-Kifejezések;
 azonban;kötőszó
 azonfelül;kötőszó
 azonfelül;kötőszó
@@ -4149,10 +4100,8 @@ azót;főnév
 azóta;névmás;határozószó
 azúrkék;azúr;melléknév
 azúrkék;azúr;melléknév
-abaculoadangulum;
 abattuta;határozó
 abeneplacito;kifejezés
-abovemajoridiscitarareminor;
 acapella;kifejezés
 acapitafoetetpiscis;kifejezés
 acapitefoetetpiscis;kifejezés
@@ -4161,7 +4110,6 @@ acapiteusqueadcalcem;kifejezés
 acappella;határozószó
 acapriccio;kifejezés
 acommodo;főnév
-aconto;
 acostí;főnév
 adato;kifejezés
 adue;kifejezés
@@ -4198,7 +4146,6 @@ apriori;határozó
 aquattro;kifejezés
 asuoarbitrio;kifejezés
 asuoplacito;kifejezés
-Aszóeredete;
 tempera;főnév
 atempo;kifejezés
 atre;kifejezés
@@ -4210,9 +4157,6 @@ averbisadverbera;kifejezés
 averbisadverbera;kifejezés
 avista;főnév
 avocesola;kifejezés
-B;b;betű
-Továbbirészletezés;
-Továbbirészletezés;
 Bálám;tulajdonnév
 bab;főnév
 baba;főnév
@@ -4307,7 +4251,6 @@ bagzik;ige
 bagázs;főnév
 bagázsi;főnév
 bagázsia;főnév
-Kifejezések;
 bagóhit;főnév
 bagósüveg;főnév
 bagózik;ige
@@ -4551,7 +4494,6 @@ bamboche;főnév
 bambusonia;főnév
 bambusz;bambusznád;főnév
 bambusz;bambusznád;főnév
-Továbbirészletezés;
 Bana;tulajdonnév;földrajzinév
 banális;melléknév
 banalitás;főnév
@@ -4732,7 +4674,6 @@ barátnő;főnév
 barátság;főnév
 barátságos;melléknév
 barátságosan;határozószó
-Továbbirészletezés;
 barátságtalan;melléknév
 baráttánc;főnév
 barátgaras;főnév
@@ -4748,7 +4689,6 @@ barét;főnév
 Barót;tulajdonnév
 basa;pasa;főnév
 Basal;tulajdonnév;földrajzinév
-Továbbirészletezés;
 baseball;főnév
 basilaris;melléknév
 bazíroz;ige
@@ -4821,7 +4761,6 @@ Bazsó;tulajdonnév
 bazálisganglionok;főnév
 bazár;főnév
 bazíroz;ige
-Továbbirészletezés;
 Bea;tulajdonnév
 bead;ige
 beadvány;főnév
@@ -5100,7 +5039,6 @@ begombolkozik;ige
 begubózik;ige
 begubózik;ige
 begurul;ige
-Kifejezések;
 begyakorlás;főnév
 begyakorol;ige
 begyakoroltat;ige
@@ -5132,7 +5070,6 @@ begöngyölget;ige
 begörbít;ige
 begördít;ige
 begördül;ige
-Továbbirészletezés;
 behabar;ige
 behaboz;ige
 behabzsol;ige
@@ -5142,7 +5079,6 @@ behajlott;melléknév
 behajló;melléknév
 behajol;ige
 behajszol;ige
-Továbbirészletezés;
 behajtat;ige
 behajtás;főnév
 behajít;ige
@@ -5343,7 +5279,6 @@ belakkoz;ige
 belapul;ige
 belbecs;főnév
 Belecska;tulajdonnév;földrajzinév
-Továbbirészletezés;
 belead;ige
 beleakad;ige
 beleakaszkodik;ige
@@ -5465,7 +5400,6 @@ belekényszerít;ige
 beleképzel;ige
 belekóstol;ige
 beleköp;ige
-beleköt;
 belelapoz;ige
 belelehel;ige
 belelkesedik;ige
@@ -5543,7 +5477,6 @@ beleáll;ige
 beleállít;ige
 beleárt;ige
 beleárt;ige
-beleáztatige;
 beleél;ige
 beleépít;ige
 beleér;ige
@@ -5635,7 +5568,6 @@ belécez;belécel;ige
 belég;főnév
 belégel;ige
 belégzés;főnév
-Továbbirészletezés;
 belélegzik;ige
 belélegzik;ige
 beléndek;főnév
@@ -5685,7 +5617,6 @@ bemászik;ige
 bemázol;ige
 bemázsál;ige
 bemér;ige
-Továbbirészletezés;
 Bence;tulajdonnév
 benci;főnév
 bencés;főnév
@@ -6319,7 +6250,6 @@ beékel;ige
 beékelődik;ige
 beépít;ige
 beépül;ige
-Továbbirészletezés;
 beérik;ige
 beérkezik;ige
 beígér;ige
@@ -6623,7 +6553,6 @@ bivaly;főnév
 bivak;főnév
 bivouacozik;ige
 bivouaquiroz;ige
-Kifejezések;
 bizakodik;ige
 bizakodás;főnév
 bizakodó;melléknév
@@ -6647,8 +6576,6 @@ bizomány;főnév
 bizományi;melléknév
 bizományos;főnév
 bizonnyal;határozószó
-Kifejezések;
-Kifejezések;
 bizonygat;ige
 bizonylat;főnév
 bizonyos;melléknév
@@ -7152,7 +7079,6 @@ bornírt;melléknév
 bornírt;melléknév
 boroboly;főnév
 borogat;ige
-Kifejezés;
 boronafal;főnév
 boronafog;főnév
 boronahajó;főnév
@@ -7778,7 +7704,6 @@ bájos;melléknév
 bájram;főnév
 bájt;főnév
 bájzli;főnév
-Kifejezések;
 bála;főnév
 báli;melléknév
 Bálint;tulajdonnév
@@ -7820,7 +7745,6 @@ bántás;főnév
 bántó;melléknév
 bántódás;főnév
 bánus;főnév
-Továbbirészletezés;
 bányalámpa;főnév
 bányarém;főnév
 bányavidék;főnév
@@ -7832,7 +7756,6 @@ bánásmód;főnév
 bár;habár;kötőszó
 bárca;barca;főnév
 bárcsak;határozószó
-Kifejezés;
 bárdol;ige
 bárdolatlan;melléknév
 bárgyú;szófaj
@@ -7870,7 +7793,6 @@ Bársonyka;tulajdonnév
 bársonyos;melléknév
 bársonyszín;főnév
 Bárdudvarnok;tulajdonnév;földrajzinév
-Kifejezés;
 Báránd;tulajdonnév;földrajzinév
 bárány;főnév
 báránybőr;főnév
@@ -7904,7 +7826,6 @@ báva;melléknév
 Bázakerettye;tulajdonnév;földrajzinév
 bázis;főnév
 pernahajder;főnév
-Továbbirészletezés;
 Béb;tulajdonnév;földrajzinév
 bébi;főnév
 bébillér;főnév
@@ -8064,7 +7985,6 @@ bértulajdonos;főnév
 bérév;főnév
 bérösszeg;főnév
 bésigue;főnév
-Kifejezések;
 béte;főnév
 bétel;főnév
 bétise;főnév
@@ -8128,7 +8048,6 @@ Bókaháza;tulajdonnév;földrajzinév
 bóklász;ige
 bóklászik;ige
 bókol;ige
-Továbbirészletezés;
 bólint;ige
 bólintás;főnév
 bólogat;ige
@@ -8153,7 +8072,6 @@ böfög;ige
 böfögés;főnév
 bög;főnév
 bögre;főnév
-Kifejezések;
 bögyörő;főnév
 begyes;melléknév
 begyesedik;ige
@@ -8321,7 +8239,6 @@ bőgős;főnév
 bőgőzik;ige
 bőkezű;melléknév
 bőkezűen;határozószó
-Továbbirészletezés;
 Bőny;tulajdonnév;földrajzinév
 bőnye;főnév
 bőr;főnév
@@ -9702,8 +9619,6 @@ kuzin;főnév
 coutequecoute;kifejezés
 kuverta;főnév
 coxa;főnév
-Továbbirészletezés;
-Továbbirészletezés;
 crapula;főnév
 kreáció;főnév
 kreatúra;főnév
@@ -9813,7 +9728,6 @@ Csanádalberti;tulajdonnév;földrajzinév
 Csanádapáca;tulajdonnév;földrajzinév
 Csanádpalota;tulajdonnév;földrajzinév
 csalán;főnév
-Továbbirészletezés;
 csapadék;főnév
 csapadékmérő;főnév
 csapat;főnév
@@ -9854,7 +9768,6 @@ csapzik;ige
 csapzott;melléknév
 csapágy;főnév
 csapágyfém;főnév
-Továbbirészletezés;
 csapó;főnév
 csapóajtó;főnév
 csapódeszka;főnév
@@ -10023,13 +9936,11 @@ cseprő;melléknév
 csepül;ige
 csepű;főnév
 csepűrágó;főnév
-Kifejezések;
 cserbenhagy;ige
 cserbenhagy;ige
 Cserdi;tulajdonnév;földrajzinév
 cserdít;csördít;ige
 csördül;ige
-Továbbirészletezés;
 cserebere;főnév
 cserebere;főnév
 csereberél;ige
@@ -10388,7 +10299,6 @@ csombókos;melléknév
 csomorika;főnév
 csompó;főnév
 Csomád;tulajdonnév;földrajzinév
-Kifejezések;
 csomókbanelhelyezkedőlevelek;főnév
 csomópont;főnév
 csomós;melléknév
@@ -10468,11 +10378,9 @@ csucsorít;ige
 csucsujgat;ige
 csucsul;ige
 csoda;főnév
-Kifejezések;
 csuhasz;melléknév
 csuhé;főnév
 csuk;ige
-Kifejezések;
 csukafej;főnév
 csukafejes;főnév
 csukamájolaj;főnév
@@ -10533,7 +10441,6 @@ Csáfordjánosfa;tulajdonnév;földrajzinév
 csája;főnév
 Csák;tulajdonnév
 Csákberény;tulajdonnév;földrajzinév
-Közmondás;
 csáklya;főnév
 csáklyáz;ige
 Csákvár;tulajdonnév;földrajzinév
@@ -10809,7 +10716,6 @@ csővezeték;főnév
 Csővár;tulajdonnév;földrajzinév
 csüd;főnév
 csűr;főnév
-Szóhasználatimegjegyzés;
 csűrdöngölő;főnév
 csűröl;csúrol;ige
 cubeba;főnév
@@ -10983,7 +10889,6 @@ cézium;főnév
 cézár;főnév
 cíkszár;főnév
 cím;főnév
-Kifejezések;
 címerdísz;főnév
 címeres;melléknév
 címermező;főnév
@@ -11139,7 +11044,6 @@ Damáz;tulajdonnév
 Danausokajándéka;kifejezés
 dancs;főnév
 dendi;főnév
-Kifejezések;
 Daniella;tulajdonnév
 Daniló;tulajdonnév
 dankasirály;főnév
@@ -11807,7 +11711,6 @@ diadalének;főnév
 diadalív;főnév
 diadém;főnév
 diadém;főnév
-Kifejezés;
 dietetika;főnév
 dietetikus;melléknév
 diafilm;főnév
@@ -11897,7 +11800,6 @@ didergés;főnév
 didi;főnév
 Didot;főnév
 dízel;melléknév
-Kifejezés;
 dietális;melléknév
 dietetika;főnév
 dietetikus;melléknév
@@ -12263,7 +12165,6 @@ diákkonyha;főnév
 diákság;főnév
 Diána;tulajdonnév
 diárium;főnév
-Kifejezés;
 diétenklasse;főnév
 diétázik;ige
 dió;főnév
@@ -12533,7 +12434,6 @@ dotáció;főnév
 dotál;ige
 douane;főnév
 dablett;főnév
-Kifejezés;
 doxológia;főnév
 doajen;melléknév
 Dozmat;tulajdonnév;földrajzinév
@@ -12658,7 +12558,6 @@ duellál;ige
 duenna;főnév
 duett;főnév
 dug;ige
-Kifejezés;
 dugasz;főnév
 dugaszol;ige
 dugattyú;főnév
@@ -13242,7 +13141,6 @@ Ecseny;tulajdonnév;földrajzinév
 Ecser;tulajdonnév;földrajzinév
 ecset;főnév
 ecsetel;ige
-Továbbirészletezés;
 Ecséd;tulajdonnév;földrajzinév
 Ecuador;tulajdonnév
 Edda;tulajdonnév
@@ -13337,10 +13235,8 @@ egotista;főnév
 egotibimusicabo;kifejezés
 egres;köszméte;büszke;főnév
 egzekúció;főnév
-Továbbirészletezés;
 egyaránt;határozószó
 egyazon;névmás;melléknév
-Továbbirészletezés;
 egybead;ige
 egybefoglal;ige
 egybeforr;ige
@@ -13411,7 +13307,6 @@ egyenlőképp;egyenlőképpen;határozószó
 egyenlőre;határozószó
 egyenlősdi;főnév
 egyenlőség;főnév
-Kifejezés;
 egyenlőtlen;melléknév
 egyenruha;főnév
 egyenruház;ige
@@ -13494,7 +13389,6 @@ egyházatya;főnév
 egyházfi;főnév
 egyházgyűlés;főnév
 egyházi;melléknév
-egyháziszemély;
 egyházjog;főnév
 egyházkerület;főnév
 egyházközség;főnév
@@ -13712,9 +13606,7 @@ eketaliga;ekekaruca;eketalicskó;eketargonca;főnév
 eketaliga;ekekaruca;eketalicskó;eketargonca;főnév
 ekevas;laposvas;szántóvas;főnév
 elektrokardiográf;EKG;főnév
-ekhó;
 ekhós;melléknév
-Továbbirészletezés;
 eklézsia;főnév
 eklézsia;főnév
 ekkor;névmás;határozószó
@@ -13772,7 +13664,6 @@ ekörül;névmás;határozószó
 eközben;mindeközben;névmás;határozószó
 eközött;eközt;határozószó
 eközött;eközt;határozószó
-Továbbirészletezés;
 elaborátum;főnév
 elaborátum;főnév
 elad;ige
@@ -15709,7 +15600,6 @@ elünnepel;ige
 elüt;ige
 elüttet;ige
 elüvegesedik;ige
-Továbbirészletezés;
 előad;ige
 előadás;főnév
 előadó;melléknév
@@ -15811,7 +15701,6 @@ előparancsol;ige
 előrag;főnév
 előrajz;főnév
 előrajzol;ige
-Továbbirészletezés;
 előrebocsát;ige
 előregondolkodás;főnév
 előrehajol;ige
@@ -16152,7 +16041,6 @@ endoterm;melléknév
 Endre;tulajdonnév
 Endrefalva;tulajdonnév;földrajzinév
 Endrőc;tulajdonnév;földrajzinév
-Szóhasználatimegjegyzések;
 enemű;névmás;melléknév
 energia;főnév
 energiaforrás;főnév
@@ -16638,7 +16526,6 @@ esszencialiter;határozószó
 esszenciális;melléknév
 eszcájg;főnév
 esszénus;főnév
-Használatimegjegyzés;
 est;főnév
 estalkony;főnév
 este;hatátozószó
@@ -16667,7 +16554,6 @@ eszerint;névmás;határozószó
 eszes;melléknév
 eszesedik;ige
 észveszett;eszeveszett;melléknév
-Továbbirészletezés;
 eszik;ige
 eszkadron;főnév
 eszkaláció;főnév
@@ -16744,7 +16630,6 @@ esztétika;főnév
 esztétikus;melléknév
 esztézis;főnév
 eszű;melléknév
-Használatimegjegyzés;
 esély;főnév
 esés;főnév
 eső;főnév
@@ -17096,7 +16981,6 @@ exsilium;főnév
 exstirpál;ige
 exsufflatio;főnév
 eksztázis;főnév
-Továbbirészletezés;
 extempo;főnév
 extemporál;ige
 extemporizál;ige
@@ -17145,7 +17029,6 @@ extremitások;főnév
 extrovertált;melléknév
 extrudál;ige
 extrém;melléknév
-Továbbirészletezés;
 eksztázis;főnév
 exteriőr;főnév
 exuvia;főnév
@@ -17182,7 +17065,6 @@ ezerjófű;főnév
 ezerjófű;főnév
 ezermester;főnév
 ezernyi;melléknév
-Továbbirészletezés;
 eziránt;névmás;határozószó
 ezoterikus;melléknév
 ezotéria;főnév
@@ -18024,7 +17906,6 @@ fekély;főnév
 fekélyes;melléknév
 fekélyesedik;ige
 fekü;főnév
-Továbbirészletezés;
 felad;ige
 feladat;főnév
 feladogat;ige
@@ -18487,7 +18368,6 @@ felkever;ige
 felkeveredik;ige
 felkiált;ige
 felkiáltó;melléknév
-Használatimegjegyzés;
 felkiáltószó;főnév
 mondat;főnév
 mód;főnév
@@ -18736,7 +18616,6 @@ felszakít;felszakaszt;ige
 felszalad;ige
 felszalagoz;ige
 felszarvaz;ige
-Kifejezés;
 felszedeget;ige
 felszeg;ige
 felszegez;felszögez;ige
@@ -18908,7 +18787,6 @@ feltételez;ige
 feltételezhetően;határozószó
 feltételezés;főnév
 feltétlen;melléknév
-Továbbirészletezés;
 feltéve;határozószó
 feltölt;ige
 feltöltöget;ige
@@ -18950,7 +18828,6 @@ felvehető;melléknév
 felver;ige
 felvergődik;ige
 felvesz;ige
-Kifejezés;
 felvetődik;ige
 felvetődtet;ige
 felvevés;főnév
@@ -19108,7 +18985,6 @@ feminin;melléknév
 feminin;melléknév
 feminin;melléknév
 feminizmus;főnév
-Kifejezések;
 fendöszjekl;kifejezés
 fene;főnév
 fenekedett;feneklett;melléknév
@@ -19296,7 +19172,6 @@ fetva;főnév
 feudalizmus;főnév
 feudum;főnév
 feudális;melléknév
-feudálisjáradék;
 feuerpikét;főnév
 feuilletonista;főnév
 fez;főnév
@@ -19330,7 +19205,6 @@ ficam;főnév
 ficamodik;ige
 ficamodott;melléknév
 ficánkol;fickándozik;ige
-Továbbirészletezés;
 fickóra;határozószó
 ficsor;ficsór;főnév
 ficsor;ficsór;főnév
@@ -19523,7 +19397,6 @@ fitológia;főnév
 fitos;melléknév
 fetreng;fitringel;ige
 fitt;melléknév
-Kifejezés;
 fityfiritty;főnév
 fittyeget;ige
 fittyen;ige
@@ -20002,7 +19875,6 @@ formátum;főnév
 formátumcsinálás;főnév
 formáz;ige
 forog;ige
-Továbbirészletezés;
 forrad;ige
 forradalmi;melléknév
 forradalom;főnév
@@ -20121,7 +19993,6 @@ frecskay;ige
 frecskel;fröcsköl;ige
 Fredegonde;tulajdonnév
 Frederik;tulajdonnév
-Továbbirészletezés;
 Freetown;tulajdonnév
 fregatt;főnév
 fregoli;főnév
@@ -20264,7 +20135,6 @@ fura;melléknév
 furadék;főnév
 furakodik;ige
 furat;főnév
-furatosfőnév;
 furcsa;fura;melléknév
 furcsaság;főnév
 furcsán;határozószó
@@ -20539,7 +20409,6 @@ féloldalt;határozószó
 félposztó;főnév
 félpálya;főnév
 félpénz;főnév
-Továbbirészletezés;
 félrebeszél;ige
 félrecsap;ige
 félreeső;melléknév
@@ -20719,7 +20588,6 @@ fírol;ige
 fób;főnév
 fóbia;főnév
 fógelfrej;melléknév
-Kifejezés;
 fókusz;főnév
 fókuszál;ige
 fólia;főnév
@@ -20781,7 +20649,6 @@ földpince;főnév
 földpálya;főnév
 földpát;főnév
 földrajz;főnév
-földrajzinév;
 földrakás;főnév
 földrengés;főnév
 földrész;főnév
@@ -20808,7 +20675,6 @@ fölheccel;ige
 felkel;fölkel;ige
 felkelés;fölkelés;főnév
 fölrámol;ige
-Továbbirészletezés;
 felvállal;fölvállal;ige
 fölé;névutó
 föléje;névmás;határozószó
@@ -20871,7 +20737,6 @@ fúvódás;főnév
 fúvóka;főnév
 fúvókar;főnév
 fúvólyuk;főnév
-fúvósfőnév;
 fúvószáj;főnév
 fúvószár;főnév
 fúvótalp;főnév
@@ -21143,7 +21008,6 @@ főzőlyuk;főnév
 főúr;főnév
 főügyelő;főnév
 fű;füve;füvek;főnév
-Kifejezés;
 fűevő;melléknév
 fűféle;melléknév
 fűkosár;főnév
@@ -21349,7 +21213,6 @@ ganéjtúró;ganajtúró;főnév
 ganca;gánca;gánica;főnév
 marihuána;főnév
 gang;főnév
-Kifejezés;
 gangréna;főnév
 Ganna;tulajdonnév;földrajzinév
 ganzlicherAusverkauf;kifejezés
@@ -21361,7 +21224,6 @@ Gara;tulajdonnév;földrajzinév
 garaboly;főnév
 garabonc;főnév
 garabonciás;melléknév
-Kifejezés;
 Garadna;tulajdonnév;földrajzinév
 garázs;főnév
 garamond;főnév
@@ -21373,7 +21235,6 @@ garantál;ige
 garantált;melléknév
 garantál;ige
 garas;főnév
-Kifejezés;
 garatos;melléknév
 Garbolc;tulajdonnév;földrajzinév
 garbó;főnév
@@ -21915,7 +21776,6 @@ gondnokság;főnév
 gondol;ige
 gondola;főnév
 gondolat;főnév
-Továbbimegjegyzés;
 gondolatközlés;főnév
 gondolatmenet;főnév
 gondolatsor;főnév
@@ -22152,7 +22012,6 @@ gtotta;főnév
 guanó;főnév
 Guatemala;tulajdonnév
 Guatemalaváros;tulajdonnév
-Kifejezések;
 gubacs;főnév
 gubacslégy;főnév
 gubacssav;főnév
@@ -22862,7 +22721,6 @@ gátépítés;főnév
 Gátér;tulajdonnév;földrajzinév
 gátőr;főnév
 Gávavencsellő;tulajdonnév;földrajzinév
-Továbbirészletezés;
 gázcsere;főnév
 gázcserenyílás;főnév
 gázel;főnév
@@ -22929,7 +22787,6 @@ Géza;tulajdonnév
 gézengúz;főnév
 gím;főnév
 gímszarvas;főnév
-Kifejezés;
 góc;főnév
 gógyi;főnév
 GógésMagóg;kifejezés
@@ -23266,7 +23123,6 @@ Hahót;tulajdonnév;földrajzinév
 haiku;főnév
 HailColumbia;kifejezés
 Haiti;tulajdonnév
-Kifejezések;
 hajadon;melléknév
 hajadonjog;főnév
 hajag;főnév
@@ -23300,7 +23156,6 @@ hajfonat;főnév
 hajfésű;főnév
 hajfürt;főnév
 hajgyökér;főnév
-Kifejezések;
 hajha;főnév
 hajhullás;főnév
 hajháló;főnév
@@ -23370,7 +23225,6 @@ hajszálér;főnév
 hajszárító;főnév
 hajszín;főnév
 hajsütővas;főnév
-Továbbirészletezés;
 hajthatatlan;melléknév
 hajtható;melléknév
 hajtogat;ige
@@ -23764,7 +23618,6 @@ hanyagol;ige
 hányas;kérdőnévmás;melléknév
 hányasával;névmás;határozószó
 hanyatlik;ige
-hanyatlás;
 hanyatt;határozószó
 hanzli;főnév
 hanák;főnév
@@ -24007,7 +23860,6 @@ hasítható;melléknév
 hasíték;főnév
 hasító;melléknév
 hasüreg;főnév
-Kifejezések;
 hatalmas;főnév
 hatalmaskodik;ige
 hatalmasodik;ige
@@ -24131,14 +23983,12 @@ haudegon;főnév
 haudquaquameiusmodi;kifejezés
 Hausherr;főnév
 Hausknecht;főnév
-Továbbirészletezés;
 orölief;főnév
 otkrém;főnév
 otszezon;főnév
 otvolé;főnév
 otfinansz;főnév
 hauteécole;kifejezés
-Továbbirészletezés;
 havanna;főnév
 havária;főnév
 havária;főnév
@@ -24338,8 +24188,6 @@ helyismeret;főnév
 helyiség;főnév
 helynök;főnév
 helyparancsnok;főnév
-helypénz;
-Továbbirészletezés;
 helyrehoz;ige
 helyrehozhatatlan;melléknév
 helyrehozható;melléknév
@@ -24521,7 +24369,6 @@ Heszperidák;főnév
 hess;mondatszó
 hesseget;ige
 Heszperidák;főnév
-Kifejezések;
 hetéra;főnév
 heted;számnév
 hetedhét;melléknév
@@ -24551,7 +24398,6 @@ hetven;számnév
 hetvened;főnév
 hetvenedik;számnév
 hetvenes;főnév
-Kifejezés;
 Hetyefő;tulajdonnév;földrajzinév
 hetyeg;ige
 hetyke;melléknév
@@ -24737,7 +24583,6 @@ hipotetikus;melléknév
 hipotéka;főnév
 hipotézis;főnév
 hipotónia;főnév
-Kifejezés;
 Hipparch;tulajdonnév
 hippi;főnév
 Hippia;tulajdonnév
@@ -24876,8 +24721,6 @@ hiú;melléknév
 hiúság;főnév
 hiúz;főnév
 hiúzszem;főnév
-hja;
-hm;
 hobbi;főnév
 Hobol;tulajdonnév;földrajzinév
 hobó;főnév
@@ -24912,7 +24755,6 @@ hokedli;főnév
 hoki;főnév
 hokedli;főnév
 hol;határozószó;kérdőnévmás
-Továbbirészletezés;
 Holda;tulajdonnév
 holdas;melléknév
 holdfogyatkozás;főnév
@@ -25093,7 +24935,6 @@ hordszék;főnév
 hordágy;főnév
 hordár;főnév
 hordás;főnév
-Kifejezés;
 hordócsap;főnév
 hordócska;főnév
 hordónyi;melléknév
@@ -25180,7 +25021,6 @@ Horák;főnév
 hospice;főnév
 hospitál;ige
 hoszpodár;főnév
-Továbbirészletezés;
 hosszabb;melléknév
 hosszabbodik;ige
 hosszacska;főnév
@@ -25481,7 +25321,6 @@ hálál;ige
 hálálkodik;ige
 hálás;melléknév
 hálátlan;melléknév
-Továbbirészletezés;
 hálóhely;főnév
 hálóing;főnév
 hálóköntös;főnév
@@ -25608,7 +25447,6 @@ hátideg;főnév
 hátizom;főnév
 hátizsák;főnék
 hátlap;hátoldal;főnév
-Továbbirészletezés;
 hátrabukik;ige
 hátrafelé;határozószó
 hátrahagy;ige
@@ -25745,7 +25583,6 @@ hétszámra;határozószó
 hétszög;főnév
 hétvége;főnév
 hétvezér;kifejezés
-Kifejezés;
 hévér;főnév
 hévíz;főnév
 Hévízgyörk;tulajdonnév;földrajzinév
@@ -25798,7 +25635,6 @@ hír;főnév
 híradás;főnév
 híradó;főnév
 hirdet;ige
-Kifejezés;
 híres;melléknév
 híresedik;ige
 híresség;főnév
@@ -25841,7 +25677,6 @@ hízott;melléknév
 hízékony;melléknév
 hízó;melléknév
 hízósertés;főnév
-Továbbirészletezés;
 hóbelevanc;főnév
 hóbort;főnév
 hóbortos;melléknév
@@ -25887,7 +25722,6 @@ hónalj;főnév
 hónaljaz;ige
 hónaljvessző;főnév
 hónaljág;főnév
-Továbbirészletezés;
 hónapi;havi;melléknév
 hónapos;melléknév
 hópehely;főnév
@@ -26051,9 +25885,6 @@ hűtőzik;ige
 hűvös;melléknév
 hűvösödik;ige
 I;i;betű
-Megjegyzés;
-Megjegyzés;
-Megjegyzés;
 iafia;főnév
 Ibafa;tulajdonnév;földrajzinév
 ibiubi;kifejezés
@@ -26068,7 +25899,6 @@ icce;főnév
 ICD;főnév
 ichtiológia;főnév
 ichtioszaurusz;főnév
-Kifejezés;
 icipici;melléknév
 iconoclaster;főnév
 iconomachia;főnév
@@ -26076,7 +25906,6 @@ iconomachus;főnév
 icsoglán;főnév
 iktusz;főnév
 ictusbaculorum;kifejezés
-Kifejezés;
 id;főnév
 Ida;tulajdonnév
 Idalia;tlajdonnnév
@@ -26088,7 +25917,6 @@ ideális;melléknév
 idealista;főnév
 idealizmus;főnév
 idealizál;ige
-idealdictionary;
 idefelé;határozószó
 ideg;főnév
 idegbaj;idegbetegség;főnév
@@ -26183,7 +26011,6 @@ idéz;ige
 idézet;főnév
 idézés;főnév
 idéző;melléknév
-Továbbirészletezés;
 idült;melléknév
 idő;főnév
 időben;határozószó
@@ -26239,7 +26066,6 @@ ifjúi;melléknév
 ifjúkor;főnév
 ifjúság;főnév
 török;melléknév
-Továbbirészletezés;
 iga;főnév
 Igal;tulajdonnév;földrajzinév
 Igar;tulajdonnév;földrajzinév
@@ -26282,7 +26108,6 @@ igeképzés;főnév
 igeképző;főnév
 igekötő;főnév
 igemód;főnév
-Továbbirészletezés;
 igenel;ige
 igenis;határozószó
 igenlés;főnév
@@ -26829,7 +26654,6 @@ indulat;főnév
 indulati;melléknév
 indulatos;melléknév
 indulatoskodik;ige
-indulatszó;
 indulgencia;főnév
 indulgencia;főnév
 indulás;főnév
@@ -27510,7 +27334,6 @@ iroda;főnév
 irodalmi;melléknév
 nyelv;főnév
 irodalmár;literátor;főnév
-irodalom;
 irodalomjegyzék;főnév
 irodalomtörténet;főnév
 irokéz;melléknév
@@ -27727,7 +27550,6 @@ itiner;főnév
 itinerárium;főnév
 itinerárium;főnév
 itt;határozószó
-Továbbirészletezés;
 ittas;melléknév
 ittasodik;ige
 ittasság;főnév
@@ -28235,7 +28057,6 @@ juhászodik;ige
 juhászság;főnév
 juhászodik;ige
 juhéj;indulatszó
-Továbbirészletezés;
 jujuj;jujújj;jujujuj;indulatszó
 jujuj;jujújj;jujujuj;indulatszó
 jujuj;jujújj;jujujuj;indulatszó
@@ -28333,7 +28154,6 @@ Jánoshida;tulajdonnév;földrajzinév
 Jánosháza;tulajdonnév;földrajzinév
 Jánossomorja;tulajdonnév;földrajzinév
 jár;ige
-Kifejezések;
 járadék;főnév
 járat;főnév
 járatos;melléknév
@@ -28357,7 +28177,6 @@ járomfa;főnév
 járomszög;főnév
 járt;főnév
 járta;főnév
-Kifejezés;
 jártas;melléknév
 jártasság;főnév
 jártat;ige
@@ -28558,7 +28377,6 @@ jószedés;kifejezés
 jóérzés;főnév
 jóízű;melléknév
 jön;ige
-Kifejezés;
 jött;főnév
 jötte;főnév
 jöttment;melléknév
@@ -28596,7 +28414,6 @@ júriszdikció;főnév
 K;k;betű
 Kaba;tulajdonnév;földrajzinév
 kabak;főnév
-Kifejezés;
 kabale;főnév
 kabanosz;főnév
 kabar;kabard;főnév
@@ -28629,7 +28446,6 @@ kacki;melléknév
 kackiás;melléknév
 Kacorlak;tulajdonnév;földrajzinév
 kacs;főnév
-Kifejezések;
 kacsaláb;főnév
 kacsaorr;főnév
 kacsatalp;főnév
@@ -28945,7 +28761,6 @@ kanefora;főnév
 kankalikoskút;kifejezés
 kankalin;főnév
 kánkán;főnév
-Kifejezés;
 kanna;főnév
 kannamosó;főnév
 kannelíroz;ige
@@ -29127,7 +28942,6 @@ kapás;főnév
 kapiskál;ige
 kapó;főnév
 kapós;főnév
-Továbbirészletezés;
 karabin;főnév
 karabiner;főnév
 karabély;főnév
@@ -29242,7 +29056,6 @@ Karina;tulajdonnév
 katrinca;főnév
 karing;főnév
 Karion;tulajdonnév
-Kifejezés;
 karistolt;melléknév
 karitatív;melléknév
 karitász;főnév
@@ -29340,7 +29153,6 @@ karóz;ige
 karöltve;határozószó
 karöltő;főnév
 karú;melléknév
-Kifejezések;
 kaska;főnév
 Kaskantyú;tulajdonnév;földrajzinév
 kaskavál;főnév
@@ -29428,7 +29240,6 @@ kataszter;főnév
 katasztrófa;főnév
 kataszter;főnév
 kataszteri;melléknév
-Továbbirészletezés;
 katasztrófa;főnév
 katatónia;főnév
 katekézis;főnév
@@ -29946,7 +29757,6 @@ Keresztéte;tulajdonnév;földrajzinév
 keresztöltés;főnév
 keresztút;főnév
 keresztül;határozószó
-Kifejezés;
 keresztülmegy;ige
 keresztülvergődik;ige
 keresztülvisz;ige
@@ -30074,7 +29884,6 @@ kettyent;ige
 kettéválik;ige
 kettő;számnév
 kettős;melléknév
-Továbbirészletezés;
 természet;főnév
 kettőz;ige
 ketty;főnév
@@ -30507,7 +30316,6 @@ kihengerít;ige
 kiherél;ige
 kihever;ige
 kihirdet;ige
-Kifejezés;
 kihordoz;ige
 kihordozgat;ige
 kihorgol;ige
@@ -32294,7 +32102,6 @@ koplal;ige
 koplaltat;ige
 koplaló;főnév
 kopog;ige
-Továbbirészletezés;
 kopogtatás;főnév
 kopogás;főnév
 kopoltyú;főnév
@@ -32311,7 +32118,6 @@ kopolya;kopotyú;főnév
 kopp;mondatszó
 koppan;ige
 Koppenhága;tulajdonnév
-Kifejezések;
 Koppány;tulajdonnév
 Koppányszántó;tulajdonnév;földrajzinév
 kopra;főnév
@@ -32327,7 +32133,6 @@ kopárság;főnév
 kopás;főnév
 kopírnyomás;főnév
 kopíroz;ige
-Kifejezés;
 kor;főnév
 kora;melléknév
 korabeli;melléknév
@@ -32360,9 +32165,7 @@ kordon;főnév
 kordován;főnév
 kordován;főnév
 kordul;ige
-Kifejezés;
 Kordélia;tulajdonnév
-Kifejezés;
 kordéra;határozószó
 korelnök;főnév
 korengedély;főnév
@@ -32530,7 +32333,6 @@ koszos;melléknév
 koszosodik;ige
 Koszovó;tulajdonnév
 koszperd;főnév
-Kifejezések;
 kosztol;ige
 kosztos;főnév
 kosztpénz;főnév
@@ -32942,7 +32744,6 @@ kurtizán;főnév
 kurtán;határozószó
 kurtány;főnév
 kurtít;ige
-Kifejezések;
 kuruttyol;ige
 kuruzslás;főnév
 kuruzsol;ige
@@ -33226,7 +33027,6 @@ kártalanít;ige
 kártevő;főnév
 kártol;ige
 kártolószék;főnév
-Továbbirészletezés;
 kártyaasztal;főnév
 kártyajáték;főnév
 kártyajátékos;kártyás;főnév
@@ -33385,7 +33185,6 @@ képcsarnok;főnév
 képcső;főnév
 képed;ige
 képernyő;főnév
-Továbbirészletezés;
 képeskönyv;főnév
 képeslap;főnév
 képesség;főnév
@@ -33482,7 +33281,6 @@ kérelmez;ige
 kérelmező;főnév
 kéret;ige
 kéretlen;melléknév
-Továbbirészletezés;
 kéretlenül;határozószó
 kérges;melléknév
 bekérgesedik;kérgesedik;ige
@@ -33641,7 +33439,6 @@ kézbilincs;főnév
 kézcsukló;főnév
 kézcsók;főnév
 kézelő;mandzsetta;főnév
-Kifejezés;
 kézenfekvő;melléknév
 kézfej;főnév
 kézfogás;főnév
@@ -33874,7 +33671,6 @@ Kölked;tulajdonnév;földrajzinév
 kell;ige
 kölni;kölnivíz;főnév
 kölni;kölnivíz;főnév
-Kifejezések;
 költekezik;ige
 költemény;főnév
 költség;főnév
@@ -34249,7 +34045,6 @@ kövület;őskövület;főnév
 kövülettan;főnév
 kövült;melléknév
 kövülés;főnév
-Továbbirészletezés;
 közakarat;főnév
 közalkalmazott;főnév
 közbe;határozószó
@@ -34391,7 +34186,6 @@ központozás;főnév
 központú;melléknév
 közpénz;főnév
 közpénztár;főnév
-Továbbirészletezés;
 közrejátszik;ige
 közreműködik;ige
 közreműködés;ige
@@ -34478,7 +34272,6 @@ közérzet;főnév
 közétkezés;főnév
 közíró;főnév
 közízlés;főnév
-Kifejezés;
 közölnivaló;főnév
 közömbös;melléknév
 közömbösít;ige
@@ -34778,7 +34571,6 @@ lakbér;főnév
 lakhatatlan;melléknév
 lakható;melléknév
 Lakhegy;tulajdonnév;földrajzinév
-Továbbirészletezés;
 Lakitelek;tulajdonnév;földrajzinév
 lakk;főnév
 lakkoz;ige
@@ -35077,7 +34869,6 @@ laHongrievaincueestauxpiedsdeVotreMajestré;kifejezés
 Allah;tulajdonnév
 LaPaz;tulajdonnév
 LaPitié;kifejezés
-Továbbirészletezés;
 Lea;tulajdonnév
 lead;ige
 líder;főnév
@@ -35135,7 +34926,6 @@ lecke;főnév
 leckepénz;főnév
 leckéz;ige
 leckéztet;ige
-Továbbirészletezés;
 lecsal;ige
 lecsap;ige
 lecsapol;ige
@@ -35484,7 +35274,6 @@ lekerekedik;ige
 lekerekít;ige
 lekerget;ige
 lelkesítő;melléknév
-Továbbirészletezés;
 lekiabál;ige
 lekiált;ige
 lekonyul;ige
@@ -35619,7 +35408,6 @@ lemér;ige
 lemészárol;ige
 len;főnév
 lencse;főnév
-Kifejezés;
 lencseleves;főnév
 lencserendszer;főnév
 lencsés;nelléknév
@@ -36000,7 +35788,6 @@ levágás;főnév
 leválik;ige
 leváta;főnév
 Levédia;tulajdonnév
-Továbbirészletezés;
 levélboríték;főnév
 levélbélyeg;főnév
 levélhernyó;főnév
@@ -36450,7 +36237,6 @@ Lovászpatona;tulajdonnév;földrajzinév
 loxodroma;főnév
 lojális;melléknév
 lojalitás;főnév
-Továbbirészletezés;
 Luanda;tulajdonnév
 lubickol;ige
 Luca;tulajdonnév
@@ -36554,7 +36340,6 @@ lyukazó;főnév
 lány;leány;főnév
 lyüki;főnév
 láb;főnév
-Kifejezés;
 lábadozik;ige
 lábal;lábol;ige
 lábas;melléknév
@@ -36563,7 +36348,6 @@ lábasfejű;főnév
 lábatlan;melléknév
 lábatlankodik;ige
 lábazat;főnév
-Kifejezés;
 lábbeli;főnév
 lábdübörgés;főnév
 lábfej;főnév
@@ -36696,7 +36480,6 @@ látóhatár;főnév
 látótávolság;főnév
 látótér;főnév
 láva;főnév
-Továbbirészletezés;
 lázad;ige
 lázadás;főnév
 lázadó;melléknév
@@ -36847,7 +36630,6 @@ lépked;ige
 léprigó;főnév
 lépsejt;főnév
 lépte;főnév
-Kifejezés;
 léptet;ige
 léptetve;határozószó
 lépték;főnév
@@ -36900,7 +36682,6 @@ líder;főnév
 Lídia;tulajdonnév
 lídó;főnév
 lénia;línea;főnév
-Továbbirészletezés;
 lírai;melléknév
 lírikus;melléknév
 lítium;főnév
@@ -37054,7 +36835,6 @@ machináció;főnév
 machináció;főnév
 machinál;ige
 mackintosh;főnév
-Továbbirészletezés;
 mackóruha;főnév
 macropythecus;főnév
 macska;macskája;macskák;főnév
@@ -37345,7 +37125,6 @@ metrdeplazír;főnév
 maimagyar;melléknévikifejezés
 maja;melléknév
 majc;főnév
-Kifejezések;
 majdan;határozószó
 majdani;melléknév
 majdcsak;határozószó
@@ -37462,12 +37241,9 @@ malkontentus;melléknév
 malkontentus;melléknév
 malleolus;főnév
 malleus;főnév
-Továbbirészletezés;
 malmos;melléknév
-Továbbirészletezés;
 malmozik;ige
 malocchio;melléknév
-Továbbirészletezés;
 malombeli;főnév
 malomgát;főnév
 malomkerék;főnév
@@ -37571,7 +37347,6 @@ maníros;melléknév
 mankus;főnév
 mankóláb;főnév
 mankós;melléknév
-Kifejezés;
 manöken;főnév
 mannlicher;főnév
 manőverez;ige
@@ -37661,7 +37436,6 @@ Margitta;tulajdonnév
 margaréta;főnév
 margó;főnév
 margó;főnév
-Továbbirészletezés;
 marhabőr;főnév
 marhabűz;főnév
 marhacsapás;főnév
@@ -38457,7 +38231,6 @@ meggyomosodik;ige
 meggyomroz;ige
 meggyszín;főnév
 meggyullad;főnév
-meggyullaszt;
 meggyvíz;főnév
 meggyérít;ige
 meggyérül;ige
@@ -38506,8 +38279,6 @@ meghajlás;főnév
 meghajlít;ige
 meghajol;ige
 meghajszol;ige
-Kifejezések;
-Továbbirészletezés;
 meghajít;ige
 meghal;ige
 meghalad;ige
@@ -39416,9 +39187,7 @@ megszurkosodik;ige
 megszurkoz;ige
 megszurkál;ige
 megszutykosodik;ige
-Továbbirészletezés;
 megszállott;melléknév
-Továbbirészletezés;
 megszámlál;ige
 megszámlálhatatlan;melléknév
 megszámlálható;melléknév
@@ -39663,7 +39432,6 @@ megver;ige
 megvereget;ige
 megverekedik;ige
 megvesszőz;ige
-Továbbirészletezés;
 megveszekedett;melléknév
 megveszekedik;ige
 megveszik;megvész;ige
@@ -39824,7 +39592,6 @@ megénekel;ige
 megépít;ige
 megépítés;főnév
 megépül;ige
-Kifejezés;
 megérdemel;ige
 megérdemelt;melléknév
 megérdesedik;ige
@@ -39976,7 +39743,6 @@ melltartó;főnév
 melltű;főnév
 mellvéd;főnév
 mellvért;főnév
-Továbbirészletezés;
 melléfog;ige
 mellék;főnév
 mellékbolygó;főnév
@@ -40129,11 +39895,9 @@ mensaettoro;kifejezés
 mensevik;főnév
 menstruáció;főnév
 menstruál;ige
-Kifejezések;
 menta;főnév
 mentalitás;főnév
 mentalitás;főnév
-Kifejezés;
 menteget;ige
 mentegetőzik;ige
 mentelmi;melléknév
@@ -40197,7 +39961,6 @@ meredez;meredezik;ige
 meredt;melléknév
 meredten;határozószó
 meredély;főnév
-Kifejezés;
 meregető;főnév
 mereng;ige
 merengős;melléknév
@@ -40744,7 +40507,6 @@ ministrál;ige
 ministráns;főnév
 miniszter;főnév
 miniszterelnök;főnév
-miniszterelnökihivatal;
 minisztertanács;főnév
 minisztérium;főnév
 mi;személyesnévmás
@@ -41516,7 +41278,6 @@ muter;főnév
 muteszellim;főnév
 muti;indulatszó
 mutogat;ige
-Kifejezés;
 mutábilis;melléknév
 mutáció;főnév
 mutál;ige
@@ -41638,9 +41399,7 @@ Máriapócs;tulajdonnév;földrajzinév
 máriaüveg;csillámlemez;főnév
 máris;határozószó
 Máriusz;tulajdonnév
-Kifejezés;
 Márió;tulajdonnév
-Kifejezés;
 Márk;tulajdonnév
 márkaépítés;főnév
 Márkháza;tulajdonnév;földrajzinév
@@ -41675,7 +41434,6 @@ márványszobor;főnév
 márványzat;főnév
 más;névmás;főnév
 más;névmás;főnév
-Kifejezések;
 másfajta;másféle;névmás;melléknév
 másfeles;melléknév
 másfelé;határozószó
@@ -41786,7 +41544,6 @@ Médea;tulajdonnév
 média;főnév
 médisance;főnév
 médium;főnév
-Továbbirészletezés;
 mégakkora;névmás;melléknév
 mégannyi;névmás;melléknév;számnév
 mégannyira;határozószó
@@ -41798,7 +41555,6 @@ mégoly;mégolyan;névmás;melléknév
 mégpedig;kötőszó
 mégse;kötőszó
 mégsem;kötőszó
-Kifejezés;
 méhcsípés;főnév
 mhedruli;főnév
 méhecske;főnév
@@ -42448,7 +42204,6 @@ naiva;főnév
 naivitás;főnév
 naivitás;főnév
 najád;főnév
-Továbbirészletezés;
 nakara;főnév
 Namíbia;tulajdonnév
 nana;mondatszó
@@ -42497,7 +42252,6 @@ napnyugta;főnév
 naponként;naponta;határozószó
 naponként;naponta;határozószó
 napos;melléknév
-Továbbirészletezés;
 napozik;ige
 nappa;főnév
 nappal;határozószó
@@ -42506,7 +42260,6 @@ nappálya;főnév
 napraforgó;főnév
 naprakész;melléknév
 naprendszer;főnév
-napsugár;
 napszak;főnév
 napszemüveg;főnév
 napszállta;főnév
@@ -42678,7 +42431,6 @@ nehézségi;melléknév
 nehézsúly;főnév
 nejlon;nylon;főnév
 nejű;melléknév
-Továbbirészletezés;
 nekem;határozószó
 neki;határozószó
 durál;nekidurál;ige
@@ -42722,7 +42474,6 @@ Nemesgörzsöny;tulajdonnév;földrajzinév
 Nemeshany;tulajdonnév;földrajzinév
 Nemeshetés;tulajdonnév;földrajzinév
 nemezis;főnév
-Továbbirészletezés;
 Nemeske;tulajdonnév;földrajzinév
 Nemeskeresztúr;tulajdonnév;földrajzinév
 Nemeskisfalud;tulajdonnév;földrajzinév
@@ -43013,7 +42764,6 @@ nominális;melléknév
 nomdeguerre;kifejezés
 nomdöplüm;kifejezés
 nomád;melléknév
-Kifejezések;
 nonsalansz;főnév
 nonchalant;melléknév
 noncombattant;melléknév
@@ -43149,7 +42899,6 @@ nyakörv;főnév
 nyal;ige
 nyalakodik;nyalakszik;ige
 nyalakodik;nyalakszik;ige
-Továbbirészletezés;
 nyaldos;ige
 nyalint;ige
 nyalka;melléknév
@@ -43229,7 +42978,6 @@ nyelvész;főnév
 nyelvészet;főnév
 nyelvöltő;melléknév
 nyelvújítás;főnév
-nyelvújításkora;
 nyelvújító;főnév
 nyelvű;melléknév
 nyelés;főnév
@@ -43457,7 +43205,6 @@ nyugosztal;nyugoszt;ige
 nyugosztal;nyugoszt;ige
 Nyugotszenterzsébet;tulajdonnév;földrajzinév
 nyugszik;ige
-Kifejezések;
 nyugtalan;melléknév
 nyugtalankodik;ige
 nyugtalankodás;főnév
@@ -43474,13 +43221,10 @@ nyugvás;főnév
 nyugvó;melléknév
 nyugágy;főnév
 nyugállomány;főnév
-Továbbirészletezés;
 nyulacska;főnév
-Továbbirészletezés;
 nyulas;melléknév
 nyulászat;főnév
 nyurga;melléknév
-Továbbirészletezés;
 nyuszt;főnév
 nyuvad;ige
 nyuvaszt;ige
@@ -43505,10 +43249,8 @@ nyálmirigy;főnév
 nyámmog;ige
 nyámnyila;melléknév
 nyápic;melléknév
-Továbbirészletezés;
 Nyáregyháza;tulajdonnév;földrajzinév
 nyárelő;főnév
-Továbbirészletezés;
 nyárfalevél;főnév
 nyári;melléknév
 nyárias;melléknév
@@ -43548,7 +43290,6 @@ nyílt;melléknév
 nyíltan;határozószó
 nyíltszívű;melléknév
 nyíltkeringésirendszer;főnév
-Továbbirészletezés;
 nyíltláncúszervesvegyületek;főnév
 nyílás;főnév
 nyír;ige
@@ -43614,7 +43355,6 @@ nyújtózik;ige
 nyújtózkodik;ige
 nyújtózkodás;főnév
 nyújtóztat;ige
-Továbbirészletezés;
 nyúlajkú;melléknév
 nyúlcsapás;főnév
 nyúlfarok;főnév
@@ -43687,7 +43427,6 @@ nádvágó;főnév
 Nágocs;tulajdonnév;földrajzinév
 azték;náhuatl;melléknév
 najád;főnév
-Továbbirészletezés;
 nála;nálam;nálad;nálunk;nálatok;náluk;névmás;határozószó
 nála;nálam;nálad;nálunk;nálatok;náluk;névmás;határozószó
 Nándor;tulajdonnév
@@ -43755,7 +43494,6 @@ néhány;egynéhány;névmás;melléknév;számnév
 néhányan;egynéhányan;névmás;határozószó
 néhányféle;névmás;melléknév
 néhányszor;névmás;határozószó
-Továbbirészletezés;
 nélkül;névutó
 nélküle;névmás;határozószó
 nélküli;névmás;melléknév
@@ -43883,7 +43621,6 @@ Nónusz;tulajdonnév
 Nóra;tulajdonnév
 nória;főnév
 Nóráp;tulajdonnév;földrajzinév
-Továbbirészletezés;
 nótafa;főnév
 nótárius;főnév
 nótázik;ige
@@ -44029,7 +43766,6 @@ okuláré;főnév
 oculataalávesz;kifejezés
 oculusdominisaginatboves;kifejezés
 ad;ige
-Továbbirészletezés;
 odaad;ige
 odabenn;odabent;határozószó
 odabenn;odabent;határozószó
@@ -44137,9 +43873,7 @@ id;főnév
 oignon;főnév
 oinológia;főnév
 ojjé;indulatszó
-Továbbirészletezés;
 ojtott;melléknév
-Továbbirészletezés;
 ok;főnév
 okapi;főnév
 okarína;főnév
@@ -44321,12 +44055,10 @@ olimpikon;főnév
 Olinda;tulajdonnév
 Olivér;tulajdonnév
 olyan;névmás;melléknév
-Továbbirészletezés;
 ollós;melléknév
 ollótlan;melléknév
 ollóz;ige
 ollózik;ige
-Továbbirészletezés;
 óta;névutó
 oltalmaz;ige
 oltalom;főnév
@@ -44344,7 +44076,6 @@ oltározó;főnév
 oltárterítő;főnév
 oltás;főnév
 oltásos;főnév
-Továbbirészletezés;
 oltódézsa;főnév
 oltófecskendő;főnév
 oltóiskola;főnév
@@ -44387,7 +44118,6 @@ olvasólámpa;főnév
 olvasóterem;főnév
 oly;névmás;melléknév
 olyan;névmás;melléknév
-Szóhasználatimegjegyzés;
 olyanfajta;névmás;melléknév
 olyanforma;névmás;melléknév
 olyanformán;névmás;határozószó
@@ -44872,7 +44602,6 @@ Oszvald;tulajdonnév
 Oszvalda;tulajdonnév
 jász;főnév
 osnaviculare;kifejezés
-Továbbirészletezés;
 Otelló;tulajdonnév
 otfinansz;főnév
 ócium;főnév
@@ -44931,7 +44660,6 @@ oxigén;főnév
 oximoron;főnév
 Oxána;tulajdonnév
 oxóniumion;főnév
-Továbbirészletezés;
 Ozmin;tulajdonnév
 ozmium;főnév
 Ozmánbük;tulajdonnév;földrajzinév
@@ -44969,7 +44697,6 @@ pacsi;főnév
 pacsirta;főnév
 pacsni;főnév
 pacskol;ige
-Továbbirészletezés;
 pacsmagol;ige
 pacsni;főnév
 pacsuli;főnév
@@ -45156,7 +44883,6 @@ panasztétel;főnév
 pankreasz;főnév
 pancs;főnév
 pancser;főnév
-Továbbirészletezés;
 panda;főnév
 pandan;melléknév
 pandanus;főnév
@@ -45210,7 +44936,6 @@ panácea;főnév
 panír;főnév
 paníroz;ige
 pap;főnév
-Kifejezés;
 papagáj;főnév
 papaverin;főnév
 kert;főnév
@@ -45413,7 +45138,6 @@ partner;főnév
 partner;főnév
 partner;főnév
 partfal;főnév
-Továbbirészletezés;
 partia;főnév
 partiális;melléknév
 participium;főnév
@@ -45444,7 +45168,6 @@ partvidék;főnév
 partvis;kefeseprű;főnév
 partvonal;főnév
 partvám;főnév
-Továbbirészletezés;
 partáj;főnév
 partőr;főnév
 parvenü;főnév
@@ -45866,7 +45589,6 @@ peralku;főnév
 perbeli;melléknév
 perbeszéd;főnév
 Perbál;tulajdonnév;földrajzinév
-Továbbirészletezés;
 perceg;ige
 perceget;ige
 percen;ige
@@ -45894,7 +45616,6 @@ perec;főnév
 pereces;melléknév
 Perecse;tulajdonnév;földrajzinév
 perecsütő;főnév
-Kifejezés;
 Peregrina;tulajdonnév
 peregrinus;főnév
 peregrináló;melléknév
@@ -45938,7 +45659,6 @@ pergas;ige
 pörköl;pergel;ige
 pörkölő;pergelő;főnév
 pörkölődik;pergelődik;ige
-Szóhasználatimegjegyzés;
 pergola;főnév
 pergődob;főnév
 perihélium;főnév
@@ -46249,7 +45969,6 @@ picike;picinyke;melléknév
 piciny;melléknév
 picike;picinyke;melléknév
 picsa;főnév
-Továbbirészletezés;
 picsipacsi;főnév
 picsog;ige
 piktor;főnév
@@ -46416,7 +46135,6 @@ piperétlen;melléknév
 piperézik;ige
 pipes;melléknév
 pipetta;főnév
-Továbbirészletezés;
 pipiske;főnév
 pipiskedik;ige
 pipitér;főnév
@@ -46474,7 +46192,6 @@ pisil;ige
 pisis;melléknév
 Piskó;tulajdonnév;földrajzinév
 piskóta;főnév
-Kifejezés;
 pislantás;főnév
 pislog;ige
 pislogás;főnév
@@ -46707,7 +46424,6 @@ pocakos;melléknév
 pocakosodik;ige
 poci;főnév
 peckel;pöcköl;ige
-Kifejezés;
 pocs;főnév
 Pocsaj;tulajdonnév;földrajzinév
 pocskol;ige
@@ -47088,7 +46804,6 @@ possidente;főnév
 posszesszív;melléknév
 posszibilis;melléknév
 posszibilitás;főnév
-Kifejezés;
 posta;főnév
 postagalamb;főnév
 postahivatal;főnév
@@ -47501,7 +47216,6 @@ privátdíner;főnév
 privátim;határozószó
 prizma;főnév
 priznic;főnév
-Kifejezések;
 probábilis;melléknév
 probabilitás;főnév
 probabilitás;főnév
@@ -47791,13 +47505,6 @@ prozelita;főnév
 prozopopea;főnév
 prozopopejja;főnév
 prozódia;főnév
-Kifejezések;
-Kifejezések;
-Kifejezések;
-Kifejezések;
-Kifejezések;
-Kifejezések;
-Kifejezések;
 prűd;melléknév
 prüdéria;főnév
 prunusmahaleb;kifejezés
@@ -48056,7 +47763,6 @@ purkondolé;kifejezés
 purprendrekongé;kifejezés
 purremerszié;kifejezés
 püré;főnév
-Kifejezések;
 puskacső;főnév
 puskagolyó;főnév
 puskakakas;főnév
@@ -48132,7 +47838,6 @@ pirruszi;melléknév
 pythonissa;főnév
 pikszis;főnév
 pá;mondatszó
-Továbbirészletezés;
 páciens;főnév
 pácikó;főnév
 Pácin;tulajdonnév;földrajzinév
@@ -48224,7 +47929,6 @@ Pápoc;tulajdonnév;földrajzinév
 Páprád;tulajdonnév;földrajzinév
 pápua;főnév
 pápá;mondatszó
-Továbbbirészletezés;
 pára;főnév
 páratlan;melléknév
 párbaj;főnév
@@ -48628,10 +48332,8 @@ Pörböly;tulajdonnév;földrajzinév
 pörc;főnév
 Pördefölde;tulajdonnév;földrajzinév
 perdül;pördül;ige
-Szóhasználatimegjegyzés;
 pörgettyű;főnév
 pörgés;főnév
-Továbbirészletezés;
 pörk;főnév
 pörköl;pergel;ige
 pörkölt;melléknév
@@ -48642,7 +48344,6 @@ pörsen;ige
 pörsenés;főnév
 perzsel;ige
 pörész;főnév
-Továbbirészletezés;
 pöröly;főnév
 pörölyöz;ige
 pörölyütés;főnév
@@ -48739,7 +48440,6 @@ kvóta;főnév
 quotahora;kifejezés
 quousquetandem;kifejezés
 R;r;betű
-Továbbirészletezés;
 rab;főnév
 Rabat;tulajdonnév
 rabatt;főnév
@@ -49934,7 +49634,6 @@ reinfekta;határozószó
 reoptimegesta;kifejezés
 reoptimegesta;kifejezés
 revera;kifejezés
-Továbbirészletezés;
 reál;melléknév
 reális;melléknév
 reáliák;főnév
@@ -49970,7 +49669,6 @@ ribancos;melléknév
 ribillió;főnév
 ribiszke;ribizli;főnév
 ribiszke;ribizli;főnév
-Továbbirészletezés;
 RNS;ribonukleinsav;főnév
 riccel;ige
 riccelőgép;főnév
@@ -50203,7 +49901,6 @@ romos;melléknév
 Romuald;tulajdonnév
 Romulusz;tulajdonnév
 RomulusésRémus;főnév
-Kifejezés;
 Romána;tulajdonnév
 románc;főnév
 Románd;tulajdonnév;földrajzinév
@@ -50265,7 +49962,6 @@ rosszul;határozószó
 rosszulesik;ige
 rosszullét;főnév
 rosszkorrektúra;kifejezés
-Kifejezés;
 rosta;főnév
 rostaalja;főnév
 rostok;főnév
@@ -50475,7 +50171,6 @@ ruténium;főnév
 Ruzsa;tulajdonnév;földrajzinév
 rué;főnév
 ritmus;főnév
-Továbbirészletezés;
 ráad;ige
 ráadat;ige
 ráadás;főnév
@@ -50583,7 +50278,6 @@ ráillik;ige
 ráismer;ige
 rája;főnév
 rájön;ige
-Kifejezések;
 rákel;főnév
 ráken;ige
 rákeres;ige
@@ -50593,7 +50287,6 @@ rákiált;ige
 rákleves;főnév
 rákláb;főnév
 rákmenet;főnév
-Kifejezések;
 Ráksi;tulajdonnév;földrajzinév
 rákszem;főnév
 ráktérítő;főnév
@@ -50631,7 +50324,6 @@ ránehézkedik;ige
 ráng;ige
 rángat;ige
 rángatózik;ige
-Továbbirészletezés;
 rántotta;főnév
 rántásos;melléknév
 rányúló;melléknév
@@ -50697,7 +50389,6 @@ rázúdít;ige
 rááldoz;ige
 rááll;ige
 ráébred;ige
-Kifejezés;
 ráígér;ige
 ráüt;ige
 rébusz;főnév
@@ -50712,8 +50403,6 @@ régen;határozószó
 régens;főnév
 régen;határozószó
 régi;melléknév
-régiesigeragozás;
-régiesigeragozás;
 rezsim;főnév
 régimódi;melléknév
 régiség;főnév
@@ -50909,7 +50598,6 @@ Rókus;tulajdonnév
 rókás;melléknév
 rókászat;főnév
 rókázik;ige
-Továbbirészletezés;
 róla;rólam;rólad;rólunk;rólatok;róluk;névmás;határozószó
 Róma;tulajdonnév
 szám;főnév
@@ -50960,7 +50648,6 @@ rögvest;határozó
 rögzít;ige
 rögzítő;főnév
 rögzül;ige
-Továbbirészletezés;
 rögös;melléknév
 rögösödik;ige
 röhej;főnév
@@ -51033,7 +50720,6 @@ rüszt;főnév
 rüsztung;főnév
 rőf;főnév
 rőfös;melléknév
-Továbbirészletezés;
 rőt;melléknév
 rőtvad;főnév
 rőzse;főnév
@@ -51504,7 +51190,6 @@ szilszkin;főnév
 szezon;főnév
 seb;főnév
 sebaj;főnév
-Közmondás;
 kristálymet;főnév
 sebesség;főnév
 sebességmérő;főnév
@@ -51608,8 +51293,6 @@ segélypénz;főnév
 segít;ige
 segítget;ige
 segítség;főnév
-Oldalakszerkesztése;
-Oldalakszerkesztése;
 segítő;főnév
 segítőkész;melléknév
 Seherezádé;tulajdonnév
@@ -52523,7 +52206,6 @@ Sopronhorpács;tulajdonnév;földrajzinév
 Sopronkövesd;tulajdonnév;földrajzinév
 Sopronnémeti;tulajdonnév;földrajzinév
 sopánkodik;ige
-Továbbirészletezés;
 sorakozik;ige
 sorba;határozószó
 sorban;határozószó
@@ -52673,8 +52355,6 @@ specializál;ige
 specimen;főnév
 speciosus;melléknév
 speciális;melléknév
-Licenc;
-Tartalmistatisztikák;
 speciálisan;határozószó
 spektábilis;melléknév
 spektakulózus;melléknév
@@ -53125,7 +52805,6 @@ stúdium;főnév
 stúdió;főnév
 suaviterinmodo;fortiterinre;kifejezés
 suasponte;kifejezés
-Kifejezések;
 suba;főnév
 szubaltern;melléknév
 subalternus;főnév
@@ -53267,7 +52946,6 @@ suny;ige
 sunyi;melléknév
 sunyít;ige
 suotempore;kifejezés
-Kifejezés;
 szuperarbitrium;főnév
 szuperarbitrál;ige
 superb;melléknév
@@ -54074,11 +53752,9 @@ szelídíthetetlen;melléknév
 szelídítő;melléknév
 szelídül;ige
 szelő;főnév
-Továbbirészletezés;
 szemafor;főnév
 szemantika;főnév
 szembaj;főnév
-Továbbirészletezés;
 szembefordul;ige
 szembehunyva;határozószó
 szembejön;ige
@@ -54335,7 +54011,6 @@ szenvedélytelen;melléknév
 szenvedés;főnév
 szenvedő;melléknév
 ige;főnév
-szenvedőmondat;
 szerkezet;főnév
 szenveleg;főnév
 szenvtelen;melléknév
@@ -54381,7 +54056,6 @@ szeptemvirátus;főnév
 szeptett;főnév
 szeptikus;melléknév
 szeptim;főnév
-Továbbirészletezés;
 szerafim;főnév
 Szerafina;tulajdonnév
 szeraszker;főnév
@@ -54404,7 +54078,6 @@ szerelemféltő;melléknév
 szerelemital;főnév
 szerelemittas;melléknév
 szerelemtaplója;főnév
-Továbbirészletezés;
 szerelmes;melléknév
 szerelmeskedik;ige
 szerelmetes;melléknév
@@ -55171,7 +54844,6 @@ sztyepp;sztyeppe;főnév
 sztálinizmus;főnév
 sztár;főnév
 szu;főnév
-Kifejezések;
 szubaltern;melléknév
 szubalternus;főnév
 szubdiakónusz;főnév
@@ -55266,7 +54938,6 @@ szunya;főnév
 szunyókál;ige
 szunyókálás;főnév
 szupcsárdás;főnév
-Kifejezés;
 szuperarbitrium;főnév
 szuperarbitrál;ige
 szuperdividenda;főnév
@@ -55397,14 +55068,12 @@ szálkás;melléknév
 szálkásodik;ige
 szálkásít;ige
 szálkátlan;melléknév
-Továbbirészletezés;
 szálldogál;ige
 szállingózik;ige
 szálloda;főnév
 szállodás;főnév
 szállong;ige
 szállásol;ige
-Továbbirészletezés;
 szállítmány;főnév
 szállítmányos;főnév
 szállítás;főnév
@@ -55639,8 +55308,6 @@ szégyenteljes;melléknév
 szégyenít;ige
 szégyenítő;melléknév
 szégyenül;ige
-Továbbirészletezés;
-Továbbirészletezés;
 székalj;főnév
 székel;ige
 székely;főnév
@@ -55662,7 +55329,6 @@ székszorulás;főnév
 székváros;főnév
 székács;főnév
 székállás;főnév
-Kifejezés;
 szélanya;főnév
 szélcsapás;főnév
 szélcsapó;főnév
@@ -55710,7 +55376,6 @@ széltoló;főnév
 széltében;határozószó
 szélvédő;főnév
 szélvész;főnév
-Továbbirészletezés;
 szélütés;főnév
 szén;főnév
 széna;főnév
@@ -55764,7 +55429,6 @@ szépül;ige
 széria;főnév
 szérum;főnév
 szérű;főnév
-Továbbirészletezés;
 szétadogat;ige
 szétbocsát;ige
 szétbomladozik;ige
@@ -55883,19 +55547,16 @@ szíj;főnév
 szíjas;melléknév
 szíjaz;ige
 szíjgyártó;főnév
-Továbbirészletezés;
 színarany;főnév
 színdarab;főnév
 színehagyott;melléknév
 színehagyó;melléknév
 színelés;főnév
-Továbbirészletezés;
 színesedik;ige
 színesen;melléknév
 színesség;főnév
 színesít;ige
 színevesztett;melléknév
-Továbbirészletezés;
 színezet;főnév
 színezett;melléknév
 színezüst;főnév
@@ -56092,7 +55753,6 @@ szótlan;melléknév
 szótlanodik;ige
 szótár;főnév
 szótári;melléknév
-szótárialak;
 lexikográfia;szótártudomány;főnév
 szótülök;főnév
 szótő;főnév
@@ -56379,7 +56039,6 @@ sáfrányszín;főnév
 sáfránysárga;főnév
 sáfár;főnév
 sáfárkodik;ige
-Továbbirészletezés;
 Ságvár;tulajdonnév;földrajzinév
 Ságújfalu;tulajdonnév;földrajzinév
 sál;főnév
@@ -56510,7 +56169,6 @@ szeánsz;főnév
 sébig;melléknév
 séd;főnév
 séf;főnév
-Továbbirészletezés;
 ségec;főnév
 séjour;főnév
 séjourniroz;ige
@@ -56802,7 +56460,6 @@ sűrű;melléknév
 sűrűség;főnév
 sűrűségmérő;főnév
 sűrűsödik;ige
-Továbbirészletezés;
 Tab;tulajdonnév;földrajzinév
 Tabajd;tulajdonnév;földrajzinév
 tabak;főnév
@@ -56812,7 +56469,6 @@ tabelláris;melléknév
 tabelláris;melléknév
 tabernákulum;főnév
 tabernákulum;főnév
-Továbbirészletezés;
 tabló;főnév
 tableauxvivant;kifejezés
 tabletta;főnév
@@ -57452,7 +57108,6 @@ teknős;melléknév
 teknősbéka;főnév
 tektonika;főnév
 tekézik;ige
-Továbbirészletezés;
 telefax;fax;főnév
 telefon;főnév
 telefonfülke;főnév
@@ -57984,7 +57639,6 @@ théátrecoup;főnév
 théátrefrancais;kifejezés
 thübet;főnév
 ti;névmás
-Továbbirészletezés;
 tiara;főnév
 tibeti;melléknév
 tibetsál;főnév
@@ -58556,9 +58210,7 @@ turnike;főnév
 tournure;főnév
 turné;főnév
 tourdesmains;kifejezés
-Továbbirészletezés;
 tovaris;főnév
-Továbbirészletezés;
 továbbhalad;ige
 további;melléknév
 továbbnyúlás;főnév
@@ -58754,13 +58406,11 @@ TrinidadésTobago;tulajdonnév
 trotil;TNT;főnév
 trinitárius;főnév
 trinkgeld;főnév
-Továbbirészletezés;
 trió;melléknév
 triola;főnév
 triolett;főnév
 trip;főnév
 tripartitum;főnév
-Továbbirészletezés;
 tripla;melléknév
 triplikáz;ige
 triplika;főnév
@@ -58987,7 +58637,6 @@ turriszeburnea;kifejezés
 turriszeburnea;kifejezés
 turul;főnév
 turzás;főnév
-Kifejezés;
 tusa;főnév
 tusakodik;ige
 tusfesték;főnév
@@ -59468,7 +59117,6 @@ Tófej;tulajdonnév;földrajzinév
 Tófű;tulajdonnév;földrajzinév
 tóga;főnév
 tógátus;főnév
-Továbbirészletezés;
 tónadó;főnév
 tónus;főnév
 tóra;főnév
@@ -59757,7 +59405,6 @@ tötyög;ige
 töves;melléknév
 tövesedik;ige
 tövestől;határozószó
-Kifejezés;
 tövis;főnév
 tövises;melléknév
 töviskerítés;főnév
@@ -59927,11 +59574,9 @@ tőkehal;főnév
 tőkepénz;főnév
 tőkevas;főnév
 tőkésít;ige
-Továbbirészletezés;
 tőle;tőlem;tőled;tőlünk;tőletek;tőlük;névmás;határozószó
 tőlevél;főnév
 mondat;főnév
-Kifejezés;
 tőrőlmetszett;melléknév
 tősarj;főnév
 tősgyökeres;melléknév
@@ -59956,7 +59601,6 @@ tűlevél;főnév
 tűnik;ige
 tűnődik;ige
 tűpárna;főnév
-Kifejezések;
 tűrhetetlen;melléknév
 tűrhető;melléknév
 tűrő;melléknév
@@ -60421,7 +60065,6 @@ alkonycsillag;főnév
 vacsoraidő;főnév
 vacsorázik;ige
 vákuum;főnév
-Kifejezések;
 vadalma;főnév
 vadas;melléknév
 vadaskert;főnév
@@ -60576,7 +60219,6 @@ bakcsó;vakvarjú;főnév
 vakvezető;melléknév
 vakáció;főnév
 vakít;ige
-Továbbirészletezés;
 vala;ige
 Valachia;tulajdonnév
 valag;főnév
@@ -60928,7 +60570,6 @@ Vekerd;tulajdonnév;földrajzinév
 vekker;főnév
 vekni;főnév
 vektor;főnév
-Továbbirészletezés;
 vele;névmás;határozószó
 velejáró;főnév
 Velem;tulajdonnév;földrajzinév
@@ -61000,7 +60641,6 @@ ventrebleu;indulatszó
 ventreátérre;kifejezés
 venyige;főnév
 észt;melléknév
-Továbbirészletezés;
 Vera;tulajdonnév
 veranda;főnév
 veratrum;főnév
@@ -61054,7 +60694,6 @@ Verpelét;tulajdonnév;földrajzinév
 verpeléti;főnév
 Verpflegscommissio;főnév
 verpflegskomissar;főnév
-Kifejezés;
 verzátus;melléknév
 Verseg;tulajdonnév;földrajzinév
 Versend;tulajdonnév;földrajzinév
@@ -61132,7 +60771,6 @@ veszedelmes;melléknév
 veszedelmeztet;igej
 veszeget;ige
 veszejt;ige
-Továbbirészletezés;
 veszekedik;veszekszik;ige
 veszekedés;főnév
 veszekedik;veszekszik;ige
@@ -61477,7 +61115,6 @@ vinkó;főnév
 vinnyog;ige
 vignetta;főnév
 Vinár;tulajdonnév;földrajzinév
-Kifejezések;
 violagyökér;főnév
 violencia;főnév
 violencia;főnév
@@ -61582,8 +61219,6 @@ Visnye;tulajdonnév;földrajzinév
 Visonta;tulajdonnév;földrajzinév
 Viss;tulajdonnév;földrajzinév
 visszapótlás;főnév
-Továbbirészletezés;
-Továbbirészletezés;
 visszaad;ige
 visszaakaszt;ige
 visszabeszél;ige
@@ -61732,50 +61367,25 @@ vita;főnév
 Zsoltti;korrigálószerkesztő
 mi;kérdőnévmás
 plusz;melléknév
-Kifejezés;
-Kifejezés;
-Kifejezés;
 címszó;szófaj
 rossz;melléknév
-Kifejezés;
-Kiegészítésasikérésatésztaminőségévelkapcsolatban;
-Kifejezés;
 spanyol;főnév
-Kifejezés;
-Kifejezés;
-Közmondás;
 szabás;főnév
-Közmondás;
-Kifejezés;
 szálka;főnév
-Kifejezés;
-Kifejezés;
-Kifejezés;
 címszó;szófaj
 T;rövidítés
 tart;ige
 tat;főnév
-Bővebbmegjegyzésaszócikkhez;
-Kifejezés;
-Kifejezés;
 címszó;szófaj
 tyű;indulatszó
 tényező;főnév
-Kifejezés;
-Kifejezés;
-Kifejezés;
 török;főnév
 ük;főnév
-Közmondás;
 vár;ige
 végtelen;melléknév
 címszó;szófaj
-Kifejezés;
 címszó;szófaj
-Kifejezés;
 zöld;főnév
-Kifejezés;
-Kifejezés;
 vitális;melléknév
 vitalitás;főnév
 vitalitium;főnév
@@ -62040,7 +61650,6 @@ vákuum;főnév
 vákáns;melléknév
 vákát;főnév
 Vál;tulajdonnév;földrajzinév
-Kifejezés;
 válaszadás;főnév
 válaszadó;főnév
 válaszfa;főnév
@@ -62392,7 +62001,6 @@ végez;ige
 végezetül;határozószó
 véghez;határozószó
 véghezvisz;ige
-Továbbirészletezés;
 végigsöpör;ige
 végintézkedés;főnév
 végkielégítés;főnév
@@ -62525,7 +62133,6 @@ vérség;főnév
 vért;főnév
 vértanú;főnév
 vértelen;főnév
-vértesfőnév;
 Vértesacsa;tulajdonnév;földrajzinév
 Vértesboglár;tulajdonnév;földrajzinév
 Vérteskethely;tulajdonnév;földrajzinév
@@ -62552,7 +62159,6 @@ vés;ige
 Vése;tulajdonnév;földrajzinév
 véset;ige
 vésnök;főnév
-Továbbirészletezés;
 vészes;melléknév
 vészharang;főnév
 vészhely;főnév
@@ -62718,10 +62324,6 @@ whisky;whiskey;főnév
 whisky;whiskey;főnév
 wiszt;főnév
 widerdruck;főnév
-Adminisztrátorijoggalrendelkezőszerkesztő;
-Címszó;formaiváltozatok;rendhagyóragozásúalakok
-Bemutatkozás;
-Szerzőijogok;
 wikler;melléknév
 vimedli;főnév
 Windhoek;tulajdonnév
@@ -62741,7 +62343,6 @@ xerox;főnév
 nyírfacukor;xilit;xylitol;főnév
 xilofon;főnév
 xilográfia;főnév
-Továbbirészletezés;
 nyírfacukor;xilit;xylitol;főnév
 Xénia;tulajdonnév
 Y;y;betű
@@ -62753,7 +62354,6 @@ yard;főnév
 Yaren;tulajdonnév
 jeti;főnév
 yuppie;főnév
-Továbbirészletezés;
 zab;főnév
 zaba;főnév
 Zabar;tulajdonnév;földrajzinév
@@ -62938,7 +62538,6 @@ Zics;tulajdonnév;földrajzinév
 zigóta;főnév
 zihál;ige
 zihálás;főnév
-Továbbirészletezés;
 ziliz;főnév
 Zilkadi;főnév
 zilál;ige
@@ -63378,8 +62977,6 @@ zűrzavar;főnév
 zűrzavaros;melléknév
 zűrös;melléknév
 hullám;főnév
-Továbbimegjegyzés;
-Továbbimegjegyzés;
 font;főnév
 euró;főnév
 végtelen;főnév
@@ -63442,7 +63039,6 @@ advent;ádvent;főnév
 áfonya;főnév
 áfpászol;ige
 ág;főnév
-Továbbirészletezés;
 ágacska;főnév
 ágas;melléknév
 ágasbúza;főnév
@@ -63456,7 +63052,6 @@ Továbbirészletezés;
 ágazat;főnév
 ágazati;melléknév
 ágazik;ige
-Továbbirészletezés;
 agenda;ágenda;főnév
 ágens;főnév
 ágfa;főnév
@@ -63485,7 +63080,6 @@ agenda;ágenda;főnév
 ágyás;főnév
 ágyék;főnév
 ágyéksérv;főnév
-Kifejezések;
 ágyúagy;főnév
 ágyúdörgés;főnév
 ágyúlövés;főnév
@@ -63759,7 +63353,6 @@ appetitus;főnév
 áporodik;ige
 áporodott;melléknév
 április;főnév
-Továbbirészletezés;
 árad;ige
 áradat;főnév
 áradozik;ige
@@ -63801,7 +63394,6 @@ Ariel;tulajdonnév
 árjegyzék;főnév
 árkol;ige
 árkolás;főnév
-Kifejezések;
 Árkos;tulajdonnév
 árkus;ív;főnév
 árkád;főnév
@@ -63840,7 +63432,6 @@ armális;főnév
 Árpás;tulajdonnév;földrajzinév
 árszabás;főnév
 árszint;főnév
-Kifejezések;
 ártalmas;melléknév
 ártalmatlan;melléknév
 ártalom;főnév
@@ -63981,7 +63572,6 @@ kőolaj;ásványolaj;főnév
 átgördül;ige
 áthajlik;ige
 áthajol;ige
-Továbbirészletezés;
 áthajít;ige
 áthajózik;ige
 áthajózik;ige
@@ -64078,7 +63668,6 @@ Továbbirészletezés;
 átmenet;főnév
 átmeneti;melléknév
 átmenetileg;határozószó
-Továbbirészletezés;
 átmenő;melléknév
 átmetsz;ige
 átminősít;ige
@@ -64276,7 +63865,6 @@ adu;főnév
 átüt;ige
 átüzen;ige
 ávós;főnév
-Továbbirészletezés;
 ázalag;főnév
 ázalék;főnév
 ázik;ige
@@ -64461,7 +64049,6 @@ egál;melléknév
 éjszakázik;ige
 éjsötét;melléknév
 éjvilág;főnév
-Kifejezés;
 ékcsont;főnév
 ékel;ige
 ékelődik;ige
@@ -64683,7 +64270,6 @@ termesz;építészhangya;főnév
 építőállás;főnév
 épül;ige
 épület;főnév
-Továbbirészletezés;
 éra;főnév
 érc;főnév
 ércakna;főnév
@@ -65045,7 +64631,6 @@ irón;főnév
 ívik;ige
 ívás;főnév
 ívó;melléknév
-Kifejezések;
 ízel;ige
 ízeltlábú;főnév
 ízeltlábú;főnév
@@ -65278,7 +64863,6 @@ ad;ige
 ölez;ige
 ölfa;főnév
 ölnyi;melléknév
-Továbbirészletezés;
 öltés;főnév
 öltöget;ige
 öltöny;főnév
@@ -65489,7 +65073,6 @@ nagyszülő;öregszülő;főnév
 örök;melléknév
 örökbe;határozószó
 örökbefogadott;melléknév
-Örökbefogadottszócikkek;
 örökbefogadás;főnév
 örökbér;főnév
 örökbérlet;főnév
@@ -65556,7 +65139,6 @@ nagyszülő;öregszülő;főnév
 örömünnep;főnév
 örül;ige
 Öskü;tulajdonnév;földrajzinév
-Továbbirészletezés;
 összead;ige
 összeadandó;főnév
 összeadogat;ige
@@ -65920,9 +65502,7 @@ Továbbirészletezés;
 összetettség;főnév
 anyag;anyagok;anyaga;főnév
 ion;főnév
-Továbbirészletezés;
 mondat;főnév
-Továbbirészletezés;
 virágzat;főnév
 állítmány;főnév
 összetevő;melléknév
@@ -66041,7 +65621,6 @@ szóösszevonás;főnév
 ösztövér;melléknév
 ösztövéren;határozószó
 ösztövérség;főnév
-Továbbirészletezés;
 öszvér;főnév
 öszvéres;melléknév
 öt;számnév
@@ -66102,7 +65681,6 @@ Továbbirészletezés;
 övéi;névmás;főnév
 övéik;főnév
 övék;birtokosnévmás
-Továbbirészletezés;
 özni;főnév
 öznizőgép;főnév
 Özséb;tulajdonnév
@@ -66121,7 +65699,6 @@ Továbbirészletezés;
 özönvíz;főnév
 Ú;ú;betű
 úgy;névmás;határozószó
-Szóhasználatimegjegyzés;
 úgyabban;úgyabbul;névmás;határozószó
 úgyabban;úgyabbul;névmás;határozószó
 úgyannyira;névmás;határozószó
@@ -66168,7 +65745,6 @@ alpakka;újezüst;kínaezüst;főnév
 újonc;főnév
 újonnan;határozószó
 Újpetre;tulajdonnév;földrajzinév
-Továbbirészletezés;
 újrahasznosít;ige
 újrahasznosítás;főnév
 Újrónafő;tulajdonnév;földrajzinév
@@ -66356,7 +65932,6 @@ középosztály;főnév
 ügyészség;főnév
 ük;melléknév
 ükapa;főnév
-Továbbirészletezés;
 üldögél;ige
 üldöz;ige
 üldözés;főnév
@@ -66528,7 +66103,6 @@ melegház;üvegház;főnév
 üzletel;ige
 üzletember;főnév
 üzleti;melléknév
-Továbbirészletezés;
 üzletkezelés;főnév
 üzletkötés;főnév
 üzletkötő;főnév
@@ -66538,7 +66112,6 @@ Továbbirészletezés;
 üzletág;főnév
 üzér;főnév
 üzérkedik;ige
-Kifejezések;
 osztás;főnév
 ő;névmás
 C;c;betű
