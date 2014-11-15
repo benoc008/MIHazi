@@ -6,6 +6,7 @@ public class Mondat {
     private String mondat;
     private String alany;
     private String allitmany;
+    private String targy;
     private MondatFajta fajta;
 
     public Mondat(String mondat){
@@ -47,6 +48,14 @@ public class Mondat {
 
     public MondatFajta getFajta() {
         return fajta;
+    }
+
+    public String getTargy() {
+        return targy;
+    }
+
+    public void setTargy(String targy) {
+        this.targy = targy;
     }
 
     public String getFajtaString(){

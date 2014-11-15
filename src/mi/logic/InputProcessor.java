@@ -39,7 +39,7 @@ public class InputProcessor {
         }
     }
 
-    private void kerdeseketBeolvas() {
+    public void kerdeseketBeolvas() {
         eloreDefinialtKerdesekValaszok = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(KERDESEK))){
             String line = br.readLine();
@@ -102,12 +102,28 @@ public class InputProcessor {
 
     private void ertelmez(Mondat mondat){
         eloreDefinialtAdatokAlapjanEllenoriz(mondat);
-        String targy = keresTargyat(mondat);
+        keresTargyat(mondat);
 
     }
 
-    private String keresTargyat(Mondat mondat) {
-        return null;
+    private void keresTargyat(Mondat mondat) {
+        String[] szavak = mondat.getMondat().split(" ");
+        List<String> tVeguSzavak = tVeguSzavakatKeres(szavak);
+        if(tVeguSzavak.size() == 0){
+            return;
+        } else if(tVeguSzavak.size() == 1){
+            mondat.setTargy(tVeguSzavak.get(0));
+        }
+    }
+
+    private List<String> tVeguSzavakatKeres(String[] szavak) {
+        List<String> ret = new ArrayList<>();
+        for(String s : szavak){
+            if(s.charAt(s.length() - 1) == 't'){
+                ret.add(s);
+            }
+        }
+        return ret;
     }
 
     private void eloreDefinialtAdatokAlapjanEllenoriz(Mondat mondat) {

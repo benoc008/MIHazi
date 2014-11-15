@@ -96,7 +96,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     }
 
     public void manualisOktatasAblakMegnyitas(){
-        ManualisOktatasAblak manualisOktatasAblak = new ManualisOktatasAblak();
+        ManualisOktatasAblak manualisOktatasAblak = new ManualisOktatasAblak(inputProcessor);
         Thread t = new Thread(manualisOktatasAblak);
         t.start();
     }

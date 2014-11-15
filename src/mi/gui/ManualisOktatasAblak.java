@@ -1,5 +1,6 @@
 package mi.gui;
 
+import mi.logic.InputProcessor;
 import mi.logic.KerdesValasz;
 
 import javax.swing.*;
@@ -31,9 +32,12 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private OktatasFeltoltesNezet feltoltesNezet;
     private OktatasSzerkesztesNezet szerkesztesNezet;
 
+    private InputProcessor inputProcessor;
+
     List<KerdesValasz> kerdesekValaszok = new ArrayList<>();
 
-    public ManualisOktatasAblak() {
+    public ManualisOktatasAblak(InputProcessor inputProcessor) {
+        this.inputProcessor = inputProcessor;
         setLayout(new BorderLayout());
 
         //TODO file, sugo, akarmmi...
@@ -80,7 +84,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     }
 
     private void createView() {
-        JFrame frame = new ManualisOktatasAblak();
+        JFrame frame = new ManualisOktatasAblak(inputProcessor);
         frame.setSize(640, 480);
         frame.setTitle("ChatBot - Manuális oktatás");
 
@@ -134,6 +138,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         kerdesekValaszok = szerkesztesNezet.getKerdesekValaszok();
         File file=new File(ALAP_FILE);
         kerdesValaszokMentes(file);
+        inputProcessor.kerdeseketBeolvas();
     }
 
     private void kerdesValaszokMentes(File file){
