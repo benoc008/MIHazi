@@ -1,5 +1,7 @@
 package mi.logic;
 
+import static mi.logic.MondatFajta.*;
+
 public class Mondat {
     private String mondat;
     private String alany;
@@ -8,24 +10,24 @@ public class Mondat {
 
     public Mondat(String mondat){
         this.mondat = mondat;
-        fajta = MondatFajta.KIJELENTO;
+        fajta = KIJELENTO;
     }
 
     public Mondat(String mondat, String fajta) {
         this.mondat = mondat;
         switch (fajta) {
             case "?":
-                this.fajta = MondatFajta.KERDO;
+                this.fajta = KERDO;
                 break;
             case ".":
-                this.fajta = MondatFajta.KIJELENTO;
+                this.fajta = KIJELENTO;
                 break;
             case "!":
-                this.fajta = MondatFajta.FELKIALTO;
+                this.fajta = FELKIALTO;
                 //TODO ...
                 break;
             default:
-                this.fajta = MondatFajta.KIJELENTO;
+                this.fajta = KIJELENTO;
                 //TODO exceptiont kellene dobni...
                 System.out.println("Hibas mondatfajta, kijelentonek allitva");
         }
@@ -45,5 +47,20 @@ public class Mondat {
 
     public MondatFajta getFajta() {
         return fajta;
+    }
+
+    public String getFajtaString(){
+        switch(fajta){
+            case KIJELENTO:
+                return ".";
+            case KERDO:
+                return "?";
+            case FELKIALTO:
+            case FELSZOLITO:
+            case OHAJTO:
+                return "!";
+            default:
+                return ".";
+        }
     }
 }

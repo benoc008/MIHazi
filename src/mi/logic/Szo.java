@@ -7,6 +7,16 @@ public class Szo {
     private String szo;
     private List<String> szofajok = new ArrayList<>();
 
+    public static Szo createFromCsv(String s){
+        Szo ret = new Szo();
+        String[] split = s.split(";");
+        ret.setSzo(split[0]);
+        for(int i = 1; i < split.length; i++){
+            ret.addSzofaj(split[i]);
+        }
+        return ret;
+    }
+
     public String getSzo() {
         return szo;
     }

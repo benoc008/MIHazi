@@ -13,14 +13,30 @@ public class InputProcessor {
     private static String KERDESEK = "kerdesek.txt";
 
     private List<KerdesValasz> eloreDefinialtKerdesekValaszok;
+    private List<Szo> szokincs;
     private List<String> history;
     private String valasz;
+
 
     Random random = new Random();
 
     public InputProcessor() {
-        kerdeseketBeolvas();
         history = new ArrayList<>();
+        kerdeseketBeolvas();
+        szokincsetBeolvas();
+    }
+
+    private void szokincsetBeolvas() {
+        szokincs = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(KERDESEK))) {
+            String line = br.readLine();
+            while(line != null){
+                szokincs.add(Szo.createFromCsv(line));
+                line = br.readLine();
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     private void kerdeseketBeolvas() {
@@ -42,9 +58,7 @@ public class InputProcessor {
                 line = br.readLine();
             }
             eloreDefinialtKerdesekValaszok.add(new KerdesValasz(kerdes, valaszok));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -88,12 +102,19 @@ public class InputProcessor {
 
     private void ertelmez(Mondat mondat){
         eloreDefinialtAdatokAlapjanEllenoriz(mondat);
+        String targy = keresTargyat(mondat);
 
     }
 
+    private String keresTargyat(Mondat mondat) {
+        return null;
+    }
+
     private void eloreDefinialtAdatokAlapjanEllenoriz(Mondat mondat) {
+        String keresett = mondat.getMondat().toLowerCase() + mondat.getFajtaString();
         for(KerdesValasz kv : eloreDefinialtKerdesekValaszok){
-            if(kv.getKerdes().toLowerCase().equals(mondat.getMondat().toLowerCase())){
+            String megadott = kv.getKerdes().toLowerCase();
+            if(megadott.equals(keresett)){
                 valasz = kv.getValaszok().get(random.nextInt(kv.getValaszok().size()));
             }
         }
