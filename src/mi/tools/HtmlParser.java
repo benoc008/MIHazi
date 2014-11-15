@@ -1,4 +1,4 @@
-package mi.html;
+package mi.tools;
 
 import mi.logic.Szo;
 

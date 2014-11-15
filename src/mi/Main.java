@@ -1,12 +1,6 @@
 package mi;
 
 import mi.gui.Ablak;
-import mi.helperek.FileMuveletHelper;
-import mi.html.HtmlParser;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
 
 public class Main {
 
