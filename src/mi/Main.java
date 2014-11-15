@@ -1,6 +1,7 @@
 package mi;
 
 import mi.gui.Ablak;
+import mi.logic.InputProcessor;
 
 public class Main {
 
@@ -15,7 +16,9 @@ public class Main {
 //        HtmlParser parser = new HtmlParser();
 //        parser.parse();
 
-        Ablak ablak = new Ablak();
+        InputProcessor inputProcessor = new InputProcessor();
+
+        Ablak ablak = new Ablak(inputProcessor);
         Thread t = new Thread(ablak);
         t.start();
 
