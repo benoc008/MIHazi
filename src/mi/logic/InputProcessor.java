@@ -111,9 +111,10 @@ public class InputProcessor {
     }
 
     private void eloreDefinialtAdatokAlapjanEllenoriz(Mondat mondat) {
-        String keresett = mondat.getMondat().toLowerCase() + mondat.getFajtaString();
+        String keresett = mondat.getMondat().toLowerCase();
         for(KerdesValasz kv : eloreDefinialtKerdesekValaszok){
             String megadott = kv.getKerdes().toLowerCase();
+            megadott = megadott.replaceAll("[?!.]", "");
             if(megadott.equals(keresett)){
                 valasz = kv.getValaszok().get(random.nextInt(kv.getValaszok().size()));
             }
