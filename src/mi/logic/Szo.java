@@ -10,7 +10,7 @@ public class Szo {
     public static Szo createFromCsv(String s){
         Szo ret = new Szo();
         String[] split = s.split(";");
-        ret.setSzo(split[0]);
+        ret.setSzo(split[0].toLowerCase());
         for(int i = 1; i < split.length; i++){
             ret.addSzofaj(split[i]);
         }

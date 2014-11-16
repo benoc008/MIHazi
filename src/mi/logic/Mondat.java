@@ -4,9 +4,9 @@ import static mi.logic.MondatFajta.*;
 
 public class Mondat {
     private String mondat;
-    private String alany;
-    private String allitmany;
-    private String targy;
+    private Szo alany;
+    private Szo allitmany;
+    private Szo targy;
     private MondatFajta fajta;
 
     public Mondat(String mondat){
@@ -38,23 +38,31 @@ public class Mondat {
         return mondat;
     }
 
-    public String getAlany() {
+    public Szo getAlany() {
         return alany;
     }
 
-    public String getAllitmany() {
+    public void setAlany(Szo alany) {
+        this.alany = alany;
+    }
+
+    public Szo getAllitmany() {
         return allitmany;
+    }
+
+    public void setAllitmany(Szo allitmany) {
+        this.allitmany = allitmany;
     }
 
     public MondatFajta getFajta() {
         return fajta;
     }
 
-    public String getTargy() {
+    public Szo getTargy() {
         return targy;
     }
 
-    public void setTargy(String targy) {
+    public void setTargy(Szo targy) {
         this.targy = targy;
     }
 
