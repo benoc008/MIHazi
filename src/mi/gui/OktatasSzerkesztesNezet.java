@@ -1,6 +1,6 @@
 package mi.gui;
 
-import mi.logic.KerdesValasz;
+import mi.domain.KerdesValasz;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;

@@ -1,4 +1,4 @@
-package mi.logic;
+package mi.domain;
 
 public enum MondatFajta {
     KIJELENTO,

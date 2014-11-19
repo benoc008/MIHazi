@@ -1,5 +1,10 @@
 package mi.logic;
 
+import mi.domain.KerdesValasz;
+import mi.domain.Mondat;
+import mi.domain.MondatFajta;
+import mi.domain.Szo;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.*;
@@ -11,6 +16,7 @@ public class InputProcessor {
     private static String NEVEK_FILE = "nevek.csv";
 
     private static String[] IGEKOTOK = {"abba", "hátra", "mellé", "agyon", "haza", "mögé", "alá", "helyre", "neki", "által", "hozzá", "oda", "alul", "ide", "össze", "át", "jóvá", "rá", "be", "keresztül", "rajta", "bele", "ketté", "szembe", "belül", "ki", "szerte", "benn", "bent", "kinn", "kint", "szét", "széjjel", "egybe", "kívül", "tele", "el", "kölcsön", "tova", "elé", "körbe", "tönkre", "ellen", "körül", "túl", "elő", "közzé", "újjá", "előre", "külön", "újra", "fel", "föl", "le", "utána", "félbe", "lent", "végbe", "félre", "létre", "végig", "felül", "fölül", "meg", "vissza", "fenn", "fent", "fönn", "fönt"};
+
     Random random = new Random();
     private List<KerdesValasz> eloreDefinialtKerdesekValaszok;
     private List<Szo> szokincs;
@@ -72,13 +78,24 @@ public class InputProcessor {
     }
 
     private void feldolgoz(String s) {
-        valasz = s;
+        valasz = "";
         List<Mondat> mondatok = mondatokraBont(s);
         for (Mondat m : mondatok) {
             ertelmez(m);
+            valaszol(m);
+        }
+
+        if(valasz.equals("")){
+            valasz = s;
         }
 
 
+    }
+
+    private void valaszol(Mondat mondat) {
+        if(mondat.getFajta() == MondatFajta.KIJELENTO){
+            valasz = new KerdesGeneralo().general(mondat);
+        }
     }
 
     private List<Mondat> mondatokraBont(String s) {
@@ -140,9 +157,8 @@ public class InputProcessor {
     }
 
     private void keresAlanyt(Mondat mondat) {
-        String[] szavak = mondat.getMondat().split(" ");
         List<Szo> potencialisSzavak = new ArrayList<>();
-        for (String s : szavak) {
+        for (String s : mondat.getVizsgalandoSzavak()) {
             s = s.toLowerCase();
             for (Szo szo : szokincs) {
                 if(!(szo.getSzofajok().contains("főnév") || szo.getSzofajok().contains("névmás"))){
@@ -156,19 +172,18 @@ public class InputProcessor {
                     if(s.startsWith(szo.getSzo())){
                         potencialisSzavak.add(szo);
                     }
-                } else if(s.startsWith(szo.getSzo().substring(0, szo.getSzo().length() - 2))){
+                } else if(s.startsWith(szo.getVegeNelkul())){
                     potencialisSzavak.add(szo);
                 }
             }
         }
         mondat.setAlany(getLegtobbEgyezes(mondat, potencialisSzavak));
+        mondat.torolSzo(mondat.getSzoSzotobol(mondat.getAlany()));
     }
 
     private void keresAllitmanyt(Mondat mondat) {
-        // a targyat mar ne nezze
-        String[] szavak = mondat.getMondat().split(" ");
         List<Szo> potencialisSzavak = new ArrayList<>();
-        for (String s : szavak) {
+        for (String s : mondat.getVizsgalandoSzavak()) {
             s = s.toLowerCase();
             s = igekototLevesz(s);
             for (Szo szo : szokincs) {
@@ -183,12 +198,13 @@ public class InputProcessor {
                     if(s.startsWith(szo.getSzo())){
                         potencialisSzavak.add(szo);
                     }
-                } else if(s.startsWith(szo.getSzo().substring(0, szo.getSzo().length() - 2))){
+                } else if(s.startsWith(szo.getVegeNelkul())){
                     potencialisSzavak.add(szo);
                 }
             }
         }
         mondat.setAllitmany(getLegtobbEgyezes(mondat, potencialisSzavak));
+        mondat.torolSzo(mondat.getSzoSzotobol(mondat.getAllitmany()));
     }
 
     public String igekototLevesz(String s) {
@@ -202,8 +218,10 @@ public class InputProcessor {
     }
 
     private void keresTargyat(Mondat mondat) {
-        String[] szavak = mondat.getMondat().split(" ");
-        List<String> tVeguSzavak = tVeguSzavakatKeres(szavak);
+        List<String> tVeguSzavak = egyTVeguSzavakatKeres(mondat.getVizsgalandoSzavak());
+        if(tVeguSzavak.isEmpty()){
+            return;
+        }
         List<Szo> potencialisSzavak = new ArrayList<>();
         for (String s : tVeguSzavak) {
             s = s.toLowerCase();
@@ -211,12 +229,13 @@ public class InputProcessor {
                 if(szo.getSzo().length() < 3){
                     continue;
                 }
-                if (s.startsWith(szo.getSzo().substring(0, szo.getSzo().length() - 2))) {
+                if (s.startsWith(szo.getVegeNelkul())) {
                     potencialisSzavak.add(szo);
                 }
             }
         }
         mondat.setTargy(getLegtobbEgyezes(mondat, potencialisSzavak));
+        mondat.torolSzo(mondat.getSzoSzotobol(mondat.getTargy()));
     }
 
     private Szo getLegtobbEgyezes(Mondat mondat, List<Szo> potencialisSzavak) {
@@ -244,7 +263,7 @@ public class InputProcessor {
     private Szo getLegkisebb(List<Szo> szo) {
         if(szo == null){
             Szo ret = new Szo();
-            ret.setSzo("hiba");
+            ret.setSzo("");
             return ret;
         }
         Szo min = szo.get(0);
@@ -256,10 +275,10 @@ public class InputProcessor {
         return min;
     }
 
-    private List<String> tVeguSzavakatKeres(String[] szavak) {
+    private List<String> egyTVeguSzavakatKeres(List<String> szavak) {
         List<String> ret = new ArrayList<>();
         for (String s : szavak) {
-            if (s.charAt(s.length() - 1) == 't') {
+            if (s.charAt(s.length() - 1) == 't' && s.charAt(s.length() - 2) != 't') {
                 ret.add(s);
             }
         }

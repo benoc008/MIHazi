@@ -1,4 +1,4 @@
-package mi.logic;
+package mi.domain;
 
 import java.util.ArrayList;
 import java.util.List;

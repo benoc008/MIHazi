@@ -1,21 +1,26 @@
-package mi.logic;
+package mi.domain;
 
-import static mi.logic.MondatFajta.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static mi.domain.MondatFajta.*;
 
 public class Mondat {
     private String mondat;
+    private List<String> vizsgalandoSzavak = new ArrayList<>();
     private Szo alany;
     private Szo allitmany;
     private Szo targy;
     private MondatFajta fajta;
 
     public Mondat(String mondat){
-        this.mondat = mondat;
-        fajta = KIJELENTO;
+        this(mondat, ".");
     }
 
     public Mondat(String mondat, String fajta) {
         this.mondat = mondat;
+        Collections.addAll(vizsgalandoSzavak, mondat.split(" "));
         switch (fajta) {
             case "?":
                 this.fajta = KERDO;
@@ -32,6 +37,15 @@ public class Mondat {
                 //TODO exceptiont kellene dobni...
                 System.out.println("Hibas mondatfajta, kijelentonek allitva");
         }
+    }
+
+    public String getSzoSzotobol(Szo szo){
+        for(String s : mondat.split(" ")){
+            if(szo.getSzo().length() < 3 || s.startsWith(szo.getVegeNelkul())){
+                return s;
+            }
+        }
+        return "";
     }
 
     public String getMondat() {
@@ -64,6 +78,14 @@ public class Mondat {
 
     public void setTargy(Szo targy) {
         this.targy = targy;
+    }
+
+    public List<String> getVizsgalandoSzavak() {
+        return vizsgalandoSzavak;
+    }
+
+    public void torolSzo(String s){
+        vizsgalandoSzavak.remove(s);
     }
 
     public String getFajtaString(){

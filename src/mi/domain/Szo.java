@@ -1,4 +1,4 @@
-package mi.logic;
+package mi.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,10 @@ public class Szo {
             ret.addSzofaj(split[i]);
         }
         return ret;
+    }
+
+    public String getVegeNelkul(){
+        return szo.substring(0, szo.length() - 2);
     }
 
     public String getSzo() {

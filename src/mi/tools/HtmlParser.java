@@ -1,6 +1,6 @@
 package mi.tools;
 
-import mi.logic.Szo;
+import mi.domain.Szo;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package mi.logic;
+package mi.domain;
 
 public class Sor {
     public String tipus;

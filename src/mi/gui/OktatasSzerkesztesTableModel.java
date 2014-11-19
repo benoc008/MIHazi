@@ -1,7 +1,7 @@
 package mi.gui;
 
-import mi.logic.Sor;
-import mi.logic.KerdesValasz;
+import mi.domain.Sor;
+import mi.domain.KerdesValasz;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
