@@ -80,19 +80,23 @@ public class InputProcessor {
     private void feldolgoz(String s) {
         valasz = "";
         List<Mondat> mondatok = mondatokraBont(s);
-        for (Mondat m : mondatok) {
-            ertelmez(m);
-            valaszol(m);
+        for (Mondat mondat : mondatok) {
+            if(eloreDefinialtAdatokAlapjanEllenoriz(mondat)){
+                continue;
+            }
+            ertelmez(mondat);
+            valaszol(mondat);
         }
 
         if(valasz.equals("")){
             valasz = s;
         }
-
-
     }
 
+
+
     private void valaszol(Mondat mondat) {
+
         if(mondat.getFajta() == MondatFajta.KIJELENTO){
             valasz = new KerdesGeneralo().general(mondat);
         }
@@ -116,7 +120,6 @@ public class InputProcessor {
     }
 
     private void ertelmez(Mondat mondat) {
-        eloreDefinialtAdatokAlapjanEllenoriz(mondat);
         keresTargyat(mondat);
         keresAllitmanyt(mondat);
         keresAlanyt(mondat);
@@ -285,14 +288,16 @@ public class InputProcessor {
         return ret;
     }
 
-    private void eloreDefinialtAdatokAlapjanEllenoriz(Mondat mondat) {
+    private boolean eloreDefinialtAdatokAlapjanEllenoriz(Mondat mondat) {
         String keresett = mondat.getMondat().toLowerCase();
         for (KerdesValasz kv : eloreDefinialtKerdesekValaszok) {
             String megadott = kv.getKerdes().toLowerCase();
             megadott = megadott.replaceAll("[?!.]", "");
             if (megadott.equals(keresett)) {
                 valasz = kv.getValaszok().get(random.nextInt(kv.getValaszok().size()));
+                return true;
             }
         }
+        return false;
     }
 }
