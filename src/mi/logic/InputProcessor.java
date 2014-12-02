@@ -294,7 +294,7 @@ public class InputProcessor {
             String megadott = kv.getKerdes().toLowerCase();
             megadott = megadott.replaceAll("[?!.]", "");
             if (megadott.equals(keresett)) {
-                valasz = kv.getValaszok().get(random.nextInt(kv.getValaszok().size()));
+                valasz += kv.getValaszok().get(random.nextInt(kv.getValaszok().size()));
                 return true;
             }
         }
