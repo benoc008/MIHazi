@@ -1,9 +1,10 @@
 package mi.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Szo {
+public class Szo implements Serializable{
     private String szo;
     private List<String> szofajok = new ArrayList<>();
 

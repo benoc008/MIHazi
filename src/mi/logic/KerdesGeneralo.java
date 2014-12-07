@@ -10,8 +10,8 @@ import java.util.Random;
 
 public class KerdesGeneralo {
 
-    private static String[] TARGYRA_KERDEZ = {"Miért +", "Milyen", "Mekkora", "Mennyi", "Hány"};
-    private static String[] ALLITMANYRA_KERDEZ = {"Hogy", "Hogyan", "Mivel", "Mennyire", "Miért"};
+    public static String[] TARGYRA_KERDEZ = {"Miért +", "Milyen", "Mekkora", "Mennyi", "Hány", "Mit"};
+    public static String[] ALLITMANYRA_KERDEZ = {"Hogy", "Hogyan", "Mivel", "Mennyire", "Miért"};
 
     private Mondat mondat;
     private Random random;

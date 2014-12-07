@@ -15,7 +15,7 @@ public class Hangok {
 
 
     public static String getUtolsoMaganhangzo(Szo szo) throws Exception {
-        for (int i = szo.getSzo().length() - 1; i > 0; i--) {
+        for (int i = szo.getSzo().length() - 1; i >= 0; i--) {
             for (String s : MAGANHANGZOK) {
                 if (s.equals(szo.getSzo().substring(i, i + 1))) {
                     return s;
@@ -25,9 +25,9 @@ public class Hangok {
         throw new Exception("Nincs maganhangzo a szoban"); //TODO valami normalis hibakiiro
     }
 
-    public static boolean isUtolsoHangMaganhangzo(Szo szo){
-        for(String s : MAGANHANGZOK){
-            if(szo.getSzo().endsWith(s)){
+    public static boolean isUtolsoHangMaganhangzo(Szo szo) {
+        for (String s : MAGANHANGZOK) {
+            if (szo.getSzo().endsWith(s)) {
                 return true;
             }
         }
@@ -56,26 +56,26 @@ public class Hangok {
         return Rend.VEGYES;
     }
 
-    public static String rovidetHosszura(String s){
-        for(int i = 0; i < ROVID_MAGANHANGZO.length; i++){
-            if(s.equals(ROVID_MAGANHANGZO[i])){
+    public static String rovidetHosszura(String s) {
+        for (int i = 0; i < ROVID_MAGANHANGZO.length; i++) {
+            if (s.equals(ROVID_MAGANHANGZO[i])) {
                 return HOSSZU_MAGANHANGZO[i];
-            } else if(s.equals(HOSSZU_MAGANHANGZO[i])){
+            } else if (s.equals(HOSSZU_MAGANHANGZO[i])) {
                 return HOSSZU_MAGANHANGZO[i];
             }
         }
         throw new RuntimeException("Nem maganhangzo.");
     }
 
-    public static Maganhangzo getUtolsoMaganhangzoFajtaja(Szo szo){
+    public static Maganhangzo getUtolsoMaganhangzoFajtaja(Szo szo) {
         String szoto = szo.getSzo();
-        for(String s : Hangok.HOSSZU_MAGANHANGZO){
-            if(s.equals(szoto.substring(szoto.length() - 1, szoto.length()))){
+        for (String s : Hangok.HOSSZU_MAGANHANGZO) {
+            if (s.equals(szoto.substring(szoto.length() - 1, szoto.length()))) {
                 return HOSSZU;
             }
         }
-        for(String s : Hangok.ROVID_MAGANHANGZO){
-            if(s.equals(szoto.substring(szoto.length() - 1, szoto.length()))){
+        for (String s : Hangok.ROVID_MAGANHANGZO) {
+            if (s.equals(szoto.substring(szoto.length() - 1, szoto.length()))) {
                 return ROVID;
             }
         }
@@ -83,11 +83,11 @@ public class Hangok {
         return null;
     }
 
-    public static int maganhangzokSzama(Szo szo){
+    public static int maganhangzokSzama(Szo szo) {
         int maganhangzokSzama = 0;
-        for(int i = 0; i < szo.getSzo().length(); i++){
-            for(String s : MAGANHANGZOK){
-                if(szo.getSzo().substring(i, i+1).equals(s)){
+        for (int i = 0; i < szo.getSzo().length(); i++) {
+            for (String s : MAGANHANGZOK) {
+                if (szo.getSzo().substring(i, i + 1).equals(s)) {
                     maganhangzokSzama++;
                 }
             }
@@ -95,13 +95,12 @@ public class Hangok {
         return maganhangzokSzama;
     }
 
-    public static boolean mindOU(Szo szo){ // öőüű
-        for(int i = 0; i < szo.getSzo().length(); i++){
-            for(String s : MAGANHANGZOK){
-                if("iíoóeéaáuú".contains(szo.getSzo().substring(i, i+1))){
-                    return false;
-                }
+    public static boolean mindOU(Szo szo) { // öőüű
+        for (int i = 0; i < szo.getSzo().length(); i++) {
+            if ("iíoóeéaáuú".contains(szo.getSzo().substring(i, i + 1))) {
+                return false;
             }
+
         }
         return true;
     }

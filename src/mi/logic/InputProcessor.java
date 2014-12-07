@@ -3,6 +3,7 @@ package mi.logic;
 import mi.domain.KerdesValasz;
 import mi.domain.Mondat;
 import mi.domain.Szo;
+import mi.domain.Tudas;
 import mi.domain.enumok.*;
 
 import java.io.BufferedReader;
@@ -20,6 +21,7 @@ public class InputProcessor {
     Random random = new Random();
     private List<KerdesValasz> eloreDefinialtKerdesekValaszok;
     private List<Szo> szokincs;
+    private List<Tudas> tudastar;
     private List<String> history;
     private String valasz;
 
@@ -29,6 +31,7 @@ public class InputProcessor {
         szokincs = new ArrayList<>();
         csvOlvaso(SZOKINCS_FILE);
         csvOlvaso(NEVEK_FILE);
+        tudastar = new ArrayList<>();
     }
 
     private void csvOlvaso(String file) {
@@ -85,11 +88,48 @@ public class InputProcessor {
                 continue;
             }
             ertelmez(mondat);
+            tanul(mondat);
             valaszol(mondat);
         }
 
         if (valasz.equals("")) {
             valasz = s;
+        }
+    }
+
+    private void tanul(Mondat mondat) {
+        Tudas tudas = new Tudas();
+        if(history.size() < 2){
+            return;
+        }
+        String elozoMondat = history.get(history.size() - 2);
+        if(elozoMondat.endsWith("?")){
+            String kerdoszo = ValaszGeneralo.kerdoszotKeres(elozoMondat);
+            if(!kerdoszo.equals("")){
+                tudas.setKerdoszo(kerdoszo);
+                for(String s: KerdesGeneralo.ALLITMANYRA_KERDEZ){
+                    if(s.startsWith(kerdoszo)){
+                        if(mondat.getAllitmany() != null) {
+                            tudas.setKerdezettSzo(mondat.getAllitmany());
+                        } else {
+                            throw new RuntimeException("hianyzo allitmany");
+                        }
+                    }
+                }
+                for(String s: KerdesGeneralo.TARGYRA_KERDEZ){
+                    if(s.startsWith(kerdoszo)){
+                        if(mondat.getTargy() != null) {
+                            tudas.setKerdezettSzo(mondat.getTargy());
+                        } else {
+                            throw new RuntimeException("hianyzo targy");
+                        }
+                    }
+                }
+            }
+        }
+        if(tudas.getKerdoszo() != null) {
+            tudas.setValasz(mondat);
+            tudastar.add(tudas);
         }
     }
 
@@ -103,13 +143,14 @@ public class InputProcessor {
                 e.printStackTrace();
             }
         } else if (mondat.getFajta().equals(MondatFajta.KERDO)) {
+            valasz = new ValaszGeneralo(tudastar).general(mondat);
             try {
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
-                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, mondat.getRendszer()));
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -317,5 +358,13 @@ public class InputProcessor {
             }
         }
         return false;
+    }
+
+    public List<Tudas> getTudastar() {
+        return tudastar;
+    }
+
+    public void addTudastar(List<Tudas> tudasLista){
+        tudastar.addAll(tudasLista);
     }
 }

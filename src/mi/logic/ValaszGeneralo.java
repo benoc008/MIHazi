@@ -1,7 +1,9 @@
 package mi.logic;
 
 import mi.domain.Mondat;
+import mi.domain.Tudas;
 
+import java.util.List;
 import java.util.Random;
 
 public class ValaszGeneralo {
@@ -11,6 +13,11 @@ public class ValaszGeneralo {
 
     private Mondat mondat;
     private Random random;
+    private List<Tudas> tudastar;
+
+    public ValaszGeneralo(List<Tudas> tudastar) {
+        this.tudastar = tudastar;
+    }
 
     public String general(Mondat mondat) {
         this.mondat = mondat;
@@ -22,7 +29,11 @@ public class ValaszGeneralo {
 
 
             default:
-                return "asd";
+                if(random.nextInt(2) == 0){
+                    return "Igen.";
+                } else {
+                    return "Nem.";
+                }
         }
     }
 
@@ -31,8 +42,20 @@ public class ValaszGeneralo {
 
     }
 
-    private String kerdoszotKeres() {
+    public String kerdoszotKeres() {
         for(String szo : mondat.getMondat().split(" ")){
+            for(String kerdoszo : KERDOSZAVAK) {
+                if (szo.toLowerCase().equals(kerdoszo.toLowerCase())){
+                    return kerdoszo;
+                }
+            }
+        }
+        return "";
+    }
+
+    //TODO ezt valami helperbe
+    public static String kerdoszotKeres(String mondat) {
+        for(String szo : mondat.split(" ")){
             for(String kerdoszo : KERDOSZAVAK) {
                 if (szo.toLowerCase().equals(kerdoszo.toLowerCase())){
                     return kerdoszo;

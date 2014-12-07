@@ -1,28 +1,35 @@
 package mi.domain;
 
+import mi.domain.enumok.IgeragozasiRendszer;
 import mi.domain.enumok.MondatFajta;
+import mi.logic.KerdesGeneralo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static mi.domain.enumok.MondatFajta.*;
 
-public class Mondat {
+public class Mondat implements Serializable{
     private String mondat;
     private List<String> vizsgalandoSzavak = new ArrayList<>();
     private Szo alany;
     private Szo allitmany;
     private Szo targy;
     private MondatFajta fajta;
+    private IgeragozasiRendszer rendszer = IgeragozasiRendszer.ALANYI;
 
     public Mondat(String mondat){
         this(mondat, ".");
     }
 
     public Mondat(String mondat, String fajta) {
-        this.mondat = mondat;
-        Collections.addAll(vizsgalandoSzavak, mondat.split(" "));
+        this.mondat = mondat.toLowerCase();
+        if(mondat.startsWith(" ")){
+            this.mondat = this.mondat.substring(1);
+        }
+        Collections.addAll(vizsgalandoSzavak, this.mondat.split(" "));
         switch (fajta) {
             case "?":
                 this.fajta = KERDO;
@@ -86,7 +93,16 @@ public class Mondat {
         return vizsgalandoSzavak;
     }
 
+    public IgeragozasiRendszer getRendszer() {
+        return rendszer;
+    }
+
     public void torolSzo(String s){
+        int index = vizsgalandoSzavak.indexOf(s);
+        if(index > 0 && "az".contains(vizsgalandoSzavak.get(index - 1))){
+            rendszer = IgeragozasiRendszer.TARGYAS;
+            vizsgalandoSzavak.remove(index - 1);
+        }
         vizsgalandoSzavak.remove(s);
     }
 

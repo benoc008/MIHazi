@@ -1,13 +1,16 @@
 package mi.gui;
 
+import mi.domain.Tudas;
 import mi.logic.InputProcessor;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.*;
+import java.util.List;
 
 
 public class Ablak extends JFrame implements Runnable, ActionListener, KeyListener {
@@ -21,6 +24,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     private JMenuBar menuBar;
     private JMenu fileMenu;
     private JMenuItem mentesMenupont;
+    private JMenuItem betoltesMenupont;
     private JMenuItem ujrakezdesMenupont;
     private JMenu eszkozokMenu;
     private JMenuItem manualisOktatasMenupont;
@@ -58,6 +62,9 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
         mentesMenupont = new JMenuItem("Mentés", KeyEvent.VK_S);
         mentesMenupont.addActionListener(this);
         fileMenu.add(mentesMenupont);
+        betoltesMenupont = new JMenuItem("Betöltés", KeyEvent.VK_S);
+        betoltesMenupont.addActionListener(this);
+        fileMenu.add(betoltesMenupont);
         ujrakezdesMenupont = new JMenuItem("Új beszélgetés", KeyEvent.VK_N);
         ujrakezdesMenupont.addActionListener(this);
         fileMenu.add(ujrakezdesMenupont);
@@ -107,6 +114,38 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
             kuldes();
         } else if (e.getSource() == manualisOktatasMenupont) {
             manualisOktatasAblakMegnyitas();
+        } else if(e.getSource() == mentesMenupont){
+            tudastarMentese();
+        } else if(e.getSource() == betoltesMenupont){
+            tudastarBeolvasas();
+        }
+    }
+
+    private void tudastarMentese() {
+        JFileChooser file = new JFileChooser();
+        int returnVal = file.showDialog(Ablak.this, "Mentés");
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file.getSelectedFile()))) {
+                oos.writeObject(inputProcessor.getTudastar());
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
+            }
+        }
+    }
+
+    private void tudastarBeolvasas(){
+        JFileChooser file = new JFileChooser();
+        int returnVal = file.showDialog(Ablak.this, "Betöltés");
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file.getSelectedFile()))) {
+                inputProcessor.addTudastar((List<Tudas>)ois.readObject());
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
+            } catch (ClassNotFoundException e){
+                e.printStackTrace();
+            }
         }
     }
 

@@ -18,9 +18,6 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     private  String ALAP_FILE = "kerdesek.txt";
 
     private JMenuBar menuBar;
-    private JMenu nezetMenu;
-    private JMenuItem feltoltesNezetMenuPont;
-    private JMenuItem szerkesztesNezetMenuPont;
 
     private JMenu fileMenu;
     private JMenuItem betoltesMenuPont;
@@ -29,7 +26,6 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     private JFileChooser file;
 
-    private OktatasFeltoltesNezet feltoltesNezet;
     private OktatasSzerkesztesNezet szerkesztesNezet;
 
     private InputProcessor inputProcessor;
@@ -57,19 +53,8 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         fileMenu.add(mentesMaskentMenuPont);
         menuBar.add(fileMenu);
 
-        nezetMenu = new JMenu("Nézet");
-        nezetMenu.setMnemonic(KeyEvent.VK_N);
-        feltoltesNezetMenuPont = new JMenuItem("Feltöltés nézet", KeyEvent.VK_F);
-        feltoltesNezetMenuPont.addActionListener(this);
-        nezetMenu.add(feltoltesNezetMenuPont);
-        szerkesztesNezetMenuPont = new JMenuItem("Szerkesztés nézet", KeyEvent.VK_E);
-        szerkesztesNezetMenuPont.addActionListener(this);
-        nezetMenu.add(szerkesztesNezetMenuPont);
-        menuBar.add(nezetMenu);
-
         add(menuBar, BorderLayout.PAGE_START);
 
-        feltoltesNezet = new OktatasFeltoltesNezet(kerdesekValaszok);
         szerkesztesNezet = new OktatasSzerkesztesNezet(kerdesekValaszok);
 
         kerdesekValaszokBetoltes(new File(ALAP_FILE));
@@ -94,11 +79,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == feltoltesNezetMenuPont) {
-            add(feltoltesNezet, BorderLayout.CENTER);
-        } else if (e.getSource() == szerkesztesNezetMenuPont) {
-            add(szerkesztesNezet, BorderLayout.CENTER);
-        } else if (e.getSource() == mentesMenuPont) {
+        if (e.getSource() == mentesMenuPont) {
             mentesFajlba();
         } else if (e.getSource() == betoltesMenuPont) {
             betoltesFajlbol();
@@ -142,8 +123,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
     }
 
     private void kerdesValaszokMentes(File file){
-        try(
-            FileWriter fis = new FileWriter(file)) {
+        try(FileWriter fis = new FileWriter(file)) {
             ALAP_FILE=file.getCanonicalPath();
             for (KerdesValasz kv : kerdesekValaszok) {
                 fis.write("K:" + " " + kv.getKerdes() + "\n");
