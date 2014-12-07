@@ -7,9 +7,19 @@ import java.util.List;
 import java.util.Random;
 
 public class ValaszGeneralo {
-    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Hogy", "Hogyan", "Hány", "Hányan"};
+    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Mire", "Hogy", "Hogyan", "Hányan"};
 
-    private static String[] MULT_IDOHATAROZOK = {"tegnap", "az előbb", "este", "reggel", "egy órája"};
+    private static String[] VALASZOK_MIKORRA = {"tegnap", "az előbb", "este", "reggel", "egy órája", "holnap"};
+    private static String[] VALASZOK_HANYRA = {"sok", "kevés", "öt"};
+    private static String[] VALASZOK_MENNYIRE = {"nagyon", "kicsit"};
+    private static String[] VALASZOK_MIERTRE = {"csak"};
+    private static String[] VALASZOK_MIVELRE = {"ceruzával", "dömperrel"};
+    private static String[] VALASZOK_MIRERE = {"mire hármat számolok :)"};
+    private static String[] VALASZOK_HOGYRA = {"nagyon", "kicsit", "remekül", "ügyesen", "jól"};
+    private static String[] VALASZOK_HOGYANRA = {"jól", "remekül", "ügyesen"};
+    private static String[] VALASZOK_HANYANRA = {"sokan", "kevesen", "százan", "öten"};
+
+
 
     private Mondat mondat;
     private Random random;
@@ -22,14 +32,38 @@ public class ValaszGeneralo {
     public String general(Mondat mondat) {
         this.mondat = mondat;
         random = new Random();
-        String kerdoszo = kerdoszotKeres();
-        switch (kerdoszo){
-            case "Mikor":
-                return valaszMikorra();
-
+        String kerdoszo = kerdoszotKeres().toLowerCase();
+        for(Tudas tudas : tudastar){
+            String tudasKerdoszo = tudas.getKerdoszo().toLowerCase();
+            String tudasKerdezettSzo = tudas.getKerdezettSzo().getSzo().toLowerCase();
+            String allitmany = mondat.getAllitmany().getSzo().toLowerCase();
+            String targy = mondat.getTargy().getSzo().toLowerCase();
+            if(tudasKerdoszo.equals(kerdoszo) && (tudasKerdezettSzo.equals(allitmany) || tudasKerdezettSzo.equals(targy))){
+                return tudas.getValasz().getMondat();
+            }
+        }
+        switch (kerdoszo) {
+            case "mikor":
+                return valaszKerdoszora(VALASZOK_MIKORRA);
+            case "hány":
+                return valaszKerdoszora(VALASZOK_HANYRA);
+            case "mennyi":
+                return valaszKerdoszora(VALASZOK_MENNYIRE);
+            case "miért":
+                return valaszKerdoszora(VALASZOK_MIERTRE);
+            case "mivel":
+                return valaszKerdoszora(VALASZOK_MIVELRE);
+            case "mire":
+                return valaszKerdoszora(VALASZOK_MIRERE);
+            case "hogy":
+                return valaszKerdoszora(VALASZOK_HOGYRA);
+            case "hogyan":
+                return valaszKerdoszora(VALASZOK_HOGYANRA);
+            case "hányan":
+                return valaszKerdoszora(VALASZOK_HANYANRA);
 
             default:
-                if(random.nextInt(2) == 0){
+                if (random.nextInt(2) == 0) {
                     return "Igen.";
                 } else {
                     return "Nem.";
@@ -37,8 +71,8 @@ public class ValaszGeneralo {
         }
     }
 
-    private String valaszMikorra() {
-        return MULT_IDOHATAROZOK[random.nextInt(MULT_IDOHATAROZOK.length - 1)];
+    private String valaszKerdoszora(String[] valaszTomb) {
+        return valaszTomb[random.nextInt(valaszTomb.length - 1)];
 
     }
 
