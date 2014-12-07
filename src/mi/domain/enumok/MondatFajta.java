@@ -1,4 +1,4 @@
-package mi.domain;
+package mi.domain.enumok;
 
 public enum MondatFajta {
     KIJELENTO,

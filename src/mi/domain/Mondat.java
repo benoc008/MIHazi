@@ -1,10 +1,12 @@
 package mi.domain;
 
+import mi.domain.enumok.MondatFajta;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static mi.domain.MondatFajta.*;
+import static mi.domain.enumok.MondatFajta.*;
 
 public class Mondat {
     private String mondat;

@@ -6,9 +6,9 @@ public class Nevelo {
 
     public static String get(String s){
         if(MAGANHANGZOK.contains(s.substring(0,1))){
-            return "a";
-        } else {
             return "az";
+        } else {
+            return "a";
         }
     }
 }

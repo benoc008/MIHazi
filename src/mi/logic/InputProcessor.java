@@ -2,8 +2,8 @@ package mi.logic;
 
 import mi.domain.KerdesValasz;
 import mi.domain.Mondat;
-import mi.domain.MondatFajta;
 import mi.domain.Szo;
+import mi.domain.enumok.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -81,24 +81,40 @@ public class InputProcessor {
         valasz = "";
         List<Mondat> mondatok = mondatokraBont(s);
         for (Mondat mondat : mondatok) {
-            if(eloreDefinialtAdatokAlapjanEllenoriz(mondat)){
+            if (eloreDefinialtAdatokAlapjanEllenoriz(mondat)) {
                 continue;
             }
             ertelmez(mondat);
             valaszol(mondat);
         }
 
-        if(valasz.equals("")){
+        if (valasz.equals("")) {
             valasz = s;
         }
     }
 
 
-
     private void valaszol(Mondat mondat) {
 
-        if(mondat.getFajta() == MondatFajta.KIJELENTO){
-            valasz = new KerdesGeneralo().general(mondat);
+        if (mondat.getFajta().equals(MondatFajta.KIJELENTO)) {
+            try {
+                valasz = new KerdesGeneralo().general(mondat);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        } else if (mondat.getFajta().equals(MondatFajta.KERDO)) {
+            try {
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_ELSO_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_MASODIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+                System.out.println(IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.TOBBES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI));
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            //valasz = new ValaszGeneralo().general(mondat);
         }
     }
 
@@ -130,27 +146,27 @@ public class InputProcessor {
 
     private void mondatotLogol(Mondat mondat) {
         System.out.println(mondat.getMondat());
-        if(mondat.getAlany() != null){
+        if (mondat.getAlany() != null) {
             System.out.print(mondat.getAlany().getSzo() + ", ");
-            for(String szofaj : mondat.getAlany().getSzofajok()){
+            for (String szofaj : mondat.getAlany().getSzofajok()) {
                 System.out.print(szofaj);
             }
             System.out.println("");
         } else {
             System.out.println("rejtett alany(?)");
         }
-        if(mondat.getAllitmany() != null){
+        if (mondat.getAllitmany() != null) {
             System.out.print(mondat.getAllitmany().getSzo() + ", ");
-            for(String szofaj : mondat.getAllitmany().getSzofajok()){
+            for (String szofaj : mondat.getAllitmany().getSzofajok()) {
                 System.out.print(szofaj);
             }
             System.out.println("");
         } else {
             System.out.println("nincs meg az allitmany");
         }
-        if(mondat.getTargy() != null){
+        if (mondat.getTargy() != null) {
             System.out.print(mondat.getTargy().getSzo() + ", ");
-            for(String szofaj : mondat.getTargy().getSzofajok()){
+            for (String szofaj : mondat.getTargy().getSzofajok()) {
                 System.out.print(szofaj);
             }
             System.out.println("");
@@ -164,18 +180,18 @@ public class InputProcessor {
         for (String s : mondat.getVizsgalandoSzavak()) {
             s = s.toLowerCase();
             for (Szo szo : szokincs) {
-                if(!(szo.getSzofajok().contains("főnév") || szo.getSzofajok().contains("névmás"))){
+                if (!(szo.getSzofajok().contains("főnév") || szo.getSzofajok().contains("névmás"))) {
                     continue;
                 }
-                if(szo.getSzo().equals(s)){
+                if (szo.getSzo().equals(s)) {
                     mondat.setAlany(szo);
                     return;
                 }
-                if(szo.getSzo().length() < 3){
-                    if(s.startsWith(szo.getSzo())){
+                if (szo.getSzo().length() < 3) {
+                    if (s.startsWith(szo.getSzo())) {
                         potencialisSzavak.add(szo);
                     }
-                } else if(s.startsWith(szo.getVegeNelkul())){
+                } else if (s.startsWith(szo.getVegeNelkul())) {
                     potencialisSzavak.add(szo);
                 }
             }
@@ -190,18 +206,18 @@ public class InputProcessor {
             s = s.toLowerCase();
             s = igekototLevesz(s);
             for (Szo szo : szokincs) {
-                if(!szo.getSzofajok().contains("ige")){
+                if (!szo.getSzofajok().contains("ige")) {
                     continue;
                 }
-                if(szo.getSzo().equals(s)){
+                if (szo.getSzo().equals(s)) {
                     mondat.setAllitmany(szo);
                     return;
                 }
-                if(szo.getSzo().length() < 3){
-                    if(s.startsWith(szo.getSzo())){
+                if (szo.getSzo().length() < 3) {
+                    if (s.startsWith(szo.getSzo())) {
                         potencialisSzavak.add(szo);
                     }
-                } else if(s.startsWith(szo.getVegeNelkul())){
+                } else if (s.startsWith(szo.getVegeNelkul())) {
                     potencialisSzavak.add(szo);
                 }
             }
@@ -211,8 +227,8 @@ public class InputProcessor {
     }
 
     public String igekototLevesz(String s) {
-        for(String igekoto : IGEKOTOK){
-            if(s.startsWith(igekoto)){
+        for (String igekoto : IGEKOTOK) {
+            if (s.startsWith(igekoto)) {
                 s = s.replaceAll(igekoto, "");
                 return s;
             }
@@ -222,18 +238,20 @@ public class InputProcessor {
 
     private void keresTargyat(Mondat mondat) {
         List<String> tVeguSzavak = egyTVeguSzavakatKeres(mondat.getVizsgalandoSzavak());
-        if(tVeguSzavak.isEmpty()){
+        if (tVeguSzavak.isEmpty()) {
             return;
         }
         List<Szo> potencialisSzavak = new ArrayList<>();
         for (String s : tVeguSzavak) {
             s = s.toLowerCase();
             for (Szo szo : szokincs) {
-                if(szo.getSzo().length() < 3){
+                if (szo.getSzo().length() < 3) {
                     continue;
                 }
-                if (s.startsWith(szo.getVegeNelkul())) {
-                    potencialisSzavak.add(szo);
+                if(szo.getSzofajok().contains("főnév") || szo.getSzofajok().contains("névmás")) {
+                    if (s.startsWith(szo.getVegeNelkul())) {
+                        potencialisSzavak.add(szo);
+                    }
                 }
             }
         }
@@ -244,7 +262,7 @@ public class InputProcessor {
     private Szo getLegtobbEgyezes(Mondat mondat, List<Szo> potencialisSzavak) {
         Map<Integer, List<Szo>> map = new TreeMap<>();
         int i = 1;
-        while(i == 1 || map.get(i - 1) != null) {
+        while (i == 1 || map.get(i - 1) != null) {
             for (Szo szo : potencialisSzavak) {
                 for (String szavaim : mondat.getMondat().split(" ")) {
                     if (szo.getSzo().length() >= i && szavaim.length() >= i && szo.getSzo().substring(0, i).equals(szavaim.substring(0, i))) {
@@ -264,14 +282,14 @@ public class InputProcessor {
     }
 
     private Szo getLegkisebb(List<Szo> szo) {
-        if(szo == null){
+        if (szo == null) {
             Szo ret = new Szo();
             ret.setSzo("");
             return ret;
         }
         Szo min = szo.get(0);
-        for(Szo szav : szo){
-            if(szav.getSzo().length() < min.getSzo().length()){
+        for (Szo szav : szo) {
+            if (szav.getSzo().length() < min.getSzo().length()) {
                 min = szav;
             }
         }
