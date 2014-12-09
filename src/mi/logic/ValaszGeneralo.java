@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class ValaszGeneralo {
-    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Mire", "Hogy", "Hogyan", "Hányan", "Mit", "Milyen"};
+    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Mire", "Hogy", "Hogyan", "Hányan", "Mit", "Milyen", "Mi"};
 
     private static String[] VALASZOK_MIKORRA = {"tegnap", "az előbb", "este", "reggel", "egy órája", "holnap"};
     private static String[] VALASZOK_HANYRA = {"sok", "kevés", "öt"};
@@ -20,6 +20,7 @@ public class ValaszGeneralo {
     private static String[] VALASZOK_HANYANRA = {"sokan", "kevesen", "százan", "öten"};
     private static String[] VALASZOK_MITRE = {"semmit", "közöd?"};
     private static String[] VALASZOK_MILYENRE ={"nem tudom", "szép"};
+    private static String[] VALASZOK_MIRE ={"nem tudom", "fogalmam sincs"};
 
     private Mondat mondat;
     private Random random;
@@ -65,6 +66,14 @@ public class ValaszGeneralo {
                 return valaszKerdoszora(VALASZOK_MITRE);
             case "milyen":
                 return valaszKerdoszora(VALASZOK_MILYENRE);
+            case "mi":
+                return valaszKerdoszora(VALASZOK_MIRE);
+            case "nem":
+                if (random.nextInt(2) == 0) {
+                    return "De.";
+                } else {
+                    return "Nem.";
+                }
 
             default:
                 if (random.nextInt(2) == 0) {

@@ -119,7 +119,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         kerdesekValaszok = szerkesztesNezet.getKerdesekValaszok();
         File file=new File(ALAP_FILE);
         kerdesValaszokMentes(file);
-        inputProcessor.kerdeseketBeolvas();
+        inputProcessor.getElemzo().eloreDefinialtKerdesekValaszokatBeolvas();
     }
 
     private void kerdesValaszokMentes(File file){

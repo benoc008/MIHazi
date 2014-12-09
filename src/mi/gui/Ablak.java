@@ -127,7 +127,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file.getSelectedFile()))) {
-                oos.writeObject(inputProcessor.getTudastar());
+                oos.writeObject(inputProcessor.getElemzo().getTudastar());
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
             }
@@ -140,7 +140,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file.getSelectedFile()))) {
-                inputProcessor.addTudastar((List<Tudas>)ois.readObject());
+                inputProcessor.getElemzo().addTudastarLista((List<Tudas>)ois.readObject());
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
             } catch (ClassNotFoundException e){

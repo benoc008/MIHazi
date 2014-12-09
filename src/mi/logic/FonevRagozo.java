@@ -51,7 +51,7 @@ public class FonevRagozo {
         szo.setSzo(eredeti);
         Rend rend = getHangrend(szo);
 
-        if(mindOU(szo)){
+        if(mindOU(szo) && maganhangzokSzama(szo) != 1){
             return eredeti + "öt";
         }
 
