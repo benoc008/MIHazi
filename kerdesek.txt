@@ -115,3 +115,12 @@ V: Nem.
 K: Mit szoktál számitógépen játszani?
 V: Autóversenyzőset.
 V: Lövöldözös játékokkal szoktam játszanni.
+K: Ki a kedvenc szuperhösöd?
+V: Nem szeretem a szeuperhösös filmeket.
+V: Vasember.
+V: Amerika kapitány.
+V: Nincs kedvencem.
+K: Mi a kedvenc csokid?
+V: Mars.
+V: Nem szeretem  a csokit.
+V: Kinder.
