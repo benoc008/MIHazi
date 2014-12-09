@@ -1,6 +1,5 @@
 package test;
 
-import junit.framework.Assert;
 import mi.domain.Szo;
 import mi.domain.enumok.FonevRag;
 import mi.logic.FonevRagozo;
@@ -17,4 +16,5 @@ public class FonevRagozoTest {
 
         assert eredmeny.equals("kecskéket");
     }
+
 }

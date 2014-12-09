@@ -1,6 +1,8 @@
 package mi.domain;
 
 import mi.domain.enumok.FonevRag;
+import mi.logic.FonevRagozo;
+import mi.logic.IgeRagozo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -61,6 +63,16 @@ public class Szo implements Serializable{
     public void addFonevRag(FonevRag fonevRag) {
         if(fonevRag != null) {
             this.fonevRagok.add(fonevRag);
+        }
+    }
+
+    public String getSzoRagozva(){
+        if(igeRagok != null){
+            return IgeRagozo.ragoz(this, igeRagok.getSzamSzemely(), igeRagok.getMod(), igeRagok.getIdo(), igeRagok.getIgeragozasiRendszer());
+        } else if(!fonevRagok.isEmpty()) {
+            return FonevRagozo.ragoz(this, fonevRagok.toArray(new FonevRag[fonevRagok.size()]));
+        } else {
+            return szo;
         }
     }
 
