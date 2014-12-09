@@ -65,6 +65,12 @@ public class ValaszGeneralo {
                 return valaszKerdoszora(VALASZOK_MITRE);
             case "milyen":
                 return valaszKerdoszora(VALASZOK_MILYENRE);
+            case "nem":
+                if (random.nextInt(2) == 0) {
+                    return "De.";
+                } else {
+                    return "Nem.";
+                }
 
             default:
                 if (random.nextInt(2) == 0) {
