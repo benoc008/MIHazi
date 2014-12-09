@@ -16,7 +16,7 @@ V: Szia! Én egy 5 éves ovádás vagyok, akit Bélának hivnak. Óvodába járo
 K: Hol vagy?
 V: Az óvodában.
 V: Itthon.
-K: MIt csinálsz?
+K: Mit csinálsz?
 V: Megyek az óvodba.
 V: Mesét nézek.
 V: Játszok.
@@ -32,7 +32,7 @@ V: Autósat.
 K: Mikor szoktatok az oviban aludni?
 V: Déltől háromig szoktunk aludni.
 K: Mikor mész reggel az oviba?
-V: 7-kor indulunk otthonról és fél 8-ra érrünk oda.
+V: 7-kor indulunk otthonról és fél 8-ra érünk oda.
 K: Ki szokott oviba vinni?
 V: Nagyi.
 V: Apa.
@@ -45,11 +45,11 @@ V: Dávid.
 K: Melyik csoportba jársz?
 V: A sün csoportba.
 V: A pillangó csoportba.
-K: Kik az óvonénik a csoportba?
-V: Kate néni és Zsófi néni.
+K: Kik az óvonénik a csoportban?
+V: Kati néni és Zsófi néni.
 V: Dóri néni és Szilvi néni.
 K: Mi a jeled az oviban?
-V: Háziko.
+V: Házikó.
 V: Labda.
 V: Felhő.
 V: Gomba.
@@ -65,7 +65,7 @@ V: Józsi.
 V: Béla.
 V: Ági.
 K: Hány testvéred van?
-V: NIncs testvérem.
+V: Nincs testvérem.
 V: Egy.
 V: Kettő.
 K: Szeretsz óvodába járni?

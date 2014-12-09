@@ -373,14 +373,20 @@ public class InputProcessor {
         birtokosok.add(BIRTOKOS_TOBBES_SZAM_HARMADIK_SZEMELY);
         for (Szo szo : potencialisSzavak) {
             for (String mondatSzava : mondat.getVizsgalandoSzavak()) {
+                if(mondatSzava.equals(FonevRagozo.ragoz(szo, targyRag))){
+                    ret = szo;
+                    ret.addFonevRag(targyRag);
+                }
                 if(mondatSzava.equals(FonevRagozo.ragoz(szo, TOBBES_SZAM, targyRag))){
                     ret = szo;
                     ret.addFonevRag(TOBBES_SZAM);
+                    ret.addFonevRag(targyRag);
                 }
                 for(FonevRag rag : birtokosok){
                     if(mondatSzava.equals(FonevRagozo.ragoz(szo, rag, targyRag))){
                         ret = szo;
                         ret.addFonevRag(TOBBES_SZAM);
+                        ret.addFonevRag(targyRag);
                     }
                 }
             }

@@ -22,7 +22,7 @@ public class FonevRagozo {
         List<FonevRag> ragokLista = new ArrayList<>();
         Collections.addAll(ragokLista, ragok);
 
-        String ret = "";
+        String ret = szo.getSzo();
 
         if (ragokLista.contains(FonevRag.TOBBES_SZAM)) {
             ret = addTobbesSzamRag(szo);

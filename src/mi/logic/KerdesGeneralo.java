@@ -1,16 +1,20 @@
 package mi.logic;
 
 import mi.domain.Mondat;
-import mi.domain.enumok.Ido;
-import mi.domain.enumok.IgeragozasiRendszer;
-import mi.domain.enumok.Mod;
-import mi.domain.enumok.SzamSzemely;
+import mi.domain.Szo;
+import mi.domain.enumok.*;
 
 import java.util.Random;
 
+import static mi.domain.enumok.IgeragozasiRendszer.ALANYI;
+import static mi.domain.enumok.IgeragozasiRendszer.TARGYAS;
+
 public class KerdesGeneralo {
 
-    public static String[] TARGYRA_KERDEZ = {"Miért +", "Milyen", "Mekkora", "Mennyi", "Hány", "Mit"};
+    public static String[] TARGYRA_KERDEZ_ALANYI = {"Milyen", "Mekkora", "Mennyi", "Hány"}; // mit
+    public static String[] TARGYRA_KERDEZ_TARGYAS = {"Miért +"};
+    public static String[] TARGYRA_KERDEZ = {"Miért +", "Milyen", "Mekkora", "Mennyi", "Hány"}; // TODO nem kellene ez..
+
     public static String[] ALLITMANYRA_KERDEZ = {"Hogy", "Hogyan", "Mivel", "Mennyire", "Miért"};
 
     private Mondat mondat;
@@ -33,35 +37,71 @@ public class KerdesGeneralo {
     private String allitmanybol() {
         String ret = "";
         ret += getKerdoszoAllitmanyra() + " ";
-        ret += mondat.getSzoSzotobol(mondat.getAllitmany()) + "?";
+        Szo valasz = allitmanySzamSzemelyBeallito();
+        ret += valasz.getSzoRagozva() + "?";
         return ret;
     }
 
+    private Szo allitmanySzamSzemelyBeallito() {
+        Szo valasz = mondat.getAllitmany();
+        if(mondat.getAllitmany().getIgeRagok() != null){
+            if(valasz.getIgeRagok().getSzamSzemely().equals(SzamSzemely.EGYES_SZAM_ELSO_SZEMELY)){
+                valasz.getIgeRagok().setSzamSzemely(SzamSzemely.EGYES_SZAM_MASODIK_SZEMELY);
+            } else if(valasz.getIgeRagok().getSzamSzemely().equals(SzamSzemely.EGYES_SZAM_MASODIK_SZEMELY)){
+                valasz.getIgeRagok().setSzamSzemely(SzamSzemely.EGYES_SZAM_ELSO_SZEMELY);
+            } else if(valasz.getIgeRagok().getSzamSzemely().equals(SzamSzemely.TOBBES_SZAM_ELSO_SZEMELY)){
+                valasz.getIgeRagok().setSzamSzemely(SzamSzemely.TOBBES_SZAM_MASODIK_SZEMELY);
+            } else if(valasz.getIgeRagok().getSzamSzemely().equals(SzamSzemely.TOBBES_SZAM_MASODIK_SZEMELY)){
+                valasz.getIgeRagok().setSzamSzemely(SzamSzemely.TOBBES_SZAM_ELSO_SZEMELY);
+            }
+        }
+        return valasz;
+    }
+
     private String targybol() {
+        IgeragozasiRendszer ragozas;
+        Szo valasz = mondat.getTargy();
         String ret = "";
-        ret += getKerdoszoTargyra() + " ";
-        ret += mondat.getSzoSzotobol(mondat.getTargy()) + "?";
+        //TODO ez a resz nem tetszik
+        if(random.nextInt(2) == 0){
+            ragozas = ALANYI;
+        } else {
+            ragozas = TARGYAS;
+        }
+        ret += getKerdoszoTargyra(ragozas) + " ";
+
+        ret += valasz.getSzoRagozva() + "?";
         return ret;
     }
 
     private String allitmanybolTargybol() throws Exception {
         String ret = "";
-        ret += getKerdoszoTargyra() + " ";
-        ret += mondat.getSzoSzotobol(mondat.getTargy()) + " ";
-        if(mondat.getAlany() != null) {
-            if(ret.contains(" a ") || ret.contains(" az ")) {
-                ret += IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.TARGYAS) + "?";
-            } else {
-                ret += IgeRagozo.ragoz(mondat.getAllitmany(), SzamSzemely.EGYES_SZAM_HARMADIK_SZEMELY, Mod.KIJELENTO, Ido.JELEN, IgeragozasiRendszer.ALANYI) + "?";
-            }
+        Szo valaszAllitmany = allitmanySzamSzemelyBeallito();
+        Szo valaszTargy = mondat.getTargy();
+        IgeragozasiRendszer ragozas;
+        if(random.nextInt(2) == 0){
+            ragozas = ALANYI;
         } else {
-            ret += mondat.getSzoSzotobol(mondat.getAllitmany()) + "?";
+            ragozas = TARGYAS;
         }
+
+        ret += getKerdoszoTargyra(ragozas) + " ";
+        ret += valaszTargy.getSzoRagozva() + " ";
+
+        valaszAllitmany.getIgeRagok().setIgeragozasiRendszer(ragozas);
+
+        ret += valaszAllitmany.getSzoRagozva() + "?";
+
         return ret;
     }
 
-    private String getKerdoszoTargyra() {
-        String kerdoszo = TARGYRA_KERDEZ[random.nextInt(TARGYRA_KERDEZ.length)];
+    private String getKerdoszoTargyra(IgeragozasiRendszer ragozas) {
+        String kerdoszo;
+        if(ragozas.equals(TARGYAS)){
+            kerdoszo = TARGYRA_KERDEZ_TARGYAS[random.nextInt(TARGYRA_KERDEZ_TARGYAS.length)];
+        } else {
+            kerdoszo = TARGYRA_KERDEZ_ALANYI[random.nextInt(TARGYRA_KERDEZ_ALANYI.length)];
+        }
         if(kerdoszo.contains("+")){
             return kerdoszo.replace("+", Nevelo.get(mondat.getTargy().getSzo()));
         }
