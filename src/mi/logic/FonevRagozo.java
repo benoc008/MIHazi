@@ -18,7 +18,7 @@ import static mi.domain.enumok.Maganhangzo.HOSSZU;
 
 public class FonevRagozo {
 
-    public static String ragoz(Szo szo, FonevRag... ragok) throws Exception {
+    public static String ragoz(Szo szo, FonevRag... ragok) {
         List<FonevRag> ragokLista = new ArrayList<>();
         Collections.addAll(ragokLista, ragok);
 
@@ -40,7 +40,7 @@ public class FonevRagozo {
         //TODO irany ragok... http://www.magyarora.com/grammar/irany3.pdf
 
         if(ragokLista.contains(FonevRag.TARGY)){
-            ret += addTargyRag(ret);
+            ret = addTargyRag(ret);
         }
 
         return ret;
@@ -56,7 +56,7 @@ public class FonevRagozo {
         }
 
         if(isUtolsoHangMaganhangzo(szo)){
-            String utolso = rovidetHosszura(szo.getSzo());
+            String utolso = rovidetHosszura(szo.getSzo().substring(szo.getSzo().length() - 1));
             return eredeti.substring(0, eredeti.length() - 1) + utolso + "t";
         } else {
             if(!eredeti.endsWith("cs") && !eredeti.endsWith("t") && !eredeti.endsWith("ty") && !eredeti.endsWith("gy") && !eredeti.endsWith("k") && !eredeti.endsWith("m")){
@@ -65,12 +65,14 @@ public class FonevRagozo {
                 if(rend.equals(Rend.MELY) || rend.equals(Rend.VEGYES)){
                     return eredeti + "ot";
                 } else {
-                    //TODO nagyon nem jo!!!!
-                    Random random = new Random();
-                    if(random.nextInt(10) < 5){
-                        return eredeti + "ot";
-                    } else {
+                    //TODO ezt megegyszer at kell gondolni
+                    String utolsoMaganhangzo = getUtolsoMaganhangzo(szo);
+                    if("eéi".contains(utolsoMaganhangzo)) {
                         return eredeti + "et";
+                    } else if("aá".contains(utolsoMaganhangzo)){
+                        return eredeti + "at";
+                    } else {
+                        return eredeti + "ot";
                     }
                 }
             }
@@ -79,7 +81,7 @@ public class FonevRagozo {
         //TODO kepzett szavak
     }
 
-    private static String addBirtokosSzemelyRag(Szo szo, List<FonevRag> ragokLista) throws Exception {
+    private static String addBirtokosSzemelyRag(Szo szo, List<FonevRag> ragokLista) {
         String szoto = szo.getSzo();
         boolean tobb = false;
         if(ragokLista.contains(FonevRag.TOBBES_SZAM)){
@@ -403,7 +405,7 @@ public class FonevRagozo {
         throw new RuntimeException("nem iskerult a birtokos ragot ratenni a fonevre.");
     }
 
-    private static String addTobbesSzamRag(Szo szo) throws Exception {
+    private static String addTobbesSzamRag(Szo szo) {
         String szoto = szo.getSzo();
         Rend rend = Hangok.getHangrend(szo);
         Maganhangzo utolso = getUtolsoMaganhangzoFajtaja(szo);
@@ -412,7 +414,7 @@ public class FonevRagozo {
                 return szoto + "k";
             } else {
                 String utolsoHosszan = Hangok.rovidetHosszura(szoto.substring(szoto.length() - 1));
-                return szoto.substring(0, szoto.length() - 1) + utolsoHosszan;
+                return szoto.substring(0, szoto.length() - 1) + utolsoHosszan + "k";
             }
         }
         if (maganhangzokSzama(szo) == 1) {
@@ -423,12 +425,14 @@ public class FonevRagozo {
                 return szoto + "ak";
             } else if ("öő".contains(utolsoMaganhangzo)) {
                 return szoto + "ök";
+            } else { //TODO csak hotfix a hianyzo egytaguakra, pl ín, ól...
+                return szoto + "ak";
             }
         } else {
             if (mindOU(szo)) {
                 return szoto + "ök";
             }
-            //TODO utolso maganhangzo hosszu lesz (levél -> levelek)
+            //TODO utolso maganhangzo rovid lesz (levél -> levelek)
             if (rend.equals(Rend.MAGAS)) {
                 return szoto + "ek";
             } else {
@@ -438,7 +442,6 @@ public class FonevRagozo {
 
         //TODO kepzett szavak: http://www.magyarora.com/grammar/tobbesszam_tablazat.pdf
 
-        throw new RuntimeException("hiba tobbesszam ragozasanal");
     }
 
 

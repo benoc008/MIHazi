@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static mi.domain.enumok.MondatFajta.*;
+import static mi.helperek.FileMuveletHelper.logol;
 
 public class Mondat implements Serializable{
     private String mondat;
@@ -44,7 +45,7 @@ public class Mondat implements Serializable{
             default:
                 this.fajta = KIJELENTO;
                 //TODO exceptiont kellene dobni...
-                System.out.println("Hibas mondatfajta, kijelentonek allitva");
+                logol("Nincs irasjel, kijelentonek allitva");
         }
     }
 

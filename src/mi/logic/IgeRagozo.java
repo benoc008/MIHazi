@@ -11,7 +11,7 @@ import static mi.domain.enumok.Mod.*;
 
 public class IgeRagozo {
 
-    public static String ragoz(Szo szo, SzamSzemely szamSzemely, Mod mod, Ido ido, IgeragozasiRendszer rendszer) throws Exception {
+    public static String ragoz(Szo szo, SzamSzemely szamSzemely, Mod mod, Ido ido, IgeragozasiRendszer rendszer){
         if (!szo.getSzofajok().contains("ige")) {
             return "ERROR"; //TODO ez nem jo
         }
@@ -45,7 +45,7 @@ public class IgeRagozo {
         return "";
     }
 
-    private static String jelenKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jelenKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely) {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         Rend rend = getHangrend(szo);
@@ -135,7 +135,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String jelenKijelentoTargyas(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jelenKijelentoTargyas(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         Rend rend = getHangrend(szo);
@@ -274,7 +274,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String multKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String multKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         if (veg.equals("ik")) {
@@ -335,7 +335,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String multKijelentoTargyas(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String multKijelentoTargyas(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         if (veg.equals("ik")) {
@@ -393,7 +393,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String jovoKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jovoKijelentoAlanyi(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         if (szoto.endsWith("ni")) {
             szoto = szoto.substring(0, szoto.length() - 2);
@@ -423,7 +423,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String jovoKijelentoTargyas(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jovoKijelentoTargyas(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         if (szoto.endsWith("ni")) {
             szoto = szoto.substring(0, szoto.length() - 2);
@@ -453,7 +453,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String jelenFeltetelesAlanyi(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jelenFeltetelesAlanyi(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         if (veg.equals("ik")) {
@@ -507,7 +507,7 @@ public class IgeRagozo {
         }
     }
 
-    private static String jelenFeltetelesTárgyas(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String jelenFeltetelesTárgyas(Szo szo, SzamSzemely szamSzemely)  {
         String szoto = szo.getSzo();
         String veg = getVeg(szoto);
         if (veg.equals("ik")) {
@@ -565,11 +565,11 @@ public class IgeRagozo {
         }
     }
 
-    private static String multFeltetelesAlanyi(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String multFeltetelesAlanyi(Szo szo, SzamSzemely szamSzemely)  {
         return multKijelentoAlanyi(szo, szamSzemely) + " volna";
     }
 
-    private static String multFeltetelesTargyas(Szo szo, SzamSzemely szamSzemely) throws Exception {
+    private static String multFeltetelesTargyas(Szo szo, SzamSzemely szamSzemely)  {
         return multKijelentoTargyas(szo, szamSzemely) + " volna";
     }
 

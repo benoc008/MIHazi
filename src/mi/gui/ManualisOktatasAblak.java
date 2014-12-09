@@ -164,7 +164,7 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
                 kerdesekValaszok.add(kv);
             }
         } catch (IOException e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         szerkesztesNezet.tableModel.setSorokFromKerdesValaszLista(kerdesekValaszok);
     }

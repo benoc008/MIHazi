@@ -14,7 +14,7 @@ public class Hangok {
     public static String[] ROVID_MAGANHANGZO = {"e", "i", "ö", "ü", "a", "o", "u"};
 
 
-    public static String getUtolsoMaganhangzo(Szo szo) throws Exception {
+    public static String getUtolsoMaganhangzo(Szo szo) {
         for (int i = szo.getSzo().length() - 1; i >= 0; i--) {
             for (String s : MAGANHANGZOK) {
                 if (s.equals(szo.getSzo().substring(i, i + 1))) {
@@ -22,7 +22,7 @@ public class Hangok {
                 }
             }
         }
-        throw new Exception("Nincs maganhangzo a szoban"); //TODO valami normalis hibakiiro
+        throw new RuntimeException("Nincs maganhangzo a szoban"); //TODO valami normalis hibakiiro
     }
 
     public static boolean isUtolsoHangMaganhangzo(Szo szo) {

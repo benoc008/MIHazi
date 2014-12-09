@@ -7,17 +7,18 @@ import java.util.List;
 import java.util.Random;
 
 public class ValaszGeneralo {
-    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Mire", "Hogy", "Hogyan", "Hányan"};
+    private static String[] KERDOSZAVAK = {"Mikor", "Hány", "Mennyi", "Miért", "Mivel", "Mire", "Hogy", "Hogyan", "Hányan", "Mit"};
 
     private static String[] VALASZOK_MIKORRA = {"tegnap", "az előbb", "este", "reggel", "egy órája", "holnap"};
     private static String[] VALASZOK_HANYRA = {"sok", "kevés", "öt"};
     private static String[] VALASZOK_MENNYIRE = {"nagyon", "kicsit"};
-    private static String[] VALASZOK_MIERTRE = {"csak"};
+    private static String[] VALASZOK_MIERTRE = {"csak", "mert csak"};
     private static String[] VALASZOK_MIVELRE = {"ceruzával", "dömperrel"};
     private static String[] VALASZOK_MIRERE = {"mire hármat számolok :)"};
     private static String[] VALASZOK_HOGYRA = {"nagyon", "kicsit", "remekül", "ügyesen", "jól"};
     private static String[] VALASZOK_HOGYANRA = {"jól", "remekül", "ügyesen"};
     private static String[] VALASZOK_HANYANRA = {"sokan", "kevesen", "százan", "öten"};
+    private static String[] VALASZOK_MITRE = {"semmit", "közöd?"};
 
 
 
@@ -61,6 +62,8 @@ public class ValaszGeneralo {
                 return valaszKerdoszora(VALASZOK_HOGYANRA);
             case "hányan":
                 return valaszKerdoszora(VALASZOK_HANYANRA);
+            case "mit":
+                return valaszKerdoszora(VALASZOK_MITRE);
 
             default:
                 if (random.nextInt(2) == 0) {

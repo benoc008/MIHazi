@@ -1,5 +1,7 @@
 package mi.domain;
 
+import mi.domain.enumok.FonevRag;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,8 @@ import java.util.List;
 public class Szo implements Serializable{
     private String szo;
     private List<String> szofajok = new ArrayList<>();
+    private IgeRagok igeRagok;
+    private List<FonevRag> fonevRagok = new ArrayList<>();
 
     public static Szo createFromCsv(String s){
         Szo ret = new Szo();
@@ -36,6 +40,28 @@ public class Szo implements Serializable{
 
     public void addSzofaj(String szofaj) {
         this.szofajok.add(szofaj);
+    }
+
+    public void setSzofajok(List<String> szofajok) {
+        this.szofajok = szofajok;
+    }
+
+    public IgeRagok getIgeRagok() {
+        return igeRagok;
+    }
+
+    public void setIgeRagok(IgeRagok igeRagok) {
+        this.igeRagok = igeRagok;
+    }
+
+    public List<FonevRag> getFonevRagok() {
+        return fonevRagok;
+    }
+
+    public void addFonevRag(FonevRag fonevRag) {
+        if(fonevRag != null) {
+            this.fonevRagok.add(fonevRag);
+        }
     }
 
     @Override
