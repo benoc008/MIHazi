@@ -8,9 +8,6 @@ import java.util.List;
 
 public class HtmlParser {
 
-    //TODO ez igy rossz
-//    private static String SZOTAR_DIR = "c:\\Users\\Bence\\IdeaProjects\\MIHazi\\resources\\wikiszotar\\";
-//    private static String SZOTAR_DIR = "szotar";
     private static String SZOTAR_DIR = "C:\\Users\\Bence\\AppData\\Local\\VirtualStore\\Program Files (x86)\\GnuWin32\\bin\\wikiszotar.hu\\wiki\\magyar_ertelmezo_szotar";
     private static String SZO_ES_SZOFAJ_REGEX = ".*<span class=\"mw-headline\">[a-zA-Z,() áéóöőíúüűÁÉÓÖŐÍÚÜŰ]*</span>.*";
     private File szotarMappa = new File(SZOTAR_DIR);

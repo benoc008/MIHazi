@@ -44,7 +44,6 @@ public class Mondat implements Serializable{
                 break;
             default:
                 this.fajta = KIJELENTO;
-                //TODO exceptiont kellene dobni...
                 logol("Nincs irasjel, kijelentonek allitva");
         }
     }

@@ -36,8 +36,6 @@ public class ManualisOktatasAblak extends JFrame implements Runnable, ActionList
         this.inputProcessor = inputProcessor;
         setLayout(new BorderLayout());
 
-        //TODO file, sugo, akarmmi...
-
         menuBar = new JMenuBar();
 
         fileMenu = new JMenu("Fájl");

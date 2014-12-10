@@ -26,9 +26,9 @@ public class FonevRagozoTest {
         String eredmeny = FonevRagozo.ragoz(szo, FonevRag.TARGY);
         assert eredmeny.equals("bőrt");
 
-        szo.setSzo("könyv");
+        szo.setSzo("cica");
         eredmeny = FonevRagozo.ragoz(szo, FonevRag.TOBBES_SZAM, FonevRag.TARGY);
-        assert eredmeny.equals("könyveket");
+        assert eredmeny.equals("cicákat");
     }
 
     @Test

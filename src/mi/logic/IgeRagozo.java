@@ -13,7 +13,7 @@ public class IgeRagozo {
 
     public static String ragoz(Szo szo, SzamSzemely szamSzemely, Mod mod, Ido ido, IgeragozasiRendszer rendszer){
         if (!szo.getSzofajok().contains("ige")) {
-            return "ERROR"; //TODO ez nem jo
+            throw new RuntimeException("nem megfelelo szofaju szot probal ragozni");
         }
 
         if (ido == JELEN && mod == KIJELENTO && rendszer == ALANYI) {

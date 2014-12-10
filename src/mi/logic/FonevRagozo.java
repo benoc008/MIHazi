@@ -62,7 +62,8 @@ public class FonevRagozo {
             if(!eredeti.endsWith("cs") && !eredeti.endsWith("t") && !eredeti.endsWith("ty") && !eredeti.endsWith("gy") && !eredeti.endsWith("k") && !eredeti.endsWith("m")){
                 return eredeti + "t";
             } else {
-                if(rend.equals(Rend.MELY) || rend.equals(Rend.VEGYES)){
+                //TODO ez valami botrany, mennyire nem igaz...
+                if((rend.equals(Rend.MELY) || rend.equals(Rend.VEGYES)) && !eredeti.endsWith("k") ){
                     return eredeti + "ot";
                 } else {
                     //TODO ezt megegyszer at kell gondolni
