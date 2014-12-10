@@ -25,7 +25,7 @@ public class InputProcessor {
         logol("Input: " + s);
         feldolgoz(s);
         elemzo.addHistory(valasz);
-
+        logol("Valasz: " + valasz);
         return valasz;
     }
 

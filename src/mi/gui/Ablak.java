@@ -28,6 +28,10 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
     private JMenuItem ujrakezdesMenupont;
     private JMenu eszkozokMenu;
     private JMenuItem manualisOktatasMenupont;
+    private JMenuItem logolMenupont;
+    public static boolean vanlogolas=false;
+    private String off="Log Off";
+    private String on="Log On";
 
 
     private InputProcessor inputProcessor;
@@ -68,8 +72,14 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
         ujrakezdesMenupont = new JMenuItem("Új beszélgetés", KeyEvent.VK_N);
         ujrakezdesMenupont.addActionListener(this);
         fileMenu.add(ujrakezdesMenupont);
-        menuBar.add(fileMenu);
 
+
+
+        logolMenupont=new JMenuItem(on,KeyEvent.VK_Y);
+
+        logolMenupont.addActionListener(this);
+        fileMenu.add(logolMenupont);
+        menuBar.add(fileMenu);
         eszkozokMenu = new JMenu("Eszkozok");
         eszkozokMenu.setMnemonic(KeyEvent.VK_E);
         manualisOktatasMenupont = new JMenuItem("Manuális oktatás", KeyEvent.VK_O);
@@ -118,6 +128,14 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
             tudastarMentese();
         } else if(e.getSource() == betoltesMenupont){
             tudastarBeolvasas();
+        } else if(e.getSource()==logolMenupont){
+            vanlogolas=!vanlogolas;
+            if(vanlogolas==true)
+                logolMenupont.setText(off);
+            else if(vanlogolas==false)
+                logolMenupont.setText(on);
+
+
         }
     }
 
@@ -140,7 +158,7 @@ public class Ablak extends JFrame implements Runnable, ActionListener, KeyListen
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file.getSelectedFile()))) {
-                inputProcessor.getElemzo().addTudastarLista((List<Tudas>)ois.readObject());
+                inputProcessor.getElemzo().addTudastarLista((List<Tudas>) ois.readObject());
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(this, "A fajl megnyitasa nem sikerul.");
             } catch (ClassNotFoundException e){

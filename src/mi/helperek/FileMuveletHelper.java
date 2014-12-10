@@ -2,6 +2,7 @@ package mi.helperek;
 
 import mi.domain.KerdesValasz;
 import mi.domain.Szo;
+import mi.gui.Ablak;
 
 import javax.swing.*;
 import java.io.*;
@@ -14,13 +15,15 @@ public class FileMuveletHelper {
 
     public static void logol(String s) {
         System.out.println(s);
-//        try {
-//            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(log, true)));
-//            out.println(s);
-//            out.close();
-//        } catch (IOException e) {
-//            JOptionPane.showMessageDialog(null, "Hiba a logolasnal!");
-//        }
+        if (Ablak.vanlogolas) {
+            try {
+                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(log, true)));
+                out.println(s);
+                out.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Hiba a logolasnal!");
+            }
+        }
     }
 
     public static List<Szo> szokincsetOlvasCSVbol(String file) {
