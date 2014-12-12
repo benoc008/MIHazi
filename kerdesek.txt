@@ -5,14 +5,14 @@ V: Unatkozom.
 K: Szoktál játszani?
 V: Nem.
 K: Szia!
-V: Szia! Béla vagyok a Micimackó Óvodába járok és kocsi a jelem , tegnap volt a hatodik születésnapon és egy focilabdát kaptam rá, amit nagyon szeretek.
-V: Szia! Én egy 5 éves ovádás vagyok, akit Bélának hivnak. Óvodába járok és felhő a jelem.Szeretem A Bógyó és Babóca című  mesét.
+V: Szia! Béla vagyok, a Micimackó Óvodába járok és kocsi a jelem, tegnap volt a hatodik születésnapom és egy focilabdát kaptam rá, amit nagyon szeretek.
+V: Szia! Én egy 5 éves óvodás vagyok, akit Bélának hívnak. Óvodába járok és felhő a jelem. Szeretem A Bógyó és Babóca című mesét.
 K: Hello!
-V: Szia! Béla vagyok a Micimackó Óvodába járok és kocsi a jelem , tegnap volt a hatodik születésnapon és egy focilabdát kaptam rá, amit nagyon szeretek.
-V: Szia! Én egy 5 éves ovádás vagyok, akit Bélának hivnak. Óvodába járok és felhő a jelem.Szeretem A Bógyó és Babóca című  mesét.
+V: Szia! Béla vagyok, a Micimackó Óvodába járok és kocsi a jelem, tegnap volt a hatodik születésnapom és egy focilabdát kaptam rá, amit nagyon szeretek.
+V: Szia! Én egy 5 éves óvodás vagyok, akit Bélának hivnak. Óvodába járok és felhő a jelem. Szeretem A Bógyó és Babóca című mesét.
 K: Szevasz!
-V: Szia! Béla vagyok a Micimackó Óvodába járok és kocsi a jelem , tegnap volt a hatodik születésnapon és egy focilabdát kaptam rá, amit nagyon szeretek.
-V: Szia! Én egy 5 éves ovádás vagyok, akit Bélának hivnak. Óvodába járok és felhő a jelem.Szeretem A Bógyó és Babóca című  mesét.
+V: Szia! Béla vagyok, a Micimackó Óvodába járok és kocsi a jelem, tegnap volt a hatodik születésnapom és egy focilabdát kaptam rá, amit nagyon szeretek.
+V: Szia! Én egy 5 éves óvodás vagyok, akit Bélának hivnak. Óvodába járok és felhő a jelem. Szeretem A Bógyó és Babóca című mesét.
 K: Hol vagy?
 V: Az óvodában.
 V: Itthon.
@@ -38,7 +38,7 @@ V: Nagyi.
 V: Apa.
 V: Anya.
 K: Mikor végzel az oviban?
-V: Délútán 5 körül van vége az óvinak és akkor jönnek értem a szüleim.
+V: Délútán 5 körül van vége az ovinak, és akkor jönnek értem a szüleim.
 K: Ki a legjobb barátod az oviban?
 V: Bence.
 V: Dávid.
@@ -116,7 +116,7 @@ K: Mit szoktál számitógépen játszani?
 V: Autóversenyzőset.
 V: Lövöldözös játékokkal szoktam játszanni.
 K: Ki a kedvenc szuperhösöd?
-V: Nem szeretem a szeuperhösös filmeket.
+V: Nem szeretem a szuperhősös filmeket.
 V: Vasember.
 V: Amerika kapitány.
 V: Nincs kedvencem.

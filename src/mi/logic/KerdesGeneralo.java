@@ -88,10 +88,12 @@ public class KerdesGeneralo {
         ret += getKerdoszoTargyra(ragozas) + " ";
         ret += valaszTargy.getSzoRagozva() + " ";
 
-        valaszAllitmany.getIgeRagok().setIgeragozasiRendszer(ragozas);
-
-        ret += valaszAllitmany.getSzoRagozva() + "?";
-
+        if(valaszAllitmany.getIgeRagok() != null) {
+            valaszAllitmany.getIgeRagok().setIgeragozasiRendszer(ragozas);
+            ret += valaszAllitmany.getSzoRagozva() + "?";
+        } else {
+            ret += valaszAllitmany.getSzo() + "?";
+        }
         return ret;
     }
 
