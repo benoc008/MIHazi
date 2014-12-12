@@ -28,7 +28,8 @@ public class FileMuveletHelper {
 
     public static List<Szo> szokincsetOlvasCSVbol(String file) {
         List<Szo> szokincs = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        FileMuveletHelper.class.getClassLoader();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream("resources/" + file), "UTF-8"))) {
             String line = br.readLine();
             while (line != null) {
                 szokincs.add(Szo.createFromCsv(line));
@@ -42,7 +43,8 @@ public class FileMuveletHelper {
 
     public static List<KerdesValasz> kerdeseketBeolvas(String file) {
         List<KerdesValasz> eloreDefinialtKerdesekValaszok = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        FileMuveletHelper.class.getClassLoader();
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream("resources/" + file), "UTF-8"))) {
             String line = br.readLine();
             String kerdes = null;
             List<String> valaszok = new ArrayList<>();
